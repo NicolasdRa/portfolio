@@ -33,10 +33,10 @@ const Index: React.FC<PageProps> = () => {
         <Hero />
         <Services />
         <About />
-        <Work />
-        <Projects />
-        <Contact />
       </BgImage>
+      <Work />
+      <Projects />
+      <Contact />
     </>
   );
 };

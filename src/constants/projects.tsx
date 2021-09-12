@@ -1,3 +1,14 @@
+import React from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { MdWeb } from 'react-icons/md';
+import mytinerary from '../assets/images/myitinerary.jpg';
+import clothesShop from '../assets/images/ecommerce.jpg';
+import energeniousWebsite from '../assets/images/energeniousWebsite.jpg';
+import myDoc from '../assets/images/mydoc.jpg';
+import energeniousGUI from '../assets/images/energeniousGui.jpg';
+import energeniousAdmin from '../assets/images/energeniousAdmin.gif';
+import energeniousSpreadsheet from '../assets/images/energeniousSpreadsheet.jpg';
+
 const data = [
   {
     id: 1,
@@ -7,9 +18,19 @@ const data = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux.js', 'Material-UI'],
-    links: { github: 'https://github.com/NicolasdRa/travel-App-Mytinerary', url: '' },
-    image: '',
+    links: [
+      {
+        icon: <FaGithub className="social-icon" />,
+        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+      },
+      {
+        icon: <MdWeb className="social-icon" />,
+        url: '',
+      },
+    ],
+    image: mytinerary,
   },
+
   {
     id: 2,
     title: 'clothes shop',
@@ -18,12 +39,19 @@ const data = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
     stack: ['React.js', 'Redux.js', 'firebase', 'styled components', 'Stripe payments'],
-    links: {
-      github: 'https://github.com/NicolasdRa/e-commerce-app',
-      url: 'https://e-commerce-app-ndr.herokuapp.com/',
-    },
-    image: '',
+    links: [
+      {
+        icon: <FaGithub className="social-icon" />,
+        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+      },
+      {
+        icon: <MdWeb className="social-icon" />,
+        url: '',
+      },
+    ],
+    image: clothesShop,
   },
+
   {
     id: 3,
     title: 'energenious website',
@@ -32,12 +60,19 @@ const data = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
     stack: ['Wordpress', 'HTML5', 'CSS3'],
-    links: {
-      github: '',
-      url: 'https://energenious.eu/',
-    },
-    image: '',
+    links: [
+      {
+        icon: <FaGithub className="social-icon" />,
+        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+      },
+      {
+        icon: <MdWeb className="social-icon" />,
+        url: '',
+      },
+    ],
+    image: energeniousWebsite,
   },
+
   {
     id: 4,
     title: 'MyDoc',
@@ -46,12 +81,19 @@ const data = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
     stack: ['Typescript', 'React.js', 'Redux.js', 'Material-UI'],
-    links: {
-      github: '',
-      url: 'https://mydoc-appointments.netlify.app/',
-    },
-    image: '',
+    links: [
+      {
+        icon: <FaGithub className="social-icon" />,
+        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+      },
+      {
+        icon: <MdWeb className="social-icon" />,
+        url: '',
+      },
+    ],
+    image: myDoc,
   },
+
   {
     id: 5,
     title: 'Micogrid Creator UX-UI re-design',
@@ -60,12 +102,19 @@ const data = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
     stack: ['Figma'],
-    links: {
-      github: '',
-      url: '',
-    },
-    image: '',
+    links: [
+      {
+        icon: <FaGithub className="social-icon" />,
+        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+      },
+      {
+        icon: <MdWeb className="social-icon" />,
+        url: '',
+      },
+    ],
+    image: energeniousGUI,
   },
+
   {
     id: 6,
     title: 'Account management app - energenious',
@@ -73,12 +122,18 @@ const data = [
     featured: true,
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
-    stack: ['React.js, Redux.js, Material-UI'],
-    links: {
-      github: '',
-      url: '',
-    },
-    image: '',
+    stack: ['React.js', 'Redux.js', 'Material-UI', 'Figma'],
+    links: [
+      {
+        icon: <FaGithub className="social-icon" />,
+        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+      },
+      {
+        icon: <MdWeb className="social-icon" />,
+        url: '',
+      },
+    ],
+    image: energeniousAdmin,
   },
   {
     id: 7,
@@ -87,12 +142,18 @@ const data = [
     featured: true,
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
-    stack: ['React.js, Redux.js, Material-UI'],
-    links: {
-      github: '',
-      url: '',
-    },
-    image: '',
+    stack: ['React.js', 'Redux.js', 'Material-UI', 'Figma'],
+    links: [
+      {
+        icon: <FaGithub className="social-icon" />,
+        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+      },
+      {
+        icon: <MdWeb className="social-icon" />,
+        url: '',
+      },
+    ],
+    image: energeniousSpreadsheet,
   },
 ];
 
