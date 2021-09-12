@@ -14,8 +14,8 @@ dotenv.config({
 
 const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
-    title: 'Gatsby Skeleton',
-    description: 'Gatsby starter featuring TypeScript, ESLint, Prettier and more...',
+    title: 'Nicolás di Rago dev portfolio',
+    description: 'Nicolás di Rago dev portfolio',
     keywords: ['gatsby', 'starter', 'typescript', 'eslint', 'prettier', 'layout', 'seo'],
     siteUrl: 'https://gatsby-starter-skeleton.netlify.app',
     imageUrl: '/social.jpg',
@@ -24,8 +24,9 @@ const gatsbyConfig: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-styled-components',
       options: {
@@ -36,11 +37,25 @@ const gatsbyConfig: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: resolve(__dirname, './assets'),
-        name: 'assets',
+        path: resolve(__dirname, './assets/images'),
+        name: 'images',
       },
     },
-    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-google-fonts-v2',
+      options: {
+        fonts: [
+          {
+            family: 'Source Code Pro',
+            weights: ['300', '400', '500', '600', '700', '800'],
+          },
+          {
+            family: 'Space Grotesk',
+            weights: ['300', '400', '500', '600', '700'],
+          },
+        ],
+      },
+    },
   ],
 };
 

@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    font-family: ${(props) => props.theme.fonts.primary};
     font-size: 1.6rem;
   }
 
@@ -44,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     margin: 0;
+    font-family: ${(props) => props.theme.fonts.secondary};
     font-size: 100%;
     font-weight: normal;
   }
@@ -70,6 +72,7 @@ export const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0;
+    line-height: 160%;
   }
 
   svg {

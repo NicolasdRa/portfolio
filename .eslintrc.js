@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['airbnb', 'airbnb/hooks', 'plugin:prettier/recommended'],
+  extends: ['airbnb', 'airbnb/hooks'],
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
@@ -23,7 +23,7 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       parser: '@typescript-eslint/parser',
-      extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
+      extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended', 'prettier'],
       rules: {
         'import/extensions': ['error', { ts: 'never', tsx: 'never' }],
         'no-use-before-define': 'off',
