@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 
 // import { graphql, useStaticQuery } from 'gatsby';
 // import { getImage } from 'gatsby-plugin-image';
@@ -8,6 +9,13 @@ import React from 'react';
 import { Container } from './Hero.styled';
 
 const Hero = () => {
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!textRef.current) throw Error('divRef is not assigned');
+    gsap.from(textRef.current, { duration: 0.3, opacity: 0, scale: 0.5 });
+    gsap.to(textRef.current, { duration: 1, ease: 'elastic.out(1, 0.3)', x: +55 });
+  }, []);
   // const { bgImage } = useStaticQuery(
   //   graphql`
   //     query {
@@ -27,11 +35,11 @@ const Hero = () => {
     <Container>
       {/* <BgImage image={image}> */}
       <header className="hero">
-        <div>
-          <h1 className="title">web developer</h1>
+        <div ref={textRef}>
+          <h1 className="title">nicolás di rago</h1>
           <div className="name-container">
             <div className="line" />
-            <h2 className="name">nicolas di rago</h2>
+            <h2 className="name">web developer</h2>
           </div>
           <p className="details">
             full-stack, mainly focused on the frontend side and UX/UI design. Based in Berlin.

@@ -4,6 +4,7 @@ import { GlobalStyle } from '../../style/GlobalStyle';
 import { SEO } from '../SEO/SEO';
 import Navbar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, location }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, locati
       <SEO location={location} />
       <Navbar toggleSideBar={toggleSideBar} />
       {children}
+      <SocialLinks />
       <Footer />
     </>
   );

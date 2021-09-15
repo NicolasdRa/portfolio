@@ -55,12 +55,19 @@ export const Container = styled.div`
       font-weight: 500;
       transition: ${theme.animations.transition};
       padding: 0.5rem 0;
+
     }
+
+    .nav-links a:last-child {
+      margin-right: 2rem;
+    }
+
     .nav-links a:hover {
-      color: ${theme.colors.primary5};
+      color: ${theme.colors.primary3};
+
       /* TODO: replace line below with another way to underline, it breaks in big screens */
-      box-shadow: 0px 2px ${theme.colors.primary4};
-    }
+    /* box-shadow: 0px 2px ${theme.colors.primary3};
+    }  */
     .nav-center {
       display: grid;
       grid-template-columns: auto 1fr;

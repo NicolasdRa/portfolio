@@ -35,19 +35,19 @@ export const Container = styled.div`
 
   .social-link {
     font-size: 1.75rem;
-    color: var(--clr-grey-1);
-    transition: var(--transition);
+    color: ${theme.colors.grey3};
+    transition: ${theme.animations.transition};
   }
 
   .social-link:hover {
-    color: var(--clr-primary-5);
+    color: ${theme.colors.primary3};
   }
 
   .footer .social-link {
-    color: var(--clr-white);
+    color: ${theme.colors.grey3};
   }
 
   .footer .social-link:hover {
-    color: var(--clr-primary-5);
+    color: ${theme.colors.primary3};
   }
 `;

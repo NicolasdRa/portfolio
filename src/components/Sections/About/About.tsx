@@ -16,6 +16,7 @@ const About = () => {
             </div>
             <h3>profile, skills & stack</h3>
           </div>
+
           <div className="text">
             <p className="profile">{text}</p>
             {stack.map((item) => (

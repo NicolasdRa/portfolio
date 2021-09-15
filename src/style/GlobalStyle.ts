@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 import 'normalize.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -23,6 +24,21 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.fonts.primary};
     font-size: 1.6rem;
   }
+
+body::-webkit-scrollbar {
+  width: .8rem;
+}
+
+body::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6px red; */
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  height: 15rem;
+  background-color: ${theme.colors.grey5};
+  /* outline: 1px solid slategrey; */
+}
 
   a {
     color: currentColor;

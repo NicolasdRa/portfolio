@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageProps, graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-
+import ParticlesBg from 'particles-bg';
 import { BgImage } from 'gbimage-bridge';
 
 import Hero from '../components/Sections/Hero/Hero';
@@ -12,10 +12,17 @@ import Projects from '../components/Sections/Projects/Projects';
 import Contact from '../components/Sections/Contact/Contact';
 
 const Index: React.FC<PageProps> = () => {
-  const { bgImage } = useStaticQuery(
+  const { bgImage1, bgImage2 } = useStaticQuery(
     graphql`
       query {
-        bgImage: file(relativePath: { eq: "drop-hero1.png" }) {
+        bgImage1: file(relativePath: { eq: "drop-hero1.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(width: 1000, webpOptions: { quality: 70 }, quality: 50)
+          }
+        }
+
+        bgImage2: file(relativePath: { eq: "drop-contact.png" }) {
           id
           childImageSharp {
             gatsbyImageData(width: 1000, webpOptions: { quality: 70 }, quality: 50)
@@ -25,18 +32,42 @@ const Index: React.FC<PageProps> = () => {
     `
   );
 
-  const image = getImage(bgImage);
+  const image1 = getImage(bgImage1);
+  const image2 = getImage(bgImage2);
+
+  const particleConfig = {
+    num: [1, 50],
+    rps: 0.1,
+    radius: [1, 5],
+    life: [1.5, 5],
+    v: [2, 3],
+    tha: [-40, 40],
+    // body: "./img/icon.png", // Whether to render pictures
+    // rotate: [0, 20],
+    alpha: [0.1, 0.6],
+    scale: [0.1, 0.4],
+    position: 'center', // all or center or {x:1,y:1,width:100,height:100}
+    color: ['#262626'],
+    cross: 'dead', // cross or bround
+    random: 15, // or null,
+    g: 1, // gravity
+    // f: [2, -1], // force
+  };
 
   return (
     <>
-      <BgImage image={image}>
+      <BgImage image={image1}>
+        <ParticlesBg num={50} type="custom" bg config={particleConfig} />
         <Hero />
         <Services />
         <About />
       </BgImage>
       <Work />
       <Projects />
-      <Contact />
+      <BgImage image={image2}>
+        <ParticlesBg num={50} type="custom" bg config={particleConfig} />
+        <Contact />
+      </BgImage>
     </>
   );
 };

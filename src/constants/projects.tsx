@@ -16,7 +16,7 @@ const data = [
     summary: 'travel app',
     featured: true,
     description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
+      'Travel SPA, frontend developed in React with Redux (RTK) for state management and Material-UI for the user Interface. Backend developed in Node.js, Express.js & MongoDB. Full CRUD functionality, authentication and authorization (credentials & oauth), password reset, image upload, content creation and update functionalities where users can create and edit their profiles, custom travel itineraries, comments, reviews and favourites.',
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux.js', 'Material-UI'],
     links: [
       {
@@ -37,7 +37,7 @@ const data = [
     summary: 'e-commerce app',
     featured: true,
     description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
+      'E-commerce App with fully functional shopping-cart and Integration with Stripe developed in React with Redux, with Firebase for backend and database and a mix of Styled Components and SASS.',
     stack: ['React.js', 'Redux.js', 'firebase', 'styled components', 'Stripe payments'],
     links: [
       {
@@ -57,8 +57,7 @@ const data = [
     title: 'energenious website',
     summary: 'website revamp',
     featured: true,
-    description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
+    description: 'Company website responsive re-design and implementation in wordpress.',
     stack: ['Wordpress', 'HTML5', 'CSS3'],
     links: [
       {
@@ -79,7 +78,7 @@ const data = [
     summary: 'appointments app',
     featured: true,
     description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
+      'Appoinments app to browse over a list of available practitioners, book and manage appointments. ',
     stack: ['Typescript', 'React.js', 'Redux.js', 'Material-UI'],
     links: [
       {
@@ -96,11 +95,10 @@ const data = [
 
   {
     id: 5,
-    title: 'Micogrid Creator UX-UI re-design',
+    title: 'Micogrid Creator UX-UI',
     summary: 'UX-UI re-design, energenious flagship product',
     featured: true,
-    description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
+    description: "Re-designed of the company's flagship product's UI and UX",
     stack: ['Figma'],
     links: [
       {
@@ -121,7 +119,7 @@ const data = [
     summary: 'User portal, login and account management app',
     featured: true,
     description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
+      'Design and implementation of user portal with login/signup functionality, SSO for all products, account management functionalities. Developed in React.js, Redux and Material UI. ',
     stack: ['React.js', 'Redux.js', 'Material-UI', 'Figma'],
     links: [
       {
@@ -138,10 +136,10 @@ const data = [
   {
     id: 7,
     title: 'spreadhseet widget - energenious',
-    summary: 'react based spreadsheet widget, design and development',
+    summary: 'spreadsheet widget, design and development',
     featured: true,
     description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quas minus facilis esse ipsam, excepturi at quidem autem iste ab tempora a dicta quis! Nobis dolorem odio dicta soluta? Ullam quasi in cum nemo tenetur ad nihil odio incidunt. Omnis perferendis illo, cumque aliquid unde maiores saepe deserunt suscipit quia laborum assumenda aut quasi voluptatibus similique voluptatum accusamus temporibus in delectus molestias id totam, reiciendis eveniet vel. ',
+      'Design and partial implementation of Spreadsheet widget developed in Typescript and React with Material UI. ',
     stack: ['React.js', 'Redux.js', 'Material-UI', 'Figma'],
     links: [
       {
