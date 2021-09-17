@@ -6,8 +6,8 @@ const data = [
     startDate: 'April 2021',
     endDate: 'present',
     tasks: [
-      'Co-led and developed mosaico supertemplates project.',
-      'Trained developers to build responsive mosaico HTML templates.',
+      // 'Co-led and developed mosaico supertemplates project.',
+      // 'Trained developers to build responsive mosaico HTML templates.',
       'Developed responsive HTML email templates tested for 90+ email clients and devices.',
     ],
   },
@@ -19,6 +19,7 @@ const data = [
     endDate: 'present',
     tasks: [
       'Designed and built login & account management application. Stack: React Hooks, Redux & Material UI.',
+      'Designed and built Spreadsheet Widget. Stack: React Hooks, Redux & Material UI.',
       'Re-desiged Flagship product MicrogridCreator’s GUI. Stack: React & Redux.',
       'Responsive design, prototype & developement of company’s website. Stack: Wordpress. ',
     ],

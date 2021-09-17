@@ -87,6 +87,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   p {
+    font-size: 1.5rem;
     margin: 0;
     line-height: 160%;
   }

@@ -6,9 +6,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    /* height: 100vh; */
-    width: 60vw;
+    align-items: center;
+    margin-top: 8rem;
   }
 
   .projects h3 {
@@ -40,28 +39,27 @@ export const Container = styled.div`
   .content {
     display: flex;
     flex-direction: column;
-    width: 80vw;
-    margin: 0 20rem;
+    width: 60vw;
   }
 
-  .project-list {
-    width: 80vw;
-  }
+  /* .project-list {
+  } */
 
   .project-block {
-    margin: 4rem 0;
+    margin-top: 4rem;
+    margin-bottom: 10rem;
     display: flex;
     justify-content: space-between;
   }
 
   .project-image {
-    width: 40%;
+    width: 45%;
     object-fit: cover;
     border-radius: 1rem;
   }
 
   .project-info {
-    width: 55%;
+    width: 50%;
   }
 
   .title-container {

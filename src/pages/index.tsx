@@ -1,11 +1,11 @@
 import React from 'react';
 import { PageProps, graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import ParticlesBg from 'particles-bg';
 import { BgImage } from 'gbimage-bridge';
+import ParticlesBg from 'particles-bg';
 
 import Hero from '../components/Sections/Hero/Hero';
-import Services from '../components/Sections/Services/Services';
+// import Services from '../components/Sections/Services/Services';
 import About from '../components/Sections/About/About';
 import Work from '../components/Sections/Work/Work';
 import Projects from '../components/Sections/Projects/Projects';
@@ -37,7 +37,7 @@ const Index: React.FC<PageProps> = () => {
 
   const particleConfig = {
     num: [1, 50],
-    rps: 0.1,
+    rps: 0.7,
     radius: [1, 5],
     life: [1.5, 5],
     v: [2, 3],
@@ -59,7 +59,7 @@ const Index: React.FC<PageProps> = () => {
       <BgImage image={image1}>
         <ParticlesBg num={50} type="custom" bg config={particleConfig} />
         <Hero />
-        <Services />
+        {/* <Services /> */}
         <About />
       </BgImage>
       <Work />

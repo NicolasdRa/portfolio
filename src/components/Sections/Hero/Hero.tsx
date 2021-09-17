@@ -9,12 +9,12 @@ import { gsap } from 'gsap';
 import { Container } from './Hero.styled';
 
 const Hero = () => {
-  const textRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!textRef.current) throw Error('divRef is not assigned');
-    gsap.from(textRef.current, { duration: 0.3, opacity: 0, scale: 0.5 });
-    gsap.to(textRef.current, { duration: 1, ease: 'elastic.out(1, 0.3)', x: +55 });
+    if (!contentRef.current) throw Error('divRef is not assigned');
+    const element = contentRef.current;
+    gsap.fromTo(element, { opacity: 0 }, { duration: 0.8, ease: 'expo.out', opacity: 1 });
   }, []);
   // const { bgImage } = useStaticQuery(
   //   graphql`
@@ -35,7 +35,7 @@ const Hero = () => {
     <Container>
       {/* <BgImage image={image}> */}
       <header className="hero">
-        <div ref={textRef}>
+        <div ref={contentRef}>
           <h1 className="title">nicolás di rago</h1>
           <div className="name-container">
             <div className="line" />

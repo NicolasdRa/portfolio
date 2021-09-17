@@ -6,13 +6,13 @@ const Footer = () => (
   <Container>
     <footer className="footer">
       <div>
-        <div className="footer-links social-links">
+        <ul className="footer-links social-links">
           {socialLinks.map((link) => (
-            <a href={link.url} key={link.id} className="social-link">
-              {link.icon}
-            </a>
+            <li key={link.id} className="social-link">
+              <a href={link.url}>{link.icon}</a>
+            </li>
           ))}
-        </div>
+        </ul>
         <h4>
           copyright &copy; {new Date().getFullYear()} | <span> nicolas di rago</span> design &
           development | all rights reserved

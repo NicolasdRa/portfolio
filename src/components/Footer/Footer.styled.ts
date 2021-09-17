@@ -28,19 +28,28 @@ export const Container = styled.div`
   .social-links {
     margin-top: 2rem;
     margin-bottom: 3rem;
-    width: 15rem;
+    width: 25rem;
     display: flex;
     justify-content: space-between;
   }
 
   .social-link {
-    font-size: 1.75rem;
+    font-size: 2rem;
     color: ${theme.colors.grey3};
-    transition: ${theme.animations.transition};
+    margin-right: 1.5rem;
+    will-change: transform;
+    backface-visibility: hidden;
+    transition: transform 450ms ease-out;
   }
 
   .social-link:hover {
     color: ${theme.colors.primary3};
+    transform: translateY(-2px);
+    transition: transform 125ms;
+  }
+
+  .social-link li:last-child {
+    margin-right: 0;
   }
 
   .footer .social-link {

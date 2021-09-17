@@ -30,10 +30,14 @@ export const Container = styled.div`
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
     color: ${theme.colors.grey3};
-    transition: ${theme.animations.transition};
+    will-change: transform;
+    backface-visibility: hidden;
+    transition: transform 450ms ease-out;
   }
 
   .social-link:hover {
     color: ${theme.colors.primary3};
+    transform: translateY(-2px);
+    transition: transform 125ms;
   }
 `;

@@ -11,7 +11,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     z-index: 200;
-    background: ${theme.colors.white};
+    background: transparent;
   }
   .nav-center {
     width: 95vw;
@@ -48,26 +48,30 @@ export const Container = styled.div`
       justify-content: flex-end;
     }
 
-    .nav-links a {
-      margin-right: 3rem;
+    .nav-links li {
+      margin-right: 5rem;
       text-transform: capitalize;
       color: ${theme.colors.grey2};
+      font-size: 1.4rem;
       font-weight: 500;
-      transition: ${theme.animations.transition};
       padding: 0.5rem 0;
-
+      will-change: transform;
+      backface-visibility: hidden;
+      transition: transform 450ms ease-out;
     }
 
-    .nav-links a:last-child {
+    .nav-links li:last-child {
       margin-right: 2rem;
     }
 
-    .nav-links a:hover {
+    .nav-links li:hover {
       color: ${theme.colors.primary3};
+      transform: translateY(-2px);
+      transition: transform 125ms;
 
       /* TODO: replace line below with another way to underline, it breaks in big screens */
-    /* box-shadow: 0px 2px ${theme.colors.primary3};
-    }  */
+      /* box-shadow: 0px 2px ${theme.colors.primary3}; */
+    }
     .nav-center {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -75,9 +79,9 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 992px) {
+  /* @media screen and (min-width: 992px) {
     .navbar {
       background: transparent;
     }
-  }
+  } */
 `;
