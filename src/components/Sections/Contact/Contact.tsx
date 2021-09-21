@@ -35,11 +35,14 @@ const Contact = () => {
 
   return (
     <Container>
-      <section id="contact" className="contact" ref={contentRef}>
+      <div id="contact" className="contact" ref={contentRef}>
         <div className="content">
           <div className="titles">
             <div className="title-container">
-              <h2 className="title">contact</h2>
+              <h2 className="title">
+                <div className="title-line" />
+                <span>04. </span>contact
+              </h2>
             </div>
             <h3>drop a line</h3>
           </div>
@@ -72,12 +75,12 @@ const Contact = () => {
                 className="form-control"
               />
             </div>
-            <button type="submit" className="btn">
+            <button type="submit" className="cta">
               submit
             </button>
           </form>
         </div>
-      </section>
+      </div>
     </Container>
   );
 };

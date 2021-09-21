@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
-export const Container = styled.div`
+export const Container = styled.section`
   .projects {
     display: flex;
     flex-direction: column;
@@ -39,11 +39,34 @@ export const Container = styled.div`
   .content {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 65vw;
   }
 
-  /* .project-list {
-  } */
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    width: 45%;
+  }
+
+  .title {
+    display: flex;
+    justify-content: flex-end;
+    color: ${theme.colors.primary4};
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-top: 7px;
+    position: relative;
+    width: 18rem;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  .title span {
+    margin-right: 0.5rem;
+  }
 
   .project-block {
     margin-top: 4rem;
@@ -62,12 +85,6 @@ export const Container = styled.div`
     width: 50%;
   }
 
-  .title-container {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-  }
-
   .btn-container {
     display: flex;
     align-self: center;
@@ -75,30 +92,6 @@ export const Container = styled.div`
     position: relative;
     width: 50%;
   }
-
-  .title {
-    color: ${theme.colors.primary3};
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    font-weight: 600;
-    padding-top: 7px;
-    position: relative;
-    width: 18rem;
-    margin-bottom: 1rem;
-    text-align: right;
-  }
-
-  .title::before {
-    content: '';
-    width: 90px;
-    height: 8px;
-    left: 0px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
-  }
-
-  /* .project-description {
-  } */
 
   .stack-item {
     margin-right: 3rem;
@@ -116,31 +109,18 @@ export const Container = styled.div`
     font-size: 1.75rem;
     margin-right: 3rem;
     color: ${theme.colors.grey3};
-    transition: ${theme.animations.transition};
+    transition: ${theme.transition};
   }
 
   .link-item:hover {
-    color: ${theme.colors.primary3};
+    color: ${theme.colors.primary4};
+    transform: translateY(-2px);
+    transition: ${theme.transition};
   }
 
-  .btn {
-    color: ${theme.colors.primary3};
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    font-weight: 600;
-    padding-top: 7px;
-    position: relative;
-    width: 22.8rem;
-    margin-bottom: 1rem;
-    text-align: right;
-  }
-
-  .btn::before {
-    content: '';
-    width: 100px;
-    height: 10px;
-    left: 0px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
+  .link-item:active {
+    ${theme.colors.primary3};
+    transform: translateY(1px);
+    transition: transform 125ms;
   }
 `;

@@ -1,23 +1,27 @@
 import React from 'react';
-import socialLinks from '../../constants/social_links';
+// import socialLinks from '../../constants/social_links';
+// import logo from '../../assets/svg/logo.svg';
 import { Container } from './Footer.styled';
 
 const Footer = () => (
   <Container>
     <footer className="footer">
-      <div>
-        <ul className="footer-links social-links">
-          {socialLinks.map((link) => (
-            <li key={link.id} className="social-link">
-              <a href={link.url}>{link.icon}</a>
-            </li>
-          ))}
-        </ul>
-        <h4>
-          copyright &copy; {new Date().getFullYear()} | <span> nicolas di rago</span> design &
-          development | all rights reserved
-        </h4>
-      </div>
+      {/* <div className="logo">
+        <a href="#hero">
+          <img src={logo} alt="web dev" />
+        </a>
+      </div> */}
+      <h4>
+        designed & built by <span> nicolás di rago</span>
+      </h4>
+      <h4>copyright &copy; {new Date().getFullYear()}</h4>
+      {/* <ul className="social-links">
+        {socialLinks.map((link) => (
+          <li key={link.id} className="social-link">
+            <a href={link.url}>{link.icon}</a>
+          </li>
+        ))}
+      </ul> */}
     </footer>
   </Container>
 );

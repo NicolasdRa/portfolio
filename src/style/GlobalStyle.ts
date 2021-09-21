@@ -21,8 +21,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: ${(props) => props.theme.fonts.primary};
+    font-family: ${theme.fonts.primary};
     font-size: 1.6rem;
+    background-color: ${theme.colors.background};
   }
 
 body::-webkit-scrollbar {
@@ -61,7 +62,7 @@ body::-webkit-scrollbar-thumb {
   h5,
   h6 {
     margin: 0;
-    font-family: ${(props) => props.theme.fonts.secondary};
+    font-family: ${theme.fonts.secondary};
     font-size: 100%;
     font-weight: normal;
   }
@@ -96,5 +97,37 @@ body::-webkit-scrollbar-thumb {
     fill: currentColor;
     height: 100%;
     width: 100%;
+  }
+
+  .cta {
+    color: ${theme.colors.primary4};
+    background-color: transparent;
+    border: 1px solid ${theme.colors.primary4};
+    border-radius: ${theme.borderRadius};
+    padding: 1.25rem 1.75rem;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ${theme.transition};
+    font-size: 1.4rem;
+  }
+
+  .cta:hover {
+    background-color: ${theme.colors.primary0};
+    transform: translateY(-2px);
+    transition: ${theme.transition};
+  }
+
+  .cta:active {
+    background-color: ${theme.colors.white};
+    transform: translateY(1px);
+    transition: transform 125ms;
+  }
+
+  .title-line {
+    margin-right: 1rem;
+    width: 90px;
+    height: 9px;
+    border-bottom: 1px solid ${theme.colors.grey3};
   }
 `;

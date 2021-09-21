@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
-export const Container = styled.div`
+export const Container = styled.section`
   .work {
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ export const Container = styled.div`
   }
 
   .titles {
-    width: 45%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -54,7 +54,7 @@ export const Container = styled.div`
   }
 
   .text {
-    width: 40%;
+    width: 45%;
   }
 
   .experience-block {
@@ -68,6 +68,10 @@ export const Container = styled.div`
     width: 50%;
   }
 
+  .title span {
+    margin-right: 0.5rem;
+  }
+
   .btn-container {
     display: flex;
     justify-content: flex-start;
@@ -75,9 +79,10 @@ export const Container = styled.div`
     width: 50%;
   }
 
-  .title,
-  .btn {
-    color: ${theme.colors.primary3};
+  .title {
+    display: flex;
+    justify-content: flex-end;
+    color: ${theme.colors.primary4};
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 600;
@@ -88,21 +93,7 @@ export const Container = styled.div`
     text-align: right;
   }
 
-  .title::before {
-    content: '';
-    width: 90px;
-    height: 8px;
-    left: 80px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
-  }
-
-  .btn::before {
-    content: '';
-    width: 100px;
-    height: 10px;
-    left: 0px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
+  .cta-work {
+    margin-top: 2rem;
   }
 `;

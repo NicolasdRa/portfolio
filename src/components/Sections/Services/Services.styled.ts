@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
-export const Container = styled.div`
+export const Container = styled.section`
   .services {
     display: flex;
     flex-direction: row;

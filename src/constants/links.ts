@@ -26,11 +26,11 @@ const data = [
     text: 'contact',
     url: '#contact',
   },
-  {
-    id: 6,
-    text: 'cv',
-    url: '/cv/',
-  },
+  // {
+  //   id: 6,
+  //   text: 'cv',
+  //   url: '/cv/',
+  // },
 ];
 
 export default data;

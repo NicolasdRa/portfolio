@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
-export const Container = styled.div`
+export const Container = styled.section`
   .about {
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ export const Container = styled.div`
   }
 
   .titles {
-    width: 45%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -34,7 +34,7 @@ export const Container = styled.div`
   }
 
   .text {
-    width: 55%;
+    width: 65%;
   }
 
   .profile {
@@ -47,8 +47,8 @@ export const Container = styled.div`
 
   .title-container {
     display: flex;
+    justify-content: flex-end;
     position: relative;
-    width: 50%;
   }
 
   .btn-container {
@@ -57,9 +57,10 @@ export const Container = styled.div`
     width: 50%;
   }
 
-  .title,
-  .btn {
-    color: ${theme.colors.primary3};
+  .title {
+    display: flex;
+    justify-content: flex-end;
+    color: ${theme.colors.primary4};
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 600;
@@ -70,21 +71,10 @@ export const Container = styled.div`
     text-align: right;
   }
 
-  .title::before {
-    content: '';
-    width: 90px;
-    height: 8px;
-    left: 80px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
+  .title span {
+    margin-right: 0.5rem;
   }
-
-  .btn::before {
-    content: '';
-    width: 90px;
-    height: 10px;
-    left: 0px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
+  .cta-about {
+    margin-top: 4rem;
   }
 `;

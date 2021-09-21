@@ -37,11 +37,14 @@ const Work = () => {
 
   return (
     <Container>
-      <section id="work" className="work" ref={contentRef}>
+      <div id="work" className="work" ref={contentRef}>
         <div className="content">
           <div className="titles">
             <div className="title-container">
-              <h2 className="title">work</h2>
+              <h2 className="title">
+                <div className="title-line" />
+                <span>02. </span>work
+              </h2>
             </div>
             <h3>where I’ve worked</h3>
           </div>
@@ -68,13 +71,13 @@ const Work = () => {
 
             <div className="btn-container">
               {/* TODO: link to download full CV */}
-              <button type="button" className="btn">
+              <button type="button" className="cta cta-work">
                 download cv
               </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </Container>
   );
 };

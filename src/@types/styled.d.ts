@@ -12,6 +12,7 @@ declare module 'styled-components' {
     };
 
     colors: {
+      primary0: string;
       primary1: string;
       primary2: string;
       primary3: string;
@@ -19,6 +20,7 @@ declare module 'styled-components' {
       primary5: string;
 
       white: string;
+      background: string;
 
       grey1: string;
       grey2: string;
@@ -44,5 +46,9 @@ declare module 'styled-components' {
       shadow2: string;
       shadow3: string;
     };
+
+    borderRadius: string;
+
+    transition: string;
   }
 }

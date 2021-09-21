@@ -17,7 +17,7 @@ const About = () => {
       element,
       {
         opacity: 0,
-        y: 100,
+        y: 120,
       },
       {
         duration: 0.8,
@@ -39,11 +39,14 @@ const About = () => {
 
   return (
     <Container>
-      <section id="about" className="about" ref={contentRef}>
+      <div id="about" className="about" ref={contentRef}>
         <div className="content">
           <div className="titles">
             <div className="title-container">
-              <h2 className="title">about</h2>
+              <h2 className="title">
+                <div className="title-line" />
+                <span>01. </span>about
+              </h2>
             </div>
             <h3>profile, skills & stack</h3>
           </div>
@@ -58,13 +61,13 @@ const About = () => {
 
             <div className="btn-container">
               {/* TODO: link to page with hobbies and reference to tango and other shit */}
-              <button type="button" className="btn">
+              <button type="button" className="cta cta-about">
                 the other side
               </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </Container>
   );
 };

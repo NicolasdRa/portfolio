@@ -23,11 +23,11 @@ const data = [
     icon: <FaXing className="social-icon" />,
     url: 'https://www.xing.com/profile/Nicolas_diRago/cv',
   },
-  {
-    id: 5,
-    icon: <FaInstagram className="social-icon" />,
-    url: 'https://www.instagram.com/nicolasdirago/',
-  },
+  // {
+  //   id: 5,
+  //   icon: <FaInstagram className="social-icon" />,
+  //   url: 'https://www.instagram.com/nicolasdirago/',
+  // },
 ];
 
 export default data;

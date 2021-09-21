@@ -1,30 +1,32 @@
 import styled from 'styled-components';
 import { theme } from '../../style/theme';
 
-export const Container = styled.div`
+export const Container = styled.header`
   .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8rem;
-    display: flex;
-    align-items: center;
-    z-index: 200;
-    background: transparent;
-  }
-  .nav-center {
-    width: 95vw;
-    margin: 0 auto;
-  }
-  .nav-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0px;
+    background: transparent;
+    height: 8rem;
+    z-index: 200;
+    width: 100%;
+    padding: 0 11rem 0 5rem;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    backdrop-filter: blur(5px);
   }
-  .nav-header img {
-    margin-bottom: 0.375rem;
+
+  .scrolledDown {
+    top: -100px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    backdrop-filter: blur(5px);
   }
+
+  .nav-logo img {
+    height: 1.6rem;
+  }
+
   .toggle-btn {
     font-size: 2rem;
     background: transparent;
@@ -36,6 +38,7 @@ export const Container = styled.div`
   .toggle-btn:hover {
     color: ${theme.colors.primary3};
   }
+
   .nav-links {
     display: none;
   }
@@ -52,7 +55,7 @@ export const Container = styled.div`
       margin-right: 5rem;
       text-transform: capitalize;
       color: ${theme.colors.grey2};
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 500;
       padding: 0.5rem 0;
       will-change: transform;
@@ -65,13 +68,22 @@ export const Container = styled.div`
     }
 
     .nav-links li:hover {
-      color: ${theme.colors.primary3};
+      color: ${theme.colors.primary4};
       transform: translateY(-2px);
       transition: transform 125ms;
-
-      /* TODO: replace line below with another way to underline, it breaks in big screens */
-      /* box-shadow: 0px 2px ${theme.colors.primary3}; */
     }
+
+    .nav-links li:active {
+      color: ${theme.colors.primary3};
+      transform: translateY(1px);
+      transition: transform 125ms;
+    }
+
+    .link-number {
+      font-size: 1.8rem;
+      color: ${theme.colors.primary4};
+    }
+
     .nav-center {
       display: grid;
       grid-template-columns: auto 1fr;

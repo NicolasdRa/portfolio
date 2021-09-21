@@ -11,6 +11,7 @@ export const theme: DefaultTheme = {
   },
 
   colors: {
+    primary0: '#ffebec',
     primary1: '#fd9ba0',
     primary2: '#fc5e66',
     primary3: '#fb3640',
@@ -18,6 +19,7 @@ export const theme: DefaultTheme = {
     primary5: '#972026',
 
     white: '#ffffff',
+    background: '#FAFAFA',
 
     grey1: '#262626',
     grey2: '#515151',
@@ -41,4 +43,8 @@ export const theme: DefaultTheme = {
     shadow2: '',
     shadow3: '',
   },
+
+  borderRadius: '4px',
+
+  transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
 };

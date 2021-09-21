@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const contentRef = useRef(null);
-  const elementsRef = useRef([]);
+  const elementsRef = useRef<any[]>([]);
   elementsRef.current = [];
 
   useEffect(() => {
@@ -71,12 +71,15 @@ const Projects = () => {
 
   return (
     <Container>
-      <section id="projects" className="projects" ref={contentRef}>
+      <div id="projects" className="projects" ref={contentRef}>
         <div className="content">
           <div className="title-container">
-            <h2 className="title">projects</h2>
+            <h2 className="title">
+              <div className="title-line" />
+              <span>03.</span>projects
+            </h2>
+            <h3 className="subtitle">things i’ve built, things I’m working on</h3>
           </div>
-          <h3>things i’ve built, things I’m working on</h3>
 
           <div className="project-list">
             {projects.map((project) => {
@@ -116,13 +119,12 @@ const Projects = () => {
             })}
           </div>
           <div className="btn-container">
-            {/* TODO: link to download full CV */}
-            <button type="button" className="btn">
-              all projects
-            </button>
+            <a href="/projects" className="cta">
+              more projects
+            </a>
           </div>
         </div>
-      </section>
+      </div>
     </Container>
   );
 };

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
-export const Container = styled.div`
+export const Container = styled.section`
   .contact {
     display: flex;
     flex-direction: row;
@@ -67,7 +67,9 @@ export const Container = styled.div`
   }
 
   .title {
-    color: ${theme.colors.primary3};
+    display: flex;
+    justify-content: flex-end;
+    color: ${theme.colors.primary4};
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 600;
@@ -76,42 +78,5 @@ export const Container = styled.div`
     width: 23.5rem;
     margin-bottom: 1rem;
     text-align: right;
-  }
-
-  .title::before {
-    content: '';
-    width: 60px;
-    height: 8px;
-    left: 100px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
-  }
-
-  .btn {
-    color: ${theme.colors.primary3};
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    font-weight: 600;
-    padding-top: 7px;
-    position: relative;
-    width: 12.5rem;
-    margin-bottom: 1rem;
-    text-align: right;
-  }
-
-  .btn::before {
-    content: '';
-    width: 60px;
-    height: 10px;
-    left: 0px;
-    border-bottom: 1px solid ${theme.colors.primary3};
-    position: absolute;
-  }
-
-  .btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
   }
 `;

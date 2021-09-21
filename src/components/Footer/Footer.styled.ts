@@ -1,42 +1,41 @@
 import styled from 'styled-components';
 import { theme } from '../../style/theme';
 
-export const Container = styled.div`
+export const Container = styled.footer`
   .footer {
-    height: 10rem;
+    /* min-height: 12rem; */
     text-align: center;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+  }
+
+  .logo img {
+    height: 4rem;
+    margin-bottom: 4rem;
   }
 
   .footer h4 {
-    margin-top: 0.5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
     color: currentColor;
     font-weight: normal;
     /* text-transform: uppercase; */
   }
 
   .footer h4 span {
-    color: ${theme.colors.primary3};
-  }
-
-  .footer-links {
-    margin: 0 auto 1rem auto;
+    color: ${theme.colors.primary4};
   }
 
   .social-links {
-    margin-top: 2rem;
     margin-bottom: 3rem;
-    width: 25rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .social-link {
     font-size: 2rem;
+    margin-right: 3rem;
     color: ${theme.colors.grey3};
-    margin-right: 1.5rem;
     will-change: transform;
     backface-visibility: hidden;
     transition: transform 450ms ease-out;
@@ -46,6 +45,10 @@ export const Container = styled.div`
     color: ${theme.colors.primary3};
     transform: translateY(-2px);
     transition: transform 125ms;
+  }
+
+  .social-link:last-child {
+    margin-right: 0;
   }
 
   .social-link li:last-child {

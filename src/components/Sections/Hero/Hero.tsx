@@ -34,19 +34,21 @@ const Hero = () => {
   return (
     <Container>
       {/* <BgImage image={image}> */}
-      <header className="hero">
-        <div ref={contentRef}>
-          <h1 className="title">nicolás di rago</h1>
-          <div className="name-container">
-            <div className="line" />
-            <h2 className="name">web developer</h2>
-          </div>
+      <div id="hero" className="hero" ref={contentRef}>
+        <div>
+          <h1 className="title">
+            nicolás<span>di rago</span>
+          </h1>
+          <div className="name-container">{/* <h2 className="name">web developer</h2> */}</div>
           <p className="details">
-            full-stack, mainly focused on the frontend side and UX/UI design. Based in Berlin.
-            Currently working as a free-lancer.
+            full-stack <span>web developer</span>, mainly focused on the frontend side and UX/UI
+            design. Currently working as a free-lancer. Based in Berlin.
           </p>
+          <a href="#contact" className="cta cta-hero">
+            Get in touch
+          </a>
         </div>
-      </header>
+      </div>
       {/* </BgImage> */}
     </Container>
   );
