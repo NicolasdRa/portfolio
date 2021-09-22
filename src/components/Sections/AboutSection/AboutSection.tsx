@@ -1,11 +1,12 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'gatsby';
 import { v4 as uuidv4 } from 'uuid';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Container } from './About.styled';
+import { Container } from './AboutSection.styled';
 import about from '../../../constants/about';
 
-const About = () => {
+const About: React.FC = () => {
   gsap.registerPlugin(ScrollTrigger);
   const contentRef = useRef(null);
 
@@ -61,9 +62,9 @@ const About = () => {
 
             <div className="btn-container">
               {/* TODO: link to page with hobbies and reference to tango and other shit */}
-              <button type="button" className="cta cta-about">
+              <Link to="/about" className="cta cta-about">
                 the other side
-              </button>
+              </Link>
             </div>
           </div>
         </div>

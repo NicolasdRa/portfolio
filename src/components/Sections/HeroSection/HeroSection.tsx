@@ -6,7 +6,7 @@ import { gsap } from 'gsap';
 
 // import { BgImage } from 'gbimage-bridge';
 
-import { Container } from './Hero.styled';
+import { Container } from './HeroSection.styled';
 
 const Hero = () => {
   const contentRef = useRef<HTMLDivElement>(null);

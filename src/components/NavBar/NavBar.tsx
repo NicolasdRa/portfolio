@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { FaAlignRight } from 'react-icons/fa';
 import logo from '../../assets/svg/logo.svg';
@@ -41,7 +42,9 @@ const Navbar: React.FC<Props> = ({ toggleSideBar }) => {
     <Container ref={navRef}>
       <nav className={`navbar ${scrolled}`}>
         <div className="nav-logo">
-          <img src={logo} alt="web dev" />
+          <Link to="/" className="nav-links">
+            <img src={logo} alt="web dev" />
+          </Link>
         </div>
         <button type="button" className="toggle-btn" onClick={toggleSideBar}>
           <FaAlignRight />

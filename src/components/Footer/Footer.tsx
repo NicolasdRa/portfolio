@@ -1,16 +1,16 @@
 import React from 'react';
 // import socialLinks from '../../constants/social_links';
-// import logo from '../../assets/svg/logo.svg';
+import logo from '../../assets/svg/logo.svg';
 import { Container } from './Footer.styled';
 
 const Footer = () => (
   <Container>
     <footer className="footer">
-      {/* <div className="logo">
+      <div className="logo">
         <a href="#hero">
           <img src={logo} alt="web dev" />
         </a>
-      </div> */}
+      </div>
       <h4>
         designed & built by <span> nicolás di rago</span>
       </h4>

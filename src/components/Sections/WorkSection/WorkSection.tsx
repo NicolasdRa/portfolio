@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Container } from './Work.styled';
+import { Container } from './WorkSection.styled';
 import jobs from '../../../constants/jobs';
 
 const Work = () => {
@@ -70,10 +70,9 @@ const Work = () => {
             })}
 
             <div className="btn-container">
-              {/* TODO: link to download full CV */}
-              <button type="button" className="cta cta-work">
+              <a href="../../assets/cv-nicolasdirago.pdf" download className="cta cta-work">
                 download cv
-              </button>
+              </a>
             </div>
           </div>
         </div>

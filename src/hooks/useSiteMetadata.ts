@@ -26,6 +26,7 @@ export const useSiteMetadata = () => {
             keywords
             siteUrl
             imageUrl
+            twitterUsername
             language
           }
         }

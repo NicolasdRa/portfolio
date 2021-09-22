@@ -10,6 +10,7 @@ export const Container = styled.section`
     height: 100vh;
     width: 60vw;
     margin: 0 auto;
+    padding-top: 10rem;
   }
 
   .work h3 {
@@ -88,7 +89,6 @@ export const Container = styled.section`
     font-weight: 600;
     padding-top: 7px;
     position: relative;
-    width: 23rem;
     margin-bottom: 1rem;
     text-align: right;
   }

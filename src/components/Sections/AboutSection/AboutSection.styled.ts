@@ -2,39 +2,30 @@ import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
 export const Container = styled.section`
-  .contact {
+  .about {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 60vw;
     margin: 0 auto;
-    padding: 50rem 0;
   }
 
-  .contact h3 {
+  .about h3 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 2rem;
   }
 
-  .contact p {
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 150%;
-  }
-
   .content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    width: 60vw;
   }
 
   .titles {
-    width: 45%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -42,28 +33,28 @@ export const Container = styled.section`
     text-align: right;
   }
 
-  .form {
-    width: 55%;
+  .text {
+    width: 65%;
   }
 
-  .form-group {
-    margin-top: 10rem;
-    margin-bottom: 5rem;
+  .profile {
+    margin-bottom: 2rem;
   }
-  .form-control {
-    display: block;
-    width: 30rem;
-    padding: 1rem 0;
-    border: none;
-    border-bottom: 1px solid ${theme.colors.grey4};
-    margin-bottom: 3rem;
-    outline: none;
-    text-transform: lowercase;
-    background: transparent;
+
+  .stack-item {
+    margin-bottom: 1rem;
   }
-  .form-control::placeholder {
-    font-family: ${theme.fonts.primary};
-    text-transform: lowercase;
+
+  .title-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .btn-container {
+    display: flex;
+    position: relative;
+    width: 50%;
   }
 
   .title {
@@ -75,8 +66,14 @@ export const Container = styled.section`
     font-weight: 600;
     padding-top: 7px;
     position: relative;
-    width: 23.5rem;
     margin-bottom: 1rem;
     text-align: right;
+  }
+
+  .title span {
+    margin-right: 0.5rem;
+  }
+  .cta-about {
+    margin-top: 4rem;
   }
 `;

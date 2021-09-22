@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import services from '../../../constants/services';
-import { Container } from './Services.styled';
+import { Container } from './ServicesSection.styled';
 
 const Services: React.FC = () => (
   <Container>

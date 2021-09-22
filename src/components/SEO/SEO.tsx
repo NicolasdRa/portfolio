@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from '@reach/router';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import Favicon from '../../assets/favicon.ico';
 

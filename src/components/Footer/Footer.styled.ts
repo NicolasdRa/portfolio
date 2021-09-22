@@ -11,12 +11,12 @@ export const Container = styled.footer`
   }
 
   .logo img {
-    height: 4rem;
-    margin-bottom: 4rem;
+    height: 2.3rem;
+    margin-bottom: 2.5rem;
   }
 
   .footer h4 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: currentColor;
     font-weight: normal;
     /* text-transform: uppercase; */

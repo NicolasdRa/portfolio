@@ -8,6 +8,7 @@ export const Container = styled.section`
     justify-content: flex-start;
     align-items: center;
     margin-top: 8rem;
+    padding-top: 10rem;
   }
 
   .projects h3 {
@@ -59,7 +60,6 @@ export const Container = styled.section`
     font-weight: 600;
     padding-top: 7px;
     position: relative;
-    width: 18rem;
     margin-bottom: 1rem;
     text-align: right;
   }

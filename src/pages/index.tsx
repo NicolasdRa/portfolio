@@ -4,12 +4,12 @@ import React from 'react';
 // import { BgImage } from 'gbimage-bridge';
 import ParticlesBg from 'particles-bg';
 
-import Hero from '../components/Sections/Hero/Hero';
-// import Services from '../components/Sections/Services/Services';
-import About from '../components/Sections/About/About';
-import Work from '../components/Sections/Work/Work';
-import Projects from '../components/Sections/Projects/Projects';
-import Contact from '../components/Sections/Contact/Contact';
+import HeroSection from '../components/Sections/HeroSection/HeroSection';
+// import ServicesSection from '../components/Sections/ServicesSection/ServicesSection';
+import AboutSection from '../components/Sections/AboutSection/AboutSection';
+import WorkSection from '../components/Sections/WorkSection/WorkSection';
+import ProjectsSection from '../components/Sections/ProjectsSection/ProjectsSection';
+import ContactSection from '../components/Sections/ContactSection/ContactSection';
 
 const Index: React.FC = () => {
   const particleConfig = {
@@ -33,13 +33,13 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <Hero />
+      <HeroSection />
       <ParticlesBg num={50} type="custom" bg config={particleConfig} />
       {/* <Services /> */}
-      <About />
-      <Work />
-      <Projects />
-      <Contact />
+      <AboutSection />
+      <WorkSection />
+      <ProjectsSection />
+      <ContactSection />
     </>
   );
 };
