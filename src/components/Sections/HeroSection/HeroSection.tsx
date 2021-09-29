@@ -30,7 +30,6 @@ const Hero: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const headingRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!headingRef.current) throw Error('divRef is not assigned');
@@ -38,23 +37,6 @@ const Hero: React.FC = () => {
 
     gsap.from(element, { duration: 1, opacity: 0, delay: 0.5 });
   }, []);
-
-  useEffect(() => {
-    if (!imageRef.current) throw Error('divRef is not assigned');
-    const element = imageRef.current;
-
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-      },
-      {
-        duration: 0.3,
-        delay: 0.5,
-        opacity: 1,
-      }
-    );
-  }, [activeIndex]);
 
   const imgData = useStaticQuery(query);
   const {
@@ -67,7 +49,7 @@ const Hero: React.FC = () => {
     <Container>
       <div id="hero" className="hero">
         <div className="content">
-          <div className="media" ref={imageRef}>
+          <div className="media">
             {nodes.map((node: ImageDataLike, index: any) => {
               const isActive = index === activeIndex;
 

@@ -26,17 +26,17 @@ export const Wrapper = styled.div`
   }
 
   .secondary-cursor {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 
     .cursor-background {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      border: 1px solid black;
+      border: 1px solid ${theme.colors.grey4};
       position: relative;
-      &:after,
-      &:before {
+      /* &:before, */
+      &:after {
         content: '';
         width: 3px;
         height: 3px;
@@ -47,14 +47,15 @@ export const Wrapper = styled.div`
         top: 50%;
         transform: translateY(-50%);
         animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+        right: 22px;
       }
       /* &:before {
         left: 10px;
       } */
 
-      &:after {
+      /* &:after {
         right: 12px;
-      }
+      } */
     }
   }
 `;

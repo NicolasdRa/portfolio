@@ -102,6 +102,7 @@ export const Container = styled.section`
     left: 50%;
     transform: translate(24%, 18%);
     transition: all 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    opacity: 0;
   }
 
   .active {

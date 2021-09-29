@@ -35,10 +35,10 @@ const Hero: React.FC = () => {
 
   const textRef = useRef<HTMLDivElement>(null);
 
-  // const mousePosition = useMouse(textRef, {
-  //   enterDelay: 100,
-  //   leaveDelay: 100,
-  // });
+  const mousePosition = useMouse(textRef, {
+    enterDelay: 100,
+    leaveDelay: 100,
+  });
 
   // const mousePosition = useMousePosition();
 
