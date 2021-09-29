@@ -1,13 +1,39 @@
 import React, { useRef, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 } from 'uuid';
+import { useStaticQuery, graphql } from 'gatsby';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import projects from '../../constants/projects';
 import ProjectItem from '../ProjectItem/ProjectItem';
+import CustomImage from '../CustomImage/CustomImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const query = graphql`
+  {
+    allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+      nodes {
+        name
+        childImageSharp {
+          gatsbyImageData(
+            width: 300
+            placeholder: BLURRED
+            transformOptions: { grayscale: true }
+            height: 400
+          )
+        }
+      }
+    }
+  }
+`;
+
 const ProjectList = () => {
+  const imgData = useStaticQuery(query);
+  const {
+    allFile: { nodes },
+  } = imgData;
+
   const contentRef = useRef(null);
   const elementsRef = useRef<any[]>([]);
   elementsRef.current = [];
@@ -71,9 +97,9 @@ const ProjectList = () => {
 
   return (
     <div className="project-list" ref={contentRef}>
-      {projects.map((project) => (
-        <div ref={addToRef}>
-          <ProjectItem project={project} />
+      {nodes.map((node: { name: string }) => (
+        <div ref={addToRef} key={v4()}>
+          <CustomImage node={node} name={node.name} active={false} />
         </div>
       ))}
     </div>

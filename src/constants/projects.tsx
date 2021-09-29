@@ -1,13 +1,13 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { MdWeb } from 'react-icons/md';
-import mytinerary from '../assets/images/myitinerary.jpg';
-import clothesShop from '../assets/images/ecommerce.jpg';
-import energeniousWebsite from '../assets/images/energeniousWebsite.jpg';
-import myDoc from '../assets/images/mydoc.jpg';
-import energeniousGUI from '../assets/images/energeniousGui.jpg';
-import energeniousAdmin from '../assets/images/energeniousAdmin.gif';
-import energeniousSpreadsheet from '../assets/images/energeniousSpreadsheet.jpg';
+import mytinerary from '../assets/images/projects/myitinerary.jpg';
+import clothesShop from '../assets/images/projects/ecommerce.jpg';
+import energeniousWebsite from '../assets/images/projects/energeniousWebsite.jpg';
+import myDoc from '../assets/images/projects/mydoc.jpg';
+import energeniousGUI from '../assets/images/projects/energeniousGui.jpg';
+import energeniousAdmin from '../assets/images/projects/energeniousAdmin2.jpg';
+import energeniousSpreadsheet from '../assets/images/projects/energeniousSpreadsheet.jpg';
 
 const data = [
   {

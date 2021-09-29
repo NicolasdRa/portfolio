@@ -4,6 +4,7 @@ export const theme: DefaultTheme = {
   fonts: {
     primary: 'Source Code Pro, sans-serif',
     secondary: 'Space Grotesk, sans-serif',
+    tertiary: 'Oswald, sans-serif',
   },
 
   typography: {
@@ -44,7 +45,7 @@ export const theme: DefaultTheme = {
     shadow3: '',
   },
 
-  borderRadius: '4px',
+  borderRadius: '2px',
 
   transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
 };

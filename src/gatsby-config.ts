@@ -54,6 +54,10 @@ const gatsbyConfig: GatsbyConfig = {
             family: 'Space Grotesk',
             weights: ['300', '400', '500', '600', '700'],
           },
+          {
+            family: 'Oswald',
+            weights: ['300', '400', '500', '600', '700'],
+          },
         ],
       },
     },

@@ -17,7 +17,7 @@ const SocialLinks: React.FC = () => {
     <Container>
       <div ref={linksRef} className="vertical-links">
         <div className="social-links">
-          <a href="../../assets/cv-nicolasdirago.pdf" download className="social-link cv">
+          <a href="../../assets/cv-nicolasdirago.pdf" download className="cv">
             CV
           </a>
           <div className="vertical-line" />

@@ -18,12 +18,14 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
+    cursor: none
   }
 
   body {
     font-family: ${theme.fonts.primary};
     font-size: 1.6rem;
     background-color: ${theme.colors.background};
+    cursor: none
   }
 
 body::-webkit-scrollbar {
@@ -100,9 +102,9 @@ body::-webkit-scrollbar-thumb {
   }
 
   .cta {
-    color: ${theme.colors.primary4};
-    background-color: transparent;
-    border: 1px solid ${theme.colors.primary4};
+    color: ${theme.colors.background};
+    background-color: ${theme.colors.grey1};
+    border: 1px solid ${theme.colors.grey1};
     border-radius: ${theme.borderRadius};
     padding: 1.25rem 1.75rem;
     line-height: 1;
@@ -111,17 +113,22 @@ body::-webkit-scrollbar-thumb {
     transition: ${theme.transition};
     font-size: 1.4rem;
     width: max-content;
+    will-change: transform;
 
   }
 
   .cta:hover {
-    background-color: ${theme.colors.primary0};
+    color: ${theme.colors.grey1};
+    background-color: ${theme.colors.background};
     transform: translateY(-2px);
     transition: ${theme.transition};
+
   }
 
   .cta:active {
-    background-color: ${theme.colors.white};
+    color: ${theme.colors.primary3};
+    background-color: ${theme.colors.background};
+    border: 1px solid ${theme.colors.primary3};
     transform: translateY(1px);
     transition: transform 125ms;
   }

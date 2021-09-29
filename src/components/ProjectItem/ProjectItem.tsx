@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -19,7 +20,7 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
 
   return (
     <div key={id} className="project-block">
-      <img src={image} alt={title} className="project-image" />
+      <StaticImage src={image} alt={title} className="project-image" />
       <div className="project-info">
         {featured && <h5 className="featured">featured</h5>}
         <h4>{title}</h4>
