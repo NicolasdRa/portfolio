@@ -2,40 +2,10 @@ import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
 export const Container = styled.section`
-  .projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 8rem;
-    padding-top: 10rem;
-  }
-
-  .projects h3 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-  }
-
-  .projects h4 {
-    font-size: 2.3rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-  .projects h5 {
-    font-family: ${theme.fonts.primary};
-    margin-bottom: 1rem;
-  }
-
-  .position {
-    text-transform: capitalize;
-    margin-left: 1rem;
-  }
-  .projects p {
-    /* line-height: 160%; */
-    margin-bottom: 2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .content {
     display: flex;
@@ -68,21 +38,10 @@ export const Container = styled.section`
     margin-right: 0.5rem;
   }
 
-  .project-block {
-    margin-top: 4rem;
-    margin-bottom: 10rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .project-image {
-    width: 45%;
-    object-fit: cover;
-    border-radius: 1rem;
-  }
-
-  .project-info {
-    width: 50%;
+  .subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
   }
 
   .btn-container {
@@ -91,36 +50,5 @@ export const Container = styled.section`
     justify-content: center;
     position: relative;
     width: 50%;
-  }
-
-  .stack-item {
-    margin-right: 3rem;
-  }
-
-  .links {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    display: flex;
-    width: max-content;
-    justify-content: space-between;
-  }
-
-  .link-item {
-    font-size: 1.75rem;
-    margin-right: 3rem;
-    color: ${theme.colors.grey3};
-    transition: ${theme.transition};
-  }
-
-  .link-item:hover {
-    color: ${theme.colors.primary4};
-    transform: translateY(-2px);
-    transition: ${theme.transition};
-  }
-
-  .link-item:active {
-    ${theme.colors.primary3};
-    transform: translateY(1px);
-    transition: transform 125ms;
   }
 `;

@@ -29,6 +29,15 @@ const gatsbyConfig: GatsbyConfig = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Defaults to 100
+        collectionTypes: [`project`],
+        // singleTypes: [`home-page`, `contact`],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-styled-components',
       options: {
         displayName: process.env.NODE_ENV !== 'production',

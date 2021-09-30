@@ -42,7 +42,7 @@ const data = [
     links: [
       {
         icon: <FaGithub className="social-icon" />,
-        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+        url: 'https://github.com/NicolasdRa/e-commerce-app',
       },
       {
         icon: <MdWeb className="social-icon" />,
@@ -62,7 +62,7 @@ const data = [
     links: [
       {
         icon: <FaGithub className="social-icon" />,
-        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+        url: 'https://energenious.eu/',
       },
       {
         icon: <MdWeb className="social-icon" />,
@@ -83,7 +83,7 @@ const data = [
     links: [
       {
         icon: <FaGithub className="social-icon" />,
-        url: 'https://github.com/NicolasdRa/travel-App-Mytinerary',
+        url: 'https://github.com/NicolasdRa/appointments-app',
       },
       {
         icon: <MdWeb className="social-icon" />,
@@ -95,7 +95,7 @@ const data = [
 
   {
     id: 5,
-    title: 'Micogrid Creator UX-UI',
+    title: 'Micogrid Creator - Energenious',
     summary: 'UX-UI re-design, energenious flagship product',
     featured: true,
     description: "Re-designed of the company's flagship product's UI and UX",
@@ -115,7 +115,7 @@ const data = [
 
   {
     id: 6,
-    title: 'Account management app - energenious',
+    title: 'Account management app - Energenious',
     summary: 'User portal, login and account management app',
     featured: true,
     description:
@@ -140,7 +140,7 @@ const data = [
     featured: true,
     description:
       'Design and partial implementation of Spreadsheet widget developed in Typescript and React with Material UI. ',
-    stack: ['React.js', 'Redux.js', 'Material-UI', 'Figma'],
+    stack: ['React.js', 'Typescript', 'Redux.js', 'Material-UI', 'Figma'],
     links: [
       {
         icon: <FaGithub className="social-icon" />,

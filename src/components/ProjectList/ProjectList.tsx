@@ -3,40 +3,56 @@ import { v4 } from 'uuid';
 import { useStaticQuery, graphql } from 'gatsby';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-import projects from '../../constants/projects';
+import { ImageDataLike } from 'gatsby-plugin-image';
 import ProjectItem from '../ProjectItem/ProjectItem';
-import CustomImage from '../CustomImage/CustomImage';
+import { Container } from './ProjectList.styled';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const query = graphql`
   {
-    allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+    allStrapiProject {
       nodes {
-        name
-        childImageSharp {
-          gatsbyImageData(
-            width: 300
-            placeholder: BLURRED
-            transformOptions: { grayscale: true }
-            height: 400
-          )
+        title
+        summary
+        web
+        slug
+        stack {
+          name
+        }
+        github
+        featured
+        description
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                placeholder: BLURRED
+                transformOptions: { grayscale: true, fit: FILL }
+                formats: AUTO
+              )
+            }
+          }
         }
       }
     }
   }
 `;
 
-const ProjectList = () => {
-  const imgData = useStaticQuery(query);
+interface ProjectListProps {
+  featured: boolean;
+}
+
+const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
   const {
-    allFile: { nodes },
-  } = imgData;
+    allStrapiProject: { nodes: projects },
+  } = useStaticQuery(query);
 
   const contentRef = useRef(null);
   const elementsRef = useRef<any[]>([]);
   elementsRef.current = [];
+
+  const data = featured ? projects.filter((project) => project.featured === true) : projects;
 
   useEffect(() => {
     if (!contentRef.current) throw Error('divRef is not assigned');
@@ -96,13 +112,27 @@ const ProjectList = () => {
   };
 
   return (
-    <div className="project-list" ref={contentRef}>
-      {nodes.map((node: { name: string }) => (
-        <div ref={addToRef} key={v4()}>
-          <CustomImage node={node} name={node.name} active={false} />
-        </div>
-      ))}
-    </div>
+    <Container>
+      <div ref={contentRef} className="list">
+        {data.map(
+          (project: {
+            id: number;
+            title: string;
+            summary: string;
+            featured: boolean;
+            description: string;
+            stack: any[];
+            web: string;
+            github: string;
+            image: { localFile: { childImageSharp: { gatsbyImageData: ImageDataLike } } };
+          }) => (
+            <div ref={addToRef} key={v4()}>
+              <ProjectItem project={project} />
+            </div>
+          )
+        )}
+      </div>
+    </Container>
   );
 };
 

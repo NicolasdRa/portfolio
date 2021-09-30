@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,7 +14,7 @@ const Projects = () => {
 
   return (
     <Container>
-      <div id="projects" className="projects" ref={contentRef}>
+      <div id="projects" className="content" ref={contentRef}>
         <div className="content">
           <div className="title-container">
             <h2 className="title">
@@ -23,7 +23,7 @@ const Projects = () => {
             </h2>
             <h3 className="subtitle">things i’ve built, things I’m working on</h3>
           </div>
-          <ProjectList />
+          <ProjectList featured />
           <div className="btn-container">
             <Link to="/projects" className="cta">
               more projects

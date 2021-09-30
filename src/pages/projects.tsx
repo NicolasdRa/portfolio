@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { gsap } from 'gsap';
 import { Link, PageProps } from 'gatsby';
 import { theme } from '../style/theme';
+import ProjectList from '../components/ProjectList/ProjectList';
 
 const Wrapper = styled.main`
   h1 {
@@ -23,9 +24,10 @@ const Projects: React.FC<PageProps> = () => {
   }, []);
 
   return (
-    <Wrapper className="error-page">
+    <Wrapper>
       <div ref={contentRef} className="error-container">
         <h1>Other projects Page</h1>
+        <ProjectList featured={false} />
         <Link to="/" className="cta">
           back home
         </Link>
