@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { PageProps } from 'gatsby';
-// import { getImage } from 'gatsby-plugin-image';
-// import { BgImage } from 'gbimage-bridge';
 import { GlobalStyle } from '../../style/GlobalStyle';
 import { SEO } from '../SEO/SEO';
 import Navbar from '../NavBar/NavBar';
@@ -20,13 +18,11 @@ export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, locati
     <>
       <GlobalStyle />
       <SEO location={location} />
-      {/* <BgImage image={image3}> */}
       <Navbar toggleSideBar={toggleSideBar} />
       <CustomCursor />
       {children}
       <SocialLinks />
       <Footer />
-      {/* </BgImage> */}
     </>
   );
 };

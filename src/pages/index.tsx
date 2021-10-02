@@ -1,8 +1,5 @@
 import React from 'react';
-// import { PageProps, graphql, useStaticQuery } from 'gatsby';
-// import { getImage } from 'gatsby-plugin-image';
-// import { BgImage } from 'gbimage-bridge';
-import ParticlesBg from 'particles-bg';
+import loadable from '@loadable/component';
 
 import HeroSection from '../components/Sections/HeroSection/HeroSection';
 // import ServicesSection from '../components/Sections/ServicesSection/ServicesSection';
@@ -10,6 +7,8 @@ import AboutSection from '../components/Sections/AboutSection/AboutSection';
 import WorkSection from '../components/Sections/WorkSection/WorkSection';
 import ProjectsSection from '../components/Sections/ProjectsSection/ProjectsSection';
 import ContactSection from '../components/Sections/ContactSection/ContactSection';
+
+const ParticlesBg = loadable(() => import('../../node_modules/particles-bg'));
 
 const Index: React.FC = () => {
   const particleConfig = {

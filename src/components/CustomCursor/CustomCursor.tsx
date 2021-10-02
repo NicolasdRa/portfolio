@@ -71,7 +71,6 @@ const CustomCursor = () => {
       secondaryCursorRef.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
     };
     followMouse();
-    return () => {};
   }, []);
 
   return (
