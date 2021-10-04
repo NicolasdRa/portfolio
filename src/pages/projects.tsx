@@ -6,11 +6,31 @@ import { theme } from '../style/theme';
 import ProjectList from '../components/ProjectList/ProjectList';
 
 const Wrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 8vw;
+  margin: 0 auto;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80vw;
+  }
+
   h1 {
     font-family: ${theme.fonts.secondary};
-    font-size: 4rem;
-    font-weight: lighter;
-    margin-bottom: 5rem;
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin-bottom: 3rem;
+    max-width: 65vw;
+  }
+
+  .cta-project-page {
+    margin: 4rem 0;
+    align-self: center;
   }
 `;
 
@@ -25,10 +45,10 @@ const Projects: React.FC<PageProps> = () => {
 
   return (
     <Wrapper>
-      <div ref={contentRef} className="error-container">
-        <h1>Other projects Page</h1>
+      <div ref={contentRef} className="content">
+        <h1>more projects</h1>
         <ProjectList featured={false} />
-        <Link to="/" className="cta">
+        <Link to="/" className="cta cta-project-page">
           back home
         </Link>
       </div>

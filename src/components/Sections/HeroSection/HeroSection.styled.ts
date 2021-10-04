@@ -2,12 +2,10 @@ import styled from 'styled-components';
 import { theme } from '../../../style/theme';
 
 export const Container = styled.section`
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
   .content {
     display: grid;
@@ -83,7 +81,7 @@ export const Container = styled.section`
 
   .details span {
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: none;
     color: ${theme.colors.primary4};
   }
 
@@ -112,5 +110,69 @@ export const Container = styled.section`
 
   .inactive {
     opacity: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      width: 100vw;
+      margin: 0 auto;
+    }
+
+    .media {
+      display: none;
+    }
+
+    .title {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        'title-2 title-1 . '
+        'title-3 . .'
+        'details details details';
+      /* place-content: center; */
+      height: 50vh;
+      width: 100%;
+      font-family: ${theme.fonts.tertiary};
+      font-size: 5rem;
+    }
+
+    .title-2,
+    .title-3 {
+      font-size: 12rem;
+    }
+
+    .title-1 {
+      margin: 1rem 1rem 1.8rem -8rem;
+    }
+    .title-2 {
+      margin: 1rem 8rem 1rem 0rem;
+    }
+    .title-3 {
+      margin: -7rem 0rem 1rem 4rem;
+    }
+
+    .details {
+      font-size: 1.5rem;
+      justify-self: center;
+      align-self: center;
+      margin: 0;
+      padding: 0;
+      width: 80%;
+    }
+
+    .description {
+      margin: 2rem 0;
+      padding: 0;
+    }
+
+    .cta-hero {
+      margin: 3rem 0 0 0;
+    }
   }
 `;

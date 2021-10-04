@@ -38,7 +38,7 @@ const data = [
     featured: true,
     description:
       'E-commerce App with fully functional shopping-cart and Integration with Stripe developed in React with Redux, with Firebase for backend and database and a mix of Styled Components and SASS.',
-    stack: ['React.js', 'Redux.js', 'firebase', 'styled components', 'Stripe payments'],
+    stack: ['React.js', 'Redux.js', 'firebase', 'styled components', 'stripe'],
     links: [
       {
         icon: <FaGithub className="social-icon" />,

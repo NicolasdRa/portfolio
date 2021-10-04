@@ -26,11 +26,7 @@ const query = graphql`
         image {
           localFile {
             childImageSharp {
-              gatsbyImageData(
-                placeholder: BLURRED
-                transformOptions: { grayscale: true, fit: FILL }
-                formats: AUTO
-              )
+              gatsbyImageData(placeholder: BLURRED, transformOptions: { fit: FILL }, formats: AUTO)
             }
           }
         }
@@ -57,51 +53,56 @@ const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
   useEffect(() => {
     if (!contentRef.current) throw Error('divRef is not assigned');
     const element = contentRef.current;
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        duration: 0.8,
-        ease: 'expo.out',
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          id: `Projects`,
-          trigger: element,
-          start: 'top 75%',
-          end: 'bottom 90%',
-          toggleActions: 'play none none reverse',
-          // markers: true,
-        },
-      }
-    );
 
-    elementsRef.current.forEach((el, index) => {
-      gsap.fromTo(
-        el,
-        {
-          opacity: 0,
-          y: 100,
-        },
-        {
-          duration: 0.8,
-          ease: 'expo.out',
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            id: `project-${index + 1}`,
-            trigger: el,
-            start: 'top 75%',
-            // start: 'top 75%',
-            // end: 'bottom 90%',
-            toggleActions: 'play none none none',
-            // markers: true,
+    ScrollTrigger.matchMedia({
+      '(min-width: 800px)': function () {
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+            y: 100,
           },
-        }
-      );
+          {
+            duration: 0.8,
+            ease: 'expo.out',
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+              id: `Projects`,
+              trigger: element,
+              start: 'top 75%',
+              end: 'bottom 90%',
+              toggleActions: 'play none none reverse',
+              // markers: true,
+            },
+          }
+        );
+
+        elementsRef.current.forEach((el, index) => {
+          gsap.fromTo(
+            el,
+            {
+              opacity: 0,
+              y: 100,
+            },
+            {
+              duration: 0.8,
+              ease: 'expo.out',
+              opacity: 1,
+              y: 0,
+              scrollTrigger: {
+                id: `project-${index + 1}`,
+                trigger: el,
+                start: 'top 75%',
+                // start: 'top 75%',
+                // end: 'bottom 90%',
+                toggleActions: 'play none none none',
+                // markers: true,
+              },
+            }
+          );
+        });
+      },
     });
   }, []);
 

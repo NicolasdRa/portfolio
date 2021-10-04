@@ -50,6 +50,26 @@ export const Container = styled.section`
     align-self: center;
     justify-content: center;
     position: relative;
-    width: 50%;
+    width: min-content;
+  }
+
+  @media screen and (max-width: 600px) {
+    max-width: 100vw;
+    height: 100%;
+
+    .content {
+      width: 80vw;
+      align-items: flex-start;
+    }
+
+    .title-container {
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .btn-container {
+      margin: 4rem 0 0 0;
+      align-self: center;
+    }
   }
 `;

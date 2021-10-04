@@ -34,7 +34,15 @@ export const Container = styled.section`
   }
 
   .text {
+    display: flex;
+    flex-direction: column;
     width: 65%;
+  }
+
+  .text span {
+    font-weight: bold;
+    text-transform: none;
+    color: ${theme.colors.primary4};
   }
 
   .profile {
@@ -54,7 +62,7 @@ export const Container = styled.section`
   .btn-container {
     display: flex;
     position: relative;
-    width: 50%;
+    width: min-content;
   }
 
   .title {
@@ -75,5 +83,40 @@ export const Container = styled.section`
   }
   .cta-about {
     margin-top: 4rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .about {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 80vw;
+      height: 100%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .titles {
+      width: 100%;
+      align-items: flex-start;
+      margin: 0rem;
+      text-align: left;
+    }
+
+    .text {
+      width: 100%;
+    }
+
+    .stack-item {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn-container {
+      align-self: center;
+    }
   }
 `;

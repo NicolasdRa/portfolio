@@ -9,28 +9,32 @@ const Contact = () => {
 
   useEffect(() => {
     if (!contentRef.current) throw Error('divRef is not assigned');
-
     const element = contentRef.current;
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: 100,
+
+    ScrollTrigger.matchMedia({
+      '(min-width: 800px)': function () {
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+            y: 100,
+          },
+          {
+            duration: 0.8,
+            ease: 'expo.out',
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 75%',
+              end: 'bottom 90%',
+              toggleActions: 'play none none reverse',
+              // markers: true,
+            },
+          }
+        );
       },
-      {
-        duration: 0.8,
-        ease: 'expo.out',
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: element,
-          start: 'top 75%',
-          end: 'bottom 90%',
-          toggleActions: 'play none none reverse',
-          // markers: true,
-        },
-      }
-    );
+    });
   }, []);
 
   return (
@@ -47,7 +51,16 @@ const Contact = () => {
             <h3>drop a line</h3>
           </div>
 
-          <form action="" className="form">
+          <form
+            className="form"
+            name="contact-portfolio"
+            method="post"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            action="/success"
+          >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact-portfolio" />
             <div className="form-group">
               <input
                 type="text"
@@ -75,7 +88,7 @@ const Contact = () => {
                 className="form-control"
               />
             </div>
-            <button type="submit" className="cta">
+            <button type="submit" className="cta cta-contact">
               submit
             </button>
           </form>

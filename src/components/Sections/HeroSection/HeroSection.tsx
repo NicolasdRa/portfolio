@@ -46,48 +46,41 @@ const Hero: React.FC = () => {
   const name = ['nicolás', 'di', 'rago'];
 
   return (
-    <Container>
-      <div id="hero" className="hero">
-        <div className="content">
-          <div className="media">
-            {nodes.map((node: ImageDataLike, index: any) => {
-              const isActive = index === activeIndex;
+    <Container id="hero">
+      <div className="content">
+        <div className="media">
+          {nodes.map((node: ImageDataLike, index: any) => {
+            const isActive = index === activeIndex;
 
-              return (
-                <div key={v4()} className={`image ${isActive ? 'active' : 'inactive'}`}>
-                  <CustomImage
-                    isActive={isActive}
-                    // data={data[index].url}
-                    node={node}
-                    name={name[index]}
-                    // translate={`translate(${xPos / 1.5}px, ${yPos / 3}px)`}
-                  />
-                </div>
-              );
-            })}
-          </div>
-          <div className="title" ref={headingRef}>
-            {name.map((item, index) => (
-              <div key={v4()} className={`title-${index + 1}`}>
-                <AnimatedText
-                  key={v4()}
-                  text={item}
-                  index={index}
-                  setActiveIndex={setActiveIndex}
+            return (
+              <div key={v4()} className={`image ${isActive ? 'active' : 'inactive'}`}>
+                <CustomImage
+                  isActive={isActive}
+                  // data={data[index].url}
+                  node={node}
+                  name={name[index]}
+                  // translate={`translate(${xPos / 1.5}px, ${yPos / 3}px)`}
                 />
               </div>
-            ))}
-
-            <div className="details">
-              <div className="description">
-                full-stack <span>web developer</span>, mainly focused on the frontend side and UX/UI
-                design. Currently working as a free-lancer. Based in Berlin.
-              </div>
-
-              <a href="#contact" className="cta cta-hero">
-                Get in touch
-              </a>
+            );
+          })}
+        </div>
+        <div className="title" ref={headingRef}>
+          {name.map((item, index) => (
+            <div key={v4()} className={`title-${index + 1}`}>
+              <AnimatedText key={v4()} text={item} index={index} setActiveIndex={setActiveIndex} />
             </div>
+          ))}
+
+          <div className="details">
+            <div className="description">
+              full-stack <span>web developer</span>, mainly focused on the frontend side and UX/UI
+              design. Currently working as a <span>free-lancer</span>. Based in Berlin.
+            </div>
+
+            <a href="#contact" className="cta cta-hero">
+              Get in touch
+            </a>
           </div>
         </div>
       </div>

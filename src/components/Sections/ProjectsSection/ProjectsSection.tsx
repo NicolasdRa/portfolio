@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -7,32 +7,26 @@ import ProjectList from '../../ProjectList/ProjectList';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Projects = () => {
-  const contentRef = useRef(null);
-  const elementsRef = useRef<any[]>([]);
-  elementsRef.current = [];
-
-  return (
-    <Container>
-      <div id="projects" className="content" ref={contentRef}>
-        <div className="content">
-          <div className="title-container">
-            <h2 className="title">
-              <div className="title-line" />
-              <span>03.</span>projects
-            </h2>
-            <h3 className="subtitle">things i’ve built, things I’m working on</h3>
-          </div>
-          <ProjectList featured />
-          <div className="btn-container">
-            <Link to="/projects" className="cta">
-              more projects
-            </Link>
-          </div>
+const Projects = () => (
+  <Container>
+    <div id="projects" className="content">
+      <div className="content">
+        <div className="title-container">
+          <h2 className="title">
+            <div className="title-line" />
+            <span>03.</span>projects
+          </h2>
+          <h3 className="subtitle">things i’ve built, things I’m working on</h3>
+        </div>
+        <ProjectList featured />
+        <div className="btn-container">
+          <Link to="/projects" className="cta">
+            more projects
+          </Link>
         </div>
       </div>
-    </Container>
-  );
-};
+    </div>
+  </Container>
+);
 
 export default Projects;

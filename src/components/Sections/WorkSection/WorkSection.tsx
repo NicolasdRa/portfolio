@@ -13,26 +13,31 @@ const Work = () => {
     if (!contentRef.current) throw Error('divRef is not assigned');
 
     const element = contentRef.current;
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: 100,
+
+    ScrollTrigger.matchMedia({
+      '(min-width: 800px)': function () {
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+            y: 100,
+          },
+          {
+            duration: 0.8,
+            ease: 'expo.out',
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 75%',
+              end: 'bottom 90%',
+              toggleActions: 'play none none reverse',
+              // markers: true,
+            },
+          }
+        );
       },
-      {
-        duration: 0.8,
-        ease: 'expo.out',
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: element,
-          start: 'top 75%',
-          end: 'bottom 90%',
-          toggleActions: 'play none none reverse',
-          // markers: true,
-        },
-      }
-    );
+    });
   }, []);
 
   return (
@@ -50,7 +55,7 @@ const Work = () => {
           </div>
           <div className="text">
             {jobs.map((job) => {
-              const { id, company, position, startDate, endDate, tasks } = job;
+              const { id, company, startDate, endDate, tasks } = job;
 
               return (
                 <div key={id} className="experience-block">

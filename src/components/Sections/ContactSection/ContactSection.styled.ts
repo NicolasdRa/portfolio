@@ -7,10 +7,9 @@ export const Container = styled.section`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 60vw;
     margin: 0 auto;
-    padding: 50rem 0;
+    height: 100vh;
   }
 
   .contact h3 {
@@ -50,6 +49,7 @@ export const Container = styled.section`
     margin-top: 10rem;
     margin-bottom: 5rem;
   }
+
   .form-control {
     display: block;
     width: 30rem;
@@ -77,5 +77,54 @@ export const Container = styled.section`
     position: relative;
     margin-bottom: 1rem;
     text-align: right;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+
+    .contact {
+      padding: 10rem 0 8rem 0;
+      height: 100%;
+    }
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100vw;
+      margin: 0 auto;
+    }
+
+    .titles {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 3rem 0 0 0;
+      text-align: left;
+    }
+
+    .title {
+      margin-bottom: 0.5rem;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .form-group {
+      margin: 2rem 0;
+    }
+
+    .cta-contact {
+      margin-bottom: 0;
+      align-self: flex-end;
+    }
   }
 `;

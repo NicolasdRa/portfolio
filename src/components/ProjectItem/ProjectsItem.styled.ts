@@ -56,8 +56,9 @@ export const Container = styled.div`
   }
 
   .stack-item {
-    font-size: 1.4rem;
-    margin-right: 2.5rem;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-right: 2rem;
   }
 
   .links {
@@ -70,7 +71,7 @@ export const Container = styled.div`
   .link-item {
     font-size: 1.75rem;
     margin-right: 3rem;
-    color: ${theme.colors.grey3};
+    color: ${theme.colors.grey1};
     transition: ${theme.transition};
   }
 
@@ -84,5 +85,38 @@ export const Container = styled.div`
     ${theme.colors.primary3};
     transform: translateY(1px);
     transition: transform 125ms;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .project-block {
+      margin: 3rem 0;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .image {
+      width: 80vw;
+      height: 20rem;
+      margin-bottom: 2rem;
+    }
+
+    .info {
+      margin-left: 1rem;
+      width: 95%;
+    }
+
+    .stack {
+      flex-wrap: wrap;
+    }
+
+    .stack-item {
+      margin: 0 2.5rem 1rem 0;
+    }
   }
 `;

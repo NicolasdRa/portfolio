@@ -30,6 +30,10 @@ export const Container = styled.section`
     margin-bottom: 1rem;
   }
 
+  .date {
+    font-size: 1.4rem;
+  }
+
   .position {
     text-transform: capitalize;
     margin-left: 1rem;
@@ -56,6 +60,8 @@ export const Container = styled.section`
 
   .text {
     width: 45%;
+    display: flex;
+    flex-direction: column;
   }
 
   .experience-block {
@@ -77,7 +83,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: flex-start;
     position: relative;
-    width: 50%;
+    width: min-content;
   }
 
   .title {
@@ -95,5 +101,43 @@ export const Container = styled.section`
 
   .cta-work {
     margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .work {
+      width: 80vw;
+      height: 100%;
+    }
+
+    .content {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .title-container {
+      justify-content: flex-start;
+
+      width: 50%;
+    }
+
+    .title {
+      margin-bottom: 0.5rem;
+    }
+
+    .titles {
+      width: 100%;
+      align-items: flex-start;
+      margin: 0 0 2rem 0;
+      text-align: left;
+    }
+
+    .text {
+      width: 100%;
+    }
+
+    .btn-container {
+      margin: 0 0 2rem 0;
+      align-self: center;
+    }
   }
 `;

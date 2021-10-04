@@ -19,6 +19,7 @@ export const Container = styled.footer`
     margin-bottom: 1.5rem;
     color: currentColor;
     font-weight: normal;
+    font-size: 1.3rem;
     /* text-transform: uppercase; */
   }
 
@@ -27,7 +28,7 @@ export const Container = styled.footer`
   }
 
   .social-links {
-    margin-bottom: 3rem;
+    margin: 4rem 0 3rem 0;
     display: flex;
     justify-content: center;
   }
@@ -61,5 +62,21 @@ export const Container = styled.footer`
 
   .footer .social-link:hover {
     color: ${theme.colors.primary3};
+  }
+
+  @media only screen and (min-width: 800px) {
+    .social-links {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .logo {
+      display: none;
+    }
+
+    .footer {
+      padding-bottom: 2rem;
+    }
   }
 `;

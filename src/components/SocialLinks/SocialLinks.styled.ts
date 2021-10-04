@@ -73,4 +73,10 @@ export const Container = styled.div`
     transform: translateY(1px);
     transition: transform 125ms;
   }
+
+  @media screen and (max-width: 600px) {
+    .vertical-links {
+      display: none;
+    }
+  }
 `;

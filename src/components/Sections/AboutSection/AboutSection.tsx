@@ -14,29 +14,34 @@ const About: React.FC = () => {
     if (!contentRef.current) throw Error('divRef is not assigned');
 
     const element = contentRef.current;
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: 120,
+
+    ScrollTrigger.matchMedia({
+      '(min-width: 800px)': function () {
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+            y: 120,
+          },
+          {
+            duration: 0.8,
+            ease: 'expo.out',
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 75%',
+              end: 'bottom 90%',
+              toggleActions: 'play none none reverse',
+              // markers: true,
+            },
+          }
+        );
       },
-      {
-        duration: 0.8,
-        ease: 'expo.out',
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: element,
-          start: 'top 75%',
-          end: 'bottom 90%',
-          toggleActions: 'play none none reverse',
-          // markers: true,
-        },
-      }
-    );
+    });
   }, []);
 
-  const { text, stack } = about;
+  const { stack } = about;
 
   return (
     <Container>
@@ -53,15 +58,19 @@ const About: React.FC = () => {
           </div>
 
           <div className="text">
-            <p className="profile">{text}</p>
+            <p className="profile">
+              i make things for the web, find solutions and create visual and conceptual
+              <span> identities</span>. in the last years, i’ve been cooperating with start-ups to
+              <span> design</span>, elaborate on user flows and <span> develop</span> websites, apps
+              and microservices. currently focused on the frontend side though able to deal with
+              backend<span> solutions</span> too. this is my main technology stack:
+            </p>
             {stack.map((item) => (
               <p key={uuidv4()} className="stack-item">
                 {item}
               </p>
             ))}
-
             <div className="btn-container">
-              {/* TODO: link to page with hobbies and reference to tango and other shit */}
               <Link to="/about" className="cta cta-about">
                 the other side
               </Link>

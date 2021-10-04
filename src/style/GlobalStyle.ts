@@ -162,6 +162,16 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+.title-line {
+  display: none;
+  /* margin-right: 1rem;
+  width: 4rem; */
+  }
 
 }
+
 `;

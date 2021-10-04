@@ -91,9 +91,9 @@ export const Container = styled.header`
     }
   }
 
-  /* @media screen and (min-width: 992px) {
+  @media screen and (max-width: 600px) {
     .navbar {
-      background: transparent;
+      display: none;
     }
-  } */
+  }
 `;
