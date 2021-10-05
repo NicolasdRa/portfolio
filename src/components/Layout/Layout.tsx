@@ -6,6 +6,8 @@ import Navbar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import SocialLinks from '../SocialLinks/SocialLinks';
 import CustomCursor from '../CustomCursor/CustomCursor';
+// import Menu from '../Menu/Menu';
+import Sidebar from '../Sidebar/Sidebar';
 
 export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, location }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +20,8 @@ export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, locati
     <>
       <GlobalStyle />
       <SEO location={location} />
+      {/* <Menu /> */}
+      <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
       <Navbar toggleSideBar={toggleSideBar} />
       <CustomCursor />
       {children}

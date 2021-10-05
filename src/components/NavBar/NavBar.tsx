@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
-import { FaAlignRight } from 'react-icons/fa';
+import { AiOutlineMenu } from 'react-icons/ai';
 import logo from '../../assets/svg/logo.svg';
 import pageLinks from '../../constants/links';
 import { Container } from './NavBar.styled';
@@ -47,7 +47,7 @@ const Navbar: React.FC<Props> = ({ toggleSideBar }) => {
           </Link>
         </div>
         <button type="button" className="toggle-btn" onClick={toggleSideBar}>
-          <FaAlignRight />
+          <AiOutlineMenu />
         </button>
         <ul className="nav-links">
           {pageLinks.map((link: { id: number; url: string; text: string }) => (

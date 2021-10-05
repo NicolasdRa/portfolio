@@ -31,12 +31,9 @@ export const Container = styled.header`
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
-    color: ${theme.colors.white};
+    color: ${theme.colors.grey1};
     cursor: pointer;
     transition: ${theme.animations.transition};
-  }
-  .toggle-btn:hover {
-    color: ${theme.colors.primary3};
   }
 
   .nav-links {
@@ -93,7 +90,8 @@ export const Container = styled.header`
 
   @media screen and (max-width: 600px) {
     .navbar {
-      display: none;
+      /* display: none; */
+      padding: 0 3rem;
     }
   }
 `;

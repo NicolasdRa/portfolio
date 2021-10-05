@@ -17,7 +17,7 @@ const gatsbyConfig: GatsbyConfig = {
     title: 'Nicolás di Rago dev portfolio',
     description: 'Nicolás di Rago web developer portfolio',
     keywords: ['gatsby', 'starter', 'typescript', 'eslint', 'prettier', 'layout', 'seo'],
-    siteUrl: 'https://gatsby-starter-skeleton.netlify.app',
+    siteUrl: 'https://nicolasdirago.com',
     twitterUsername: `@nicolasdiRago`,
     imageUrl: '/main.jpg',
     language: 'en',

@@ -23,6 +23,8 @@ declare module 'styled-components' {
       white: string;
       background: string;
 
+      black: string;
+
       grey1: string;
       grey2: string;
       grey3: string;

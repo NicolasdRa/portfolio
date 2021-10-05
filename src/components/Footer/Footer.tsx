@@ -3,7 +3,7 @@ import socialLinks from '../../constants/social_links';
 import logo from '../../assets/svg/logo.svg';
 import { Container } from './Footer.styled';
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <Container>
     <footer className="footer">
       <ul className="social-links">
