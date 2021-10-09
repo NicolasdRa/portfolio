@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../style/theme';
 
-export const Container = styled.aside`
+export const Container = styled.nav`
   .sidebar {
     background: ${theme.colors.black};
     position: fixed;
@@ -47,6 +47,7 @@ export const Container = styled.aside`
     opacity: 0;
     animation: slideRight 0.5s ease-in-out 0.3s forwards;
   }
+  
   .sidebar-links li a {
     display: block;
     text-align: left;

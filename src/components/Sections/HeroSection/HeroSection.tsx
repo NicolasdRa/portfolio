@@ -6,7 +6,7 @@ import { ImageDataLike } from 'gatsby-plugin-image';
 
 import AnimatedText from '../../AnimatedText/AnimatedText';
 import CustomImage from '../../CustomImage/CustomImage';
-
+import CustomLink from '../../CustomLink/CustomLink';
 import { Container } from './HeroSection.styled';
 
 const query = graphql`
@@ -28,7 +28,6 @@ const query = graphql`
 
 const Hero: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
-
   const headingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -77,10 +76,7 @@ const Hero: React.FC = () => {
               full-stack <span>web developer</span>, mainly focused on the frontend side and UX/UI
               design. Currently working as a <span>free-lancer</span>. Based in Berlin.
             </div>
-
-            <a href="#contact" className="cta cta-hero">
-              Get in touch
-            </a>
+            <CustomLink url="#contact" type="link" text="get in touch" />
           </div>
         </div>
       </div>

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { PageProps } from 'gatsby';
-import { GlobalStyle } from '../../style/GlobalStyle';
 import { SEO } from '../SEO/SEO';
 import Navbar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import SocialLinks from '../SocialLinks/SocialLinks';
 import CustomCursor from '../CustomCursor/CustomCursor';
-// import Menu from '../Menu/Menu';
 import Sidebar from '../Sidebar/Sidebar';
+import CustomCursorManager from '../../context/manager';
 
 export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, location }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +16,14 @@ export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, locati
   };
 
   return (
-    <>
-      <GlobalStyle />
+    <CustomCursorManager>
       <SEO location={location} />
-      {/* <Menu /> */}
-      <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
       <Navbar toggleSideBar={toggleSideBar} />
+      <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
       <CustomCursor />
-      {children}
       <SocialLinks />
+      {children}
       <Footer />
-    </>
+    </CustomCursorManager>
   );
 };

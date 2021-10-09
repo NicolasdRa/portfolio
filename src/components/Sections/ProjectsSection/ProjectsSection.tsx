@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Container } from './ProjectsSection.styled';
 import ProjectList from '../../ProjectList/ProjectList';
+import CustomLink from '../../CustomLink/CustomLink';
+import { Container } from './ProjectsSection.styled';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,9 +20,7 @@ const Projects = () => (
         </div>
         <ProjectList featured />
         <div className="btn-container">
-          <Link to="/projects" className="cta">
-            more projects
-          </Link>
+          <CustomLink url="/projects" type="gatsby" text="more projects" />
         </div>
       </div>
     </div>

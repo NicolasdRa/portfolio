@@ -74,7 +74,7 @@ export const Container = styled.section`
 
   .description {
     background-color: ${theme.colors.background};
-    padding: 2rem 1rem 2rem 1.5rem;
+    padding: 2rem 1rem 3rem 0;
     /* check whether to use this or not */
     /* mix-blend-mode: difference; */
   }
@@ -83,11 +83,6 @@ export const Container = styled.section`
     font-weight: bold;
     text-transform: none;
     color: ${theme.colors.primary4};
-  }
-
-  .cta-hero {
-    margin: 2rem 0 0 1.5rem;
-    width: max-content;
   }
 
   .media {
@@ -169,10 +164,6 @@ export const Container = styled.section`
     .description {
       margin: 2rem 0;
       padding: 0;
-    }
-
-    .cta-hero {
-      margin: 3rem 0 0 0;
     }
   }
 `;

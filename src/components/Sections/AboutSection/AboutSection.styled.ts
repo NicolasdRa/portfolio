@@ -60,9 +60,7 @@ export const Container = styled.section`
   }
 
   .btn-container {
-    display: flex;
-    position: relative;
-    width: min-content;
+    margin-top: 3rem;
   }
 
   .title {

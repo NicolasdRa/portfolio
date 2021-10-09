@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
+import { CustomCursorContext } from '../../context/CustomCursorContext';
 import { Wrapper } from './CustomCursor.styled';
 
 const CustomCursor = () => {
   const mainCursorRef = useRef(null);
   const secondaryCursorRef = useRef(null);
-
   const positionRef = useRef({
     mouseX: 0,
     mouseY: 0,
@@ -14,6 +14,8 @@ const CustomCursor = () => {
     distanceY: 0,
     key: -1,
   });
+
+  const { type } = useContext(CustomCursorContext);
 
   useEffect(() => {
     document.addEventListener('mousemove', (e) => {
@@ -75,11 +77,13 @@ const CustomCursor = () => {
 
   return (
     <Wrapper>
-      <div className="main-cursor" ref={mainCursorRef}>
-        <div className="main-cursor-background" />
-      </div>
-      <div className="secondary-cursor" ref={secondaryCursorRef}>
-        <div className="cursor-background" />
+      <div className={`${type}`}>
+        <div className="main-cursor" ref={mainCursorRef}>
+          <div className="main-cursor-background" />
+        </div>
+        <div className="secondary-cursor" ref={secondaryCursorRef}>
+          <div className="cursor-background" />
+        </div>
       </div>
     </Wrapper>
   );

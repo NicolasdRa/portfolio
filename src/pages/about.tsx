@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
-import { Link, PageProps } from 'gatsby';
+import { PageProps } from 'gatsby';
+import CustomLink from '../components/CustomLink/CustomLink';
 import { theme } from '../style/theme';
 
 const Wrapper = styled.main`
@@ -26,9 +27,7 @@ const About: React.FC<PageProps> = () => {
     <Wrapper className="error-page">
       <div ref={contentRef} className="error-container">
         <h1>a detailed about page is coming soon...</h1>
-        <Link to="/" className="cta">
-          back home
-        </Link>
+        <CustomLink url="/" text="back home" type="gatsby" />
       </div>
     </Wrapper>
   );

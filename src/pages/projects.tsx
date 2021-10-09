@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
-import { Link, PageProps } from 'gatsby';
+import { PageProps } from 'gatsby';
 import { theme } from '../style/theme';
 import ProjectList from '../components/ProjectList/ProjectList';
+import CustomLink from '../components/CustomLink/CustomLink';
 
 const Wrapper = styled.main`
   display: flex;
@@ -18,6 +19,7 @@ const Wrapper = styled.main`
     flex-direction: column;
     align-items: center;
     max-width: 80vw;
+    margin-bottom: 8rem;
   }
 
   h1 {
@@ -48,9 +50,7 @@ const Projects: React.FC<PageProps> = () => {
       <div ref={contentRef} className="content">
         <h1>more projects</h1>
         <ProjectList featured={false} />
-        <Link to="/" className="cta cta-project-page">
-          back home
-        </Link>
+        <CustomLink url="/" text="back home" type="gatsby" />
       </div>
     </Wrapper>
   );

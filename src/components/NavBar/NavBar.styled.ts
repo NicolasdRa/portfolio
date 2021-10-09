@@ -39,10 +39,12 @@ export const Container = styled.header`
   .nav-links {
     display: none;
   }
+
   @media screen and (min-width: 768px) {
     .toggle-btn {
       display: none;
     }
+
     .nav-links {
       display: flex;
       justify-content: flex-end;
@@ -68,6 +70,7 @@ export const Container = styled.header`
       color: ${theme.colors.primary4};
       transform: translateY(-2px);
       transition: transform 125ms;
+      cursor: none;
     }
 
     .nav-links li:active {

@@ -25,7 +25,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${theme.fonts.primary};
     font-size: 1.6rem;
     background-color: ${theme.colors.background};
-    cursor: none
+    cursor: none;
+    overflow-x: hidden;
   }
 
 body::-webkit-scrollbar {
@@ -99,38 +100,6 @@ body::-webkit-scrollbar-thumb {
     fill: currentColor;
     height: 100%;
     width: 100%;
-  }
-
-  .cta {
-    color: ${theme.colors.background};
-    background-color: ${theme.colors.grey1};
-    border: 1px solid ${theme.colors.grey1};
-    border-radius: ${theme.borderRadius};
-    padding: 1.25rem 1.75rem;
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: ${theme.transition};
-    font-size: 1.4rem;
-    width: max-content;
-    will-change: transform;
-
-  }
-
-  .cta:hover {
-    color: ${theme.colors.grey1};
-    background-color: ${theme.colors.background};
-    transform: translateY(-2px);
-    transition: ${theme.transition};
-
-  }
-
-  .cta:active {
-    color: ${theme.colors.primary3};
-    background-color: ${theme.colors.background};
-    border: 1px solid ${theme.colors.primary3};
-    transform: translateY(1px);
-    transition: transform 125ms;
   }
 
   .title-line {

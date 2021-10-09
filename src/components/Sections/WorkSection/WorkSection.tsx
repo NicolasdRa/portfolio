@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import CustomLink from '../../CustomLink/CustomLink';
 import { Container } from './WorkSection.styled';
 import jobs from '../../../constants/jobs';
 
@@ -75,9 +76,12 @@ const Work = () => {
             })}
 
             <div className="btn-container">
-              <a href="../../assets/cv-nicolasdirago.pdf" download className="cta cta-work">
-                download cv
-              </a>
+              <CustomLink
+                type="link"
+                url="../../assets/cv-nicolasdirago.pdf"
+                text="download cv"
+                download
+              />
             </div>
           </div>
         </div>

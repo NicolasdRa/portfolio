@@ -24,7 +24,6 @@ export const Container = styled.div`
     width: 45%;
     height: 300px;
     object-fit: cover;
-    border-radius: 1rem;
   }
 
   .info {

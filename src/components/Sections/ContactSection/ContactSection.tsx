@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import CustomLink from '../../CustomLink/CustomLink';
 import { Container } from './ContactSection.styled';
 
 const Contact = () => {
@@ -88,9 +89,7 @@ const Contact = () => {
                 className="form-control"
               />
             </div>
-            <button type="submit" className="cta cta-contact">
-              submit
-            </button>
+            <CustomLink type="button" url="" text="submit" />
           </form>
         </div>
       </div>
