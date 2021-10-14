@@ -29,7 +29,6 @@ export const Container = styled.div`
     padding: 0.6rem;
     line-height: 1;
     text-decoration: none;
-    cursor: pointer;
     transition: ${theme.transition};
     font-size: 1rem;
     width: max-content;

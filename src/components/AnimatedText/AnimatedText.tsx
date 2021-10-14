@@ -22,7 +22,7 @@ const AnimatedText: React.FC<Text> = ({ text, setActiveIndex, index }) => {
         key={v4()}
         onMouseEnter={() => {
           setActiveIndex(1);
-          setType('hover');
+          setType('hover-name');
         }}
         onMouseLeave={() => {
           setActiveIndex(-1);

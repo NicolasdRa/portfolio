@@ -15,6 +15,7 @@ export const Container = styled.header`
     padding: 0 11rem 0 5rem;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     backdrop-filter: blur(5px);
+    cursor: none;
   }
 
   .scrolledDown {
@@ -48,6 +49,7 @@ export const Container = styled.header`
     .nav-links {
       display: flex;
       justify-content: flex-end;
+      cursor: none;
     }
 
     .nav-links li {

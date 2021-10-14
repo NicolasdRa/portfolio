@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export type CursorLookType = 'default' | 'hover' | 'hover-social';
+export type CursorLookType = 'default' | 'hover' | 'hover-social' | 'hover-name';
 
 export type CustomCursorType = {
   type: CursorLookType;

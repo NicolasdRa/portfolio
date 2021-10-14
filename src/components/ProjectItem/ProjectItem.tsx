@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { MdWeb } from 'react-icons/md';
 import { v4 as uuidv4 } from 'uuid';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import { Container } from './ProjectsItem.styled';
+import { CustomCursorContext } from '../../context/CustomCursorContext';
 
 interface ProjectItemProps {
   project: {
@@ -21,7 +22,6 @@ interface ProjectItemProps {
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   const {
-    id,
     title,
     featured,
     summary,
@@ -37,6 +37,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   } = project;
 
   const stackArray = stack.map((item) => item.name);
+  const { setType } = useContext(CustomCursorContext);
 
   return (
     <Container>
@@ -60,12 +61,28 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
 
           <div className="links">
             <span className="link-item">
-              <a href={github}>
+              <a
+                href={github}
+                onMouseEnter={() => {
+                  setType('hover-social');
+                }}
+                onMouseLeave={() => {
+                  setType('default');
+                }}
+              >
                 <FaGithub />
               </a>
             </span>
             <span key={uuidv4()} className="link-item">
-              <a href={web}>
+              <a
+                href={web}
+                onMouseEnter={() => {
+                  setType('hover-social');
+                }}
+                onMouseLeave={() => {
+                  setType('default');
+                }}
+              >
                 <MdWeb />
               </a>
             </span>

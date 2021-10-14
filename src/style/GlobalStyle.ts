@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
+    cursor: none;
     box-sizing: border-box;
   }
 
@@ -18,14 +19,16 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
-    cursor: none
+    /* cursor: none */
   }
+
+ }
 
   body {
     font-family: ${theme.fonts.primary};
     font-size: 1.6rem;
     background-color: ${theme.colors.background};
-    cursor: none;
+    /* cursor: none; */
     overflow-x: hidden;
   }
 
@@ -48,6 +51,8 @@ body::-webkit-scrollbar-thumb {
     color: currentColor;
     display: block;
     text-decoration: none;
+
+    &:hover {cursor: none}
   }
 
   button {
@@ -56,6 +61,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     padding: 0;
     outline: none;
+    &:hover {cursor: none}
   }
 
   h1,

@@ -57,6 +57,15 @@ export const Wrapper = styled.div`
     }
   }
 
+  .hover-name {
+    .cursor-background {
+      opacity: 0.2;
+      background-color: ${theme.colors.primary1};
+      border: none;
+      animation: scaleUp 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0s forwards;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     .main-cursor,
     .secondary-cursor {

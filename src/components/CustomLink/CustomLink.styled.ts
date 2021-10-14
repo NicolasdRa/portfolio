@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   padding: 1.4rem 2rem;
   line-height: 1;
   text-decoration: none;
-  cursor: pointer;
   transition: ${theme.transition};
   font-size: 1.4rem;
   width: max-content;

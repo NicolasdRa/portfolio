@@ -30,7 +30,7 @@ export const Container = styled.section`
     font-weight: 300;
     color: ${theme.colors.grey1};
     position: relative;
-    cursor: pointer;
+    cursor: none;
   }
 
   .title-1 {
