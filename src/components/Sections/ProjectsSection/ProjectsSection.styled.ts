@@ -53,6 +53,21 @@ export const Container = styled.section`
     width: min-content;
   }
 
+  @media screen and (max-width: 768px) {
+    .content {
+      width: 80vw;
+      align-items: flex-start;
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      width: 100%;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     max-width: 100vw;
     height: 100%;

@@ -107,6 +107,27 @@ export const Container = styled.section`
     opacity: 0;
   }
 
+  @media only screen and (max-width: 1024px) {
+    .content {
+      margin: 0 auto;
+    }
+
+    .title-1 {
+      font-size: 8rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .details {
+      margin: -3rem 0 0 0rem;
+      width: 150%;
+    }
+
+    .description {
+      margin: 2rem 0;
+      padding: 0;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
     .content {
       display: flex;
@@ -144,6 +165,9 @@ export const Container = styled.section`
 
     .title-1 {
       margin: 1rem 1rem 1.8rem -8rem;
+
+      font-size: 6rem;
+      margin-bottom: 1.8rem;
     }
     .title-2 {
       margin: 1rem 8rem 1rem 0rem;

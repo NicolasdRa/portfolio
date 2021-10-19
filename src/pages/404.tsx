@@ -1,6 +1,30 @@
 import React, { useRef, useEffect } from 'react';
+import styled from 'styled-components';
 import { gsap } from 'gsap';
-import { Link, PageProps } from 'gatsby';
+import { PageProps } from 'gatsby';
+import CustomLink from '../components/CustomLink/CustomLink';
+import { theme } from '../style/theme';
+
+const Wrapper = styled.main`
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0 5vw;
+
+  h1 {
+    font-family: ${theme.fonts.secondary};
+    font-size: 4rem;
+    font-weight: lighter;
+    margin-bottom: 5rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 
 const NotFound: React.FC<PageProps> = () => {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -12,14 +36,12 @@ const NotFound: React.FC<PageProps> = () => {
   }, []);
 
   return (
-    <main className="error-page">
-      <div ref={contentRef} className="error-container">
+    <Wrapper>
+      <div ref={contentRef} className="container">
         <h1>dead end...</h1>
-        <Link to="/" className="cta">
-          back home
-        </Link>
+        <CustomLink url="/" text="back home" type="gatsby" />
       </div>
-    </main>
+    </Wrapper>
   );
 };
 

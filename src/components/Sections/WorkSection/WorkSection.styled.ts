@@ -7,10 +7,10 @@ export const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 60vw;
     margin: 0 auto;
-    padding-top: 10rem;
+    padding-top: 8vw;
+    padding-bottom: 8vw;
   }
 
   .work h3 {
@@ -103,12 +103,26 @@ export const Container = styled.section`
     margin-top: 2rem;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     .work {
       width: 80vw;
-      height: 100%;
     }
 
+    .content {
+      width: 100%;
+    }
+
+    .titles {
+      width: 25%;
+      margin: 0 4rem;
+    }
+
+    .text {
+      width: 75%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
     .content {
       flex-direction: column;
       width: 100%;

@@ -29,7 +29,6 @@ export const Container = styled.header`
   }
 
   .toggle-btn {
-    font-size: 2rem;
     background: transparent;
     border-color: transparent;
     color: ${theme.colors.grey1};
@@ -41,7 +40,23 @@ export const Container = styled.header`
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1024px) {
+    .navbar {
+      padding: 5rem 4rem;
+    }
+
+    .toggle-btn {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .toggle-btn {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
     .toggle-btn {
       display: none;
     }

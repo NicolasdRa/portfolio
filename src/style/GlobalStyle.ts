@@ -22,8 +22,6 @@ export const GlobalStyle = createGlobalStyle`
     /* cursor: none */
   }
 
- }
-
   body {
     font-family: ${theme.fonts.primary};
     font-size: 1.6rem;
@@ -114,30 +112,6 @@ body::-webkit-scrollbar-thumb {
     height: 9px;
     border-bottom: 1px solid ${theme.colors.grey3};
   }
-
-
-/* PAGES */
-
-  .error-page {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  min-height: calc(100vh - 5rem - 10rem);
-}
-
-.error-page h1 {
-  font-family: ${theme.fonts.secondary};
-  font-size: 8rem;
-  font-weight: bold;
-  color: ${theme.colors.grey2};
-  margin-bottom: 2rem;
-}
-
-.error-container  {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 
 @media only screen and (max-width: 600px) {

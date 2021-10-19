@@ -83,12 +83,17 @@ export const Container = styled.section`
     margin-top: 4rem;
   }
 
+  @media screen and (max-width: 768px) {
+    .content {
+      width: 70vw;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     .about {
       justify-content: flex-start;
       align-items: flex-start;
       width: 80vw;
-      height: 100%;
     }
 
     .content {

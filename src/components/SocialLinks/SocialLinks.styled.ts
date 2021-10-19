@@ -53,7 +53,7 @@ export const Container = styled.div`
   }
 
   .social-link {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     color: ${theme.colors.grey1};
     will-change: transform;
@@ -73,7 +73,7 @@ export const Container = styled.div`
     transition: transform 125ms;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1024px) {
     .vertical-links {
       display: none;
     }

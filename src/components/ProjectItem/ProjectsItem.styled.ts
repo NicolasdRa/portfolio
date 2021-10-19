@@ -48,7 +48,7 @@ export const Container = styled.div`
   }
 
   .stack {
-    margin-top: 2rem;
+    margin: 2rem;
     display: flex;
     width: 100%;
     /* justify-content: space-between; */
@@ -84,6 +84,34 @@ export const Container = styled.div`
     ${theme.colors.primary3};
     transform: translateY(1px);
     transition: transform 125ms;
+  }
+
+  @media screen and (max-width: 768px) {
+    .image {
+      height: 200px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+    }
+
+    .stack {
+      flex-wrap: wrap;
+      margin: 2rem 2rem 2rem 0;
+    }
+
+    .stack-item {
+      margin: 1rem 2rem 1rem 0;
+    }
+
+    .project-block {
+      margin: 4rem 0 6rem 0;
+    }
+
+    .links {
+      margin-top: 0;
+    }
   }
 
   @media screen and (max-width: 600px) {

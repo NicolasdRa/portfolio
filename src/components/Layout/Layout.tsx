@@ -18,7 +18,7 @@ export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, locati
   return (
     <CustomCursorManager>
       <SEO location={location} />
-      <Navbar toggleSideBar={toggleSideBar} />
+      {location.pathname === '/' && <Navbar toggleSideBar={toggleSideBar} />}
       <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
       <CustomCursor />
       <SocialLinks />

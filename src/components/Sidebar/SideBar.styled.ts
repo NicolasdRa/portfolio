@@ -47,7 +47,7 @@ export const Container = styled.nav`
     opacity: 0;
     animation: slideRight 0.5s ease-in-out 0.3s forwards;
   }
-  
+
   .sidebar-links li a {
     display: block;
     text-align: left;
@@ -63,7 +63,6 @@ export const Container = styled.nav`
     display: flex;
     align-self: center;
     justify-content: space-between;
-    width: 65vw;
   }
 
   .sidebar-icons li a {
@@ -75,14 +74,47 @@ export const Container = styled.nav`
   }
   .close-btn {
     position: absolute;
-    right: 2.8rem;
-    top: 2.5rem;
-    font-size: 2.5rem;
+
     background: transparent;
     border-color: transparent;
     color: ${theme.colors.background};
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+    .close-btn {
+      font-size: 3rem;
+      right: 4rem;
+      top: 3rem;
+    }
+
+    .sidebar-icons {
+      width: 40vw;
+      font-size: 3rem;
+    }
+
+    .sidebar-links li a {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .close-btn {
+      right: 2.8rem;
+      top: 2.5rem;
+      font-size: 2.5rem;
+    }
+
+    .sidebar-icons {
+      width: 65vw;
+      font-size: 2rem;
+    }
+
+    .sidebar-links li a {
+      font-size: 2rem;
+    }
+  }
+
   @media screen and (min-width: 992px) {
     .sidebar {
       transform: translateX(-100%);

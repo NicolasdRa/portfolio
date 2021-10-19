@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaXing, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaXing } from 'react-icons/fa';
 import { SiCodersrank } from 'react-icons/si';
 
 const data = [

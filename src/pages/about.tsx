@@ -6,11 +6,23 @@ import CustomLink from '../components/CustomLink/CustomLink';
 import { theme } from '../style/theme';
 
 const Wrapper = styled.main`
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0 5vw;
+
   h1 {
     font-family: ${theme.fonts.secondary};
     font-size: 4rem;
     font-weight: lighter;
     margin-bottom: 5rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -24,8 +36,8 @@ const About: React.FC<PageProps> = () => {
   }, []);
 
   return (
-    <Wrapper className="error-page">
-      <div ref={contentRef} className="error-container">
+    <Wrapper>
+      <div ref={contentRef} className="container">
         <h1>a detailed about page is coming soon...</h1>
         <CustomLink url="/" text="back home" type="gatsby" />
       </div>
