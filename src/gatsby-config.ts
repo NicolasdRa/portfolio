@@ -31,7 +31,7 @@ const gatsbyConfig: GatsbyConfig = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://portfolio-server-strapi-mongo.herokuapp.com/`,
+        apiURL: `https://portfolio-server-strapi-mongo.herokuapp.com`,
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`project`],
         // singleTypes: [`home-page`, `contact`],
