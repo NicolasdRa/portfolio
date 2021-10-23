@@ -1,10 +1,18 @@
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import { Link } from 'gatsby';
 import links from '../../constants/links';
 import socialLinks from '../../constants/social_links';
 
-import { Container, SocialLink } from './SideBar.styled';
+import {
+  Wrapper,
+  SideBar,
+  SocialLink,
+  Inner,
+  CloseBtn,
+  SideBarLinks,
+  SocialLinks,
+  SideBarLink,
+} from './SideBar.styled';
 
 interface SideBarProps {
   isOpen: boolean;
@@ -12,32 +20,32 @@ interface SideBarProps {
 }
 
 const Sidebar: React.FC<SideBarProps> = ({ isOpen, toggleSideBar }) => (
-  <Container>
-    <aside className={isOpen ? 'sidebar show-sidebar' : 'sidebar'}>
-      <button type="button" className="close-btn" onClick={toggleSideBar}>
+  <Wrapper>
+    <SideBar className={isOpen ? 'show-sidebar' : undefined}>
+      <CloseBtn onClick={toggleSideBar}>
         <AiOutlineClose />
-      </button>
-      <div className="side-container">
-        <ul className={isOpen ? 'sidebar-links' : undefined}>
+      </CloseBtn>
+      <Inner>
+        <SideBarLinks>
           {links.map((link) => (
             <li key={link.id}>
-              <Link to={link.url} onClick={toggleSideBar}>
+              <SideBarLink to={link.url} onClick={toggleSideBar}>
                 <span className="link-number">0{link.id - 1}. </span>
                 {link.text}
-              </Link>
+              </SideBarLink>
             </li>
           ))}
-        </ul>
-        <ul className={isOpen ? 'social-links sidebar-icons' : undefined}>
+        </SideBarLinks>
+        <SocialLinks>
           {socialLinks.map((link) => (
             <li key={link.id}>
               <SocialLink href={link.url}>{link.icon}</SocialLink>
             </li>
           ))}
-        </ul>
-      </div>
-    </aside>
-  </Container>
+        </SocialLinks>
+      </Inner>
+    </SideBar>
+  </Wrapper>
 );
 
 export default Sidebar;
