@@ -26,7 +26,7 @@ const Navbar: React.FC<Props> = ({ toggleSideBar }) => {
       if (prevScroll < currentScroll) {
         setScrolled('scrolledDown');
       } else if (prevScroll > currentScroll) {
-        setScrolled('scrolledUp');
+        setScrolled('');
       } else {
         setScrolled('');
       }

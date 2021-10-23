@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import { MdWeb } from 'react-icons/md';
 import { v4 as uuidv4 } from 'uuid';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
-import { Container, ProjectLink } from './ProjectsItem.styled';
+import { Container, ProjectLink } from './ProjectItem.styled';
 import { CustomCursorContext } from '../../context/CustomCursorContext';
 
 interface ProjectItemProps {

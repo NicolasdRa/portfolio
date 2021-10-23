@@ -3,11 +3,11 @@ import { theme } from '../../style/theme';
 
 export const Container = styled.header`
   .navbar {
+    position: fixed;
+    top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0px;
     background: transparent;
     height: 8rem;
     z-index: 200;
@@ -53,6 +53,10 @@ export const Container = styled.header`
   @media screen and (max-width: 600px) {
     .toggle-btn {
       height: 2.5rem;
+    }
+
+    .navbar {
+      padding: 0 3rem;
     }
   }
 
@@ -105,13 +109,6 @@ export const Container = styled.header`
       display: grid;
       grid-template-columns: auto 1fr;
       align-items: center;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .navbar {
-      /* display: none; */
-      padding: 0 3rem;
     }
   }
 `;

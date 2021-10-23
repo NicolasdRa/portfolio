@@ -63,7 +63,7 @@ export const Container = styled.div`
   .links {
     margin-top: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   @media screen and (max-width: 768px) {
