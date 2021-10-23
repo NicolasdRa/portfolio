@@ -32,8 +32,6 @@ export const Container = styled.header`
     background: transparent;
     border-color: transparent;
     color: ${theme.colors.grey1};
-    cursor: pointer;
-    transition: ${theme.animations.transition};
   }
 
   .nav-links {
@@ -43,6 +41,7 @@ export const Container = styled.header`
   @media screen and (max-width: 1024px) {
     .navbar {
       padding: 5rem 4rem;
+      justify-content: flex-end;
     }
 
     .toggle-btn {

@@ -20,7 +20,6 @@ export const Container = styled.footer`
     color: currentColor;
     font-weight: normal;
     font-size: 1.3rem;
-    /* text-transform: uppercase; */
   }
 
   .footer h4 span {
@@ -28,7 +27,7 @@ export const Container = styled.footer`
   }
 
   .social-links {
-    margin: 4rem 0 3rem 0;
+    margin: 3rem auto;
     display: flex;
     justify-content: center;
   }
