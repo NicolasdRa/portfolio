@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import { MdWeb } from 'react-icons/md';
 import { v4 as uuidv4 } from 'uuid';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
-import { Container } from './ProjectsItem.styled';
+import { Container, ProjectLink } from './ProjectsItem.styled';
 import { CustomCursorContext } from '../../context/CustomCursorContext';
 
 interface ProjectItemProps {
@@ -60,32 +60,28 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
           </div>
 
           <div className="links">
-            <span className="link-item">
-              <a
-                href={github}
-                onMouseEnter={() => {
-                  setType('hover-social');
-                }}
-                onMouseLeave={() => {
-                  setType('default');
-                }}
-              >
-                <FaGithub />
-              </a>
-            </span>
-            <span key={uuidv4()} className="link-item">
-              <a
-                href={web}
-                onMouseEnter={() => {
-                  setType('hover-social');
-                }}
-                onMouseLeave={() => {
-                  setType('default');
-                }}
-              >
-                <MdWeb />
-              </a>
-            </span>
+            <ProjectLink
+              href={github}
+              onMouseEnter={() => {
+                setType('hover-social');
+              }}
+              onMouseLeave={() => {
+                setType('default');
+              }}
+            >
+              <FaGithub />
+            </ProjectLink>
+            <ProjectLink
+              href={web}
+              onMouseEnter={() => {
+                setType('hover-social');
+              }}
+              onMouseLeave={() => {
+                setType('default');
+              }}
+            >
+              <MdWeb />
+            </ProjectLink>
           </div>
         </div>
       </div>

@@ -67,25 +67,6 @@ export const Container = styled.div`
     justify-content: space-between;
   }
 
-  .link-item {
-    font-size: 1.75rem;
-    margin-right: 3rem;
-    color: ${theme.colors.grey1};
-    transition: ${theme.transition};
-  }
-
-  .link-item:hover {
-    color: ${theme.colors.primary4};
-    transform: translateY(-2px);
-    transition: ${theme.transition};
-  }
-
-  .link-item:active {
-    ${theme.colors.primary3};
-    transform: translateY(1px);
-    transition: transform 125ms;
-  }
-
   @media screen and (max-width: 768px) {
     .image {
       height: 200px;
@@ -145,5 +126,24 @@ export const Container = styled.div`
     .stack-item {
       margin: 0 2.5rem 1rem 0;
     }
+  }
+`;
+
+export const ProjectLink = styled.a`
+  font-size: 1.75rem;
+  margin-right: 3rem;
+  color: ${theme.colors.grey1};
+  transition: ${theme.transition};
+
+  &:hover {
+    color: ${theme.colors.primary4};
+    transform: translateY(-2px);
+    transition: ${theme.transition};
+  }
+
+  &:active {
+    ${theme.colors.primary3};
+    transform: translateY(1px);
+    transition: transform 125ms;
   }
 `;
