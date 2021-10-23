@@ -34,9 +34,9 @@ export const Container = styled.footer`
   }
 
   .social-link {
-    font-size: 2rem;
+    height: 2rem;
     margin-right: 3rem;
-    color: ${theme.colors.grey3};
+    color: ${theme.colors.grey1};
     will-change: transform;
     backface-visibility: hidden;
     transition: transform 450ms ease-out;

@@ -7,9 +7,9 @@ export const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 60vw;
     margin: 0 auto;
+    padding: 8vh 0;
   }
 
   .about h3 {

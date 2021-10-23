@@ -32,6 +32,8 @@ const SocialLinks: React.FC = () => {
           {socialLinks.map((link) => (
             <a
               href={link.url}
+              target="_blank"
+              rel="noreferrer"
               key={link.id}
               className="social-link"
               onMouseEnter={() => setType('hover-social')}

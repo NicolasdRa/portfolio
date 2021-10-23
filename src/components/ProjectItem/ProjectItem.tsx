@@ -62,6 +62,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
           <div className="links">
             <ProjectLink
               href={github}
+              target="_blank"
+              rel="noreferrer"
               onMouseEnter={() => {
                 setType('hover-social');
               }}
@@ -73,6 +75,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
             </ProjectLink>
             <ProjectLink
               href={web}
+              target="_blank"
+              rel="noreferrer"
               onMouseEnter={() => {
                 setType('hover-social');
               }}

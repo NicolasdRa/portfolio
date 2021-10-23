@@ -63,7 +63,6 @@ export const Container = styled.div`
   .links {
     margin-top: 2rem;
     display: flex;
-    width: max-content;
     justify-content: space-between;
   }
 
@@ -130,7 +129,7 @@ export const Container = styled.div`
 `;
 
 export const ProjectLink = styled.a`
-  height: 2rem;
+  height: 2.5rem;
   margin-right: 3rem;
   color: ${theme.colors.grey1};
   transition: ${theme.transition};

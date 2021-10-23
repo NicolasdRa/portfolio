@@ -13,7 +13,9 @@ const Footer: React.FC = () => {
         <ul className="social-links">
           {socialLinks.map((link) => (
             <li key={link.id} className="social-link">
-              <a href={link.url}>{link.icon}</a>
+              <a href={link.url} target="_blank" rel="noreferrer">
+                {link.icon}
+              </a>
             </li>
           ))}
         </ul>
