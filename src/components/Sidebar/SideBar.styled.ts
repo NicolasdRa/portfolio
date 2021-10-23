@@ -41,15 +41,15 @@ export const CloseBtn = styled.button`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-    font-size: 3rem;
+    height: 3rem;
     right: 4rem;
     top: 3rem;
   }
 
   @media screen and (max-width: 600px) {
+    height: 2.5rem;
     right: 2.8rem;
     top: 2.5rem;
-    font-size: 2.5rem;
   }
 `;
 
@@ -113,11 +113,11 @@ export const SideBarLink = styled(Link)`
   border-radius: ${theme.borderRadius};
 
   @media screen and (max-width: 768px) {
-    font-size: 3rem;
+    height: 3rem;
   }
 
   @media screen and (max-width: 600px) {
-    font-size: 2rem;
+    height: 2rem;
   }
 `;
 

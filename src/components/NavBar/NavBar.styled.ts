@@ -46,13 +46,13 @@ export const Container = styled.header`
     }
 
     .toggle-btn {
-      font-size: 3rem;
+      height: 3rem;
     }
   }
 
   @media screen and (max-width: 600px) {
     .toggle-btn {
-      font-size: 2.5rem;
+      height: 2.5rem;
     }
   }
 

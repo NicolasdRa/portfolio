@@ -130,7 +130,7 @@ export const Container = styled.div`
 `;
 
 export const ProjectLink = styled.a`
-  font-size: 1.75rem;
+  height: 2rem;
   margin-right: 3rem;
   color: ${theme.colors.grey1};
   transition: ${theme.transition};
