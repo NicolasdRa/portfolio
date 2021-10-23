@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import { theme } from '../../style/theme';
 
+export const SocialLink = styled.a`
+  color: ${theme.colors.background};
+
+  &:hover {
+    color: ${theme.colors.grey4};
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+`;
+
 export const Container = styled.nav`
   .sidebar {
     background: ${theme.colors.black};
@@ -65,13 +77,6 @@ export const Container = styled.nav`
     justify-content: space-between;
   }
 
-  .sidebar-icons li a {
-    color: ${theme.colors.background};
-  }
-
-  .sidebar-links li a:hover {
-    color: ${theme.colors.grey4};
-  }
   .close-btn {
     position: absolute;
 

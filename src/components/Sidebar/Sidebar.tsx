@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import links from '../../constants/links';
 import socialLinks from '../../constants/social_links';
 
-import { Container } from './SideBar.styled';
+import { Container, SocialLink } from './SideBar.styled';
 
 interface SideBarProps {
   isOpen: boolean;
@@ -31,9 +31,7 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, toggleSideBar }) => (
         <ul className={isOpen ? 'social-links sidebar-icons' : undefined}>
           {socialLinks.map((link) => (
             <li key={link.id}>
-              <a href={link.url} className="social-link">
-                {link.icon}
-              </a>
+              <SocialLink href={link.url}>{link.icon}</SocialLink>
             </li>
           ))}
         </ul>
