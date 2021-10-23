@@ -34,12 +34,15 @@ export const Container = styled.footer`
   }
 
   .social-link {
-    height: 2rem;
     margin-right: 3rem;
-    color: ${theme.colors.grey1};
     will-change: transform;
     backface-visibility: hidden;
     transition: transform 450ms ease-out;
+
+    a {
+      height: 2rem;
+      color: ${theme.colors.grey2};
+    }
   }
 
   .social-link:hover {

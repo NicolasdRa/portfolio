@@ -95,15 +95,10 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
     .project-block {
-      margin: 3rem 0;
+      margin: 4rem 0;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 100%;
     }
 
