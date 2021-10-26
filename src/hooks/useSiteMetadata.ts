@@ -4,6 +4,7 @@ interface SiteMetadataQuery {
   site: {
     siteMetadata: {
       defaultTitle: string;
+      titleTemplate: string;
       defaultDescription: string;
       keywords: Array<string>;
       siteUrl: string;
@@ -23,6 +24,7 @@ export const useSiteMetadata = () => {
         site {
           siteMetadata {
             defaultTitle: title
+            titleTemplate
             defaultDescription: description
             keywords
             siteUrl

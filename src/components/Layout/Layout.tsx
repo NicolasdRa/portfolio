@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { PageProps } from 'gatsby';
-import { SEO } from '../SEO/SEO';
 import Navbar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import SocialLinks from '../SocialLinks/SocialLinks';
@@ -17,7 +16,6 @@ export const Layout: React.FC<Omit<PageProps, 'children'>> = ({ children, locati
 
   return (
     <CustomCursorManager>
-      <SEO location={location} />
       {location.pathname === '/' && <Navbar toggleSideBar={toggleSideBar} />}
       <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
       <CustomCursor />

@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { PageProps } from 'gatsby';
 import CustomLink from '../components/CustomLink/CustomLink';
 import { theme } from '../style/theme';
+import { SEO } from '../components/SEO/SEO';
 
 const Wrapper = styled.main`
   display: grid;
@@ -26,7 +27,7 @@ const Wrapper = styled.main`
   }
 `;
 
-const Success: React.FC<PageProps> = () => {
+const Success: React.FC<PageProps> = ({ location }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const Success: React.FC<PageProps> = () => {
 
   return (
     <Wrapper>
+      <SEO pageMetadata={{ title: 'Success' }} location={location} />
       <div ref={contentRef} className="container">
         <h1>your message has been received</h1>
         <CustomLink url="/" text="back home" type="gatsby" />

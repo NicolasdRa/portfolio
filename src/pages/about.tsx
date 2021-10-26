@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
 import { PageProps } from 'gatsby';
+import { SEO } from '../components/SEO/SEO';
 import CustomLink from '../components/CustomLink/CustomLink';
 import { theme } from '../style/theme';
 
@@ -26,7 +27,7 @@ const Wrapper = styled.main`
   }
 `;
 
-const About: React.FC<PageProps> = () => {
+const About: React.FC<PageProps> = ({ location }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const About: React.FC<PageProps> = () => {
 
   return (
     <Wrapper>
+      <SEO pageMetadata={{ title: 'About' }} location={location} />
       <div ref={contentRef} className="container">
         <h1>a detailed about page is coming soon...</h1>
         <CustomLink url="/" text="back home" type="gatsby" />

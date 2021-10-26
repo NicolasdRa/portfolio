@@ -1,4 +1,5 @@
 import React from 'react';
+import { PageProps } from 'gatsby';
 import loadable from '@loadable/component';
 
 import HeroSection from '../components/Sections/HeroSection/HeroSection';
@@ -7,10 +8,11 @@ import AboutSection from '../components/Sections/AboutSection/AboutSection';
 import WorkSection from '../components/Sections/WorkSection/WorkSection';
 import ProjectsSection from '../components/Sections/ProjectsSection/ProjectsSection';
 import ContactSection from '../components/Sections/ContactSection/ContactSection';
+import { SEO } from '../components/SEO/SEO';
 
 const ParticlesBg = loadable(() => import('../../node_modules/particles-bg'));
 
-const Index: React.FC = () => {
+const Index: React.FC<PageProps> = ({ location }) => {
   const particleConfig = {
     num: [1, 50],
     rps: 0.7,
@@ -32,6 +34,7 @@ const Index: React.FC = () => {
 
   return (
     <>
+      <SEO pageMetadata={{ title: 'Home' }} location={location} />
       <HeroSection />
       <ParticlesBg num={50} type="custom" bg config={particleConfig} />
       {/* <Services /> */}
