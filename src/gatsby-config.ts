@@ -16,7 +16,17 @@ const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
     title: 'Nicolás di Rago dev portfolio',
     description: 'Nicolás di Rago web developer portfolio',
-    keywords: ['gatsby', 'starter', 'typescript', 'eslint', 'prettier', 'layout', 'seo'],
+    keywords: [
+      'react',
+      'typescript',
+      'javascript',
+      'gatsby',
+      'node',
+      'strapi',
+      'mongoDB',
+      'web development',
+      'SPA',
+    ],
     siteUrl: 'https://nicolasdirago.com',
     twitterUsername: `@nicolasdiRago`,
     imageUrl: '/main.jpg',

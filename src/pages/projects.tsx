@@ -29,11 +29,6 @@ const Wrapper = styled.main`
     margin-bottom: 3rem;
     max-width: 65vw;
   }
-
-  .cta-project-page {
-    margin: 4rem 0;
-    align-self: center;
-  }
 `;
 
 const Projects: React.FC<PageProps> = () => {

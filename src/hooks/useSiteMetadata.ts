@@ -3,12 +3,13 @@ import { graphql, useStaticQuery } from 'gatsby';
 interface SiteMetadataQuery {
   site: {
     siteMetadata: {
-      title: string;
-      description: string;
+      defaultTitle: string;
+      defaultDescription: string;
       keywords: Array<string>;
       siteUrl: string;
-      imageUrl: string;
-      language: string;
+      defaultImageUrl: string;
+      defaultLanguage: string;
+      twitterUsername: string;
     };
   };
 }
@@ -21,13 +22,13 @@ export const useSiteMetadata = () => {
       query {
         site {
           siteMetadata {
-            title
-            description
+            defaultTitle: title
+            defaultDescription: description
             keywords
             siteUrl
-            imageUrl
+            defaultImageUrl: imageUrl
             twitterUsername
-            language
+            defaultLanguage: language
           }
         }
       }
