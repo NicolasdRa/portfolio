@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-// import Favicon from '../../assets/favicon.ico';
+import Favicon from '../../assets/favicon.ico';
 
 export interface SEOProps {
   location: Location;
@@ -51,6 +51,10 @@ export const SEO: React.FC<SEOProps> = ({ location, pageMetadata }) => {
               {
                 rel: 'canonical',
                 href: canonical,
+              },
+              {
+                rel: 'icon',
+                href: Favicon,
               },
             ]
           : []
@@ -124,5 +128,20 @@ export const SEO: React.FC<SEOProps> = ({ location, pageMetadata }) => {
             ]
       )}
     />
+    // <html lang={seo.language} />
+    // <link rel="icon" type="image/ico" href={Favicon} />
+
+    /* <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+
+      <meta name="keywords" content={(pageMetadata?.keywords || keywords).join(', ')} />
+      <meta property="og:title" content={pageMetadata?.title || title} />
+      <meta property="og:url" content={`${siteUrl}${location.pathname}`} />
+      <meta property="og:description" content={pageMetadata?.description || description} />
+      <meta property="og:type" content={pageMetadata?.type || 'website'} />
+      <meta property="og:image" content={pageMetadata?.imageUrl || `${siteUrl}${imageUrl}`} />
+      <meta property="og:image:alt" content={pageMetadata?.title || title} />
+      <meta name="twitter:card" content="summary_large_image" /> */
+    // </Helmet>
   );
 };
