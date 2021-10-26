@@ -17,7 +17,26 @@ const Navbar: React.FC<Props> = ({ toggleSideBar }) => {
 
   const { setType } = useContext(CustomCursorContext);
 
-  const handleScroll = () => {
+  // TODO: fix this function and event listener
+  // const handleScroll = () => {
+  //   let prevScroll = window.pageYOffset;
+
+  //   window.onscroll = () => {
+  //     const currentScroll = window.pageYOffset;
+
+  //     if (prevScroll < currentScroll) {
+  //       setScrolled('scrolledDown');
+  //     } else if (prevScroll > currentScroll) {
+  //       setScrolled('');
+  //     } else {
+  //       setScrolled('');
+  //     }
+
+  //     prevScroll = currentScroll;
+  //   };
+  // };
+
+  useEffect(() => {
     let prevScroll = window.pageYOffset;
 
     window.onscroll = () => {
@@ -33,13 +52,9 @@ const Navbar: React.FC<Props> = ({ toggleSideBar }) => {
 
       prevScroll = currentScroll;
     };
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      // window.removeEventListener('scroll', handleScroll);
     };
   });
 
