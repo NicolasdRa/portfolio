@@ -31,6 +31,7 @@ export const Container = styled.section`
     color: ${theme.colors.grey1};
     position: relative;
     cursor: none;
+    opacity: 0;
   }
 
   .title-1 {

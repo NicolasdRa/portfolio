@@ -61,7 +61,7 @@ const Navbar: React.FC<Props> = ({ toggleSideBar }) => {
   useEffect(() => {
     if (!navRef.current) throw Error('divRef is not assigned');
 
-    gsap.from(navRef.current, { duration: 0.3, opacity: 0, delay: 0.5 });
+    gsap.to(navRef.current, { duration: 0.3, opacity: 1 });
   }, []);
 
   return (

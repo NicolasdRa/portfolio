@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { theme } from '../../style/theme';
 
 export const Container = styled.header`
+  opacity: 0;
+
   .navbar {
     position: fixed;
     top: 0px;

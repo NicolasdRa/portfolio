@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   background-color: ${theme.colors.grey1};
   border: 1px solid ${theme.colors.grey1};
   border-radius: ${theme.borderRadius};
-  padding: 1.4rem 2rem;
   line-height: 1;
   text-decoration: none;
   transition: ${theme.transition};
@@ -14,8 +13,14 @@ export const Wrapper = styled.div`
   width: max-content;
   will-change: transform;
 
+  a {
+    display: block;
+    padding: 1.4rem 2rem;
+  }
+
   button {
     color: ${theme.colors.background};
+    padding: 1.4rem 2rem;
   }
 
   :hover {

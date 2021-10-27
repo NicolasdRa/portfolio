@@ -8,6 +8,7 @@ export const Container = styled.div`
     top: 1.9rem;
     margin: 0 auto;
     z-index: 200;
+    opacity: 0;
   }
 
   .social-links {

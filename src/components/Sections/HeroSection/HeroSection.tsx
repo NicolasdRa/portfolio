@@ -29,18 +29,17 @@ const query = graphql`
 const Hero: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
   const headingRef = useRef<HTMLDivElement>(null);
+  const imgData = useStaticQuery(query);
+  const {
+    allFile: { nodes },
+  } = imgData;
 
   useEffect(() => {
     if (!headingRef.current) throw Error('divRef is not assigned');
     const element = headingRef.current;
 
-    gsap.from(element, { duration: 1, opacity: 0, delay: 0.5 });
+    gsap.to(element, { duration: 0.3, opacity: 1 });
   }, []);
-
-  const imgData = useStaticQuery(query);
-  const {
-    allFile: { nodes },
-  } = imgData;
 
   const name = ['nicolás', 'di', 'rago'];
 
