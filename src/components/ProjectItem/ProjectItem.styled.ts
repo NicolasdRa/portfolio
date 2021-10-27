@@ -48,7 +48,7 @@ export const Container = styled.div`
   }
 
   .stack {
-    margin: 2rem;
+    margin: 2rem 2rem 2rem 0;
     display: flex;
     width: 100%;
     /* justify-content: space-between; */
@@ -58,6 +58,11 @@ export const Container = styled.div`
     font-size: 1.3rem;
     font-style: italic;
     margin-right: 2rem;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .links {
