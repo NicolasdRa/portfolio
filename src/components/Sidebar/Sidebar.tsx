@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import links from '../../constants/links';
 import socialLinks from '../../constants/social_links';

@@ -35,6 +35,7 @@ const SocialLinks: React.FC = () => {
               target="_blank"
               rel="noreferrer"
               key={link.id}
+              aria-label={link.name}
               className="social-link"
               onMouseEnter={() => setType('hover-social')}
               onMouseLeave={() => setType('default')}
