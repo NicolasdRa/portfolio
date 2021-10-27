@@ -44,7 +44,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
       <div className="project-block">
         <GatsbyImage image={getImage(gatsbyImageData)} alt={title} className="image" />
         <div className="info">
-          {featured && <h5 className="featured">featured</h5>}
+          {featured && <span className="featured">featured</span>}
           <h4>{title}</h4>
           <h5>
             <span className="summary">{summary}</span>
@@ -60,32 +60,38 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
           </div>
 
           <div className="links">
-            <ProjectLink
-              href={github}
-              target="_blank"
-              rel="noreferrer"
-              onMouseEnter={() => {
-                setType('hover-social');
-              }}
-              onMouseLeave={() => {
-                setType('default');
-              }}
-            >
-              <FaGithub />
-            </ProjectLink>
-            <ProjectLink
-              href={web}
-              target="_blank"
-              rel="noreferrer"
-              onMouseEnter={() => {
-                setType('hover-social');
-              }}
-              onMouseLeave={() => {
-                setType('default');
-              }}
-            >
-              <MdWeb />
-            </ProjectLink>
+            {github && (
+              <ProjectLink
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Github"
+                onMouseEnter={() => {
+                  setType('hover-social');
+                }}
+                onMouseLeave={() => {
+                  setType('default');
+                }}
+              >
+                <FaGithub />
+              </ProjectLink>
+            )}
+            {web && (
+              <ProjectLink
+                href={web}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Website"
+                onMouseEnter={() => {
+                  setType('hover-social');
+                }}
+                onMouseLeave={() => {
+                  setType('default');
+                }}
+              >
+                <MdWeb />
+              </ProjectLink>
+            )}
           </div>
         </div>
       </div>
