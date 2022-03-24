@@ -4,13 +4,19 @@ import { theme } from '../../style/theme';
 export const Container = styled.header`
   opacity: 0;
 
+  @media screen and (min-width: 1300px) {
+  }
+
+  @media screen and (min-width: 1300px) {
+  }
+
   .navbar {
     position: fixed;
     top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
+    background: ${theme.colors.background};
     height: 8rem;
     z-index: 200;
     width: 100%;
