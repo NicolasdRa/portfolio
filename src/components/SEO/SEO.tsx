@@ -55,6 +55,7 @@ export const SEO: React.FC<SEOProps> = ({ location, pageMetadata }) => {
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={seo.image} />
     </Helmet>
   );
 };

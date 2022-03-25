@@ -14,9 +14,9 @@ dotenv.config({
 
 const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
-    title: `Nicolás di Rago's WebDev Portfolio`,
-    titleTemplate: `%s | Nicolás di Rago's WebDev Portfolio`,
-    description: 'Nicolás di Rago Web Developer Portfolio',
+    title: `Nicolás di Rago - Full-stack Web developer`,
+    titleTemplate: `%s | Nicolás di Rago - Full-stack Web developer`,
+    description: 'Nicolás di Rago Full-stack Web Developer',
     keywords: [
       'react developer',
       'react typescript developer',
@@ -28,8 +28,9 @@ const gatsbyConfig: GatsbyConfig = {
       'wen applications developer',
       'frontend developer germany',
       'frontend developer berlin',
+      'full-stack developer berlin',
     ],
-    siteUrl: 'https://nicolasdirago.com',
+    siteUrl: 'https://www.nicolasdirago.com',
     twitterUsername: `@nicolasdiRago`,
     imageUrl: '/main.jpg',
     language: 'en',
