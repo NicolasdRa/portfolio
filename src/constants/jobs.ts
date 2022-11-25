@@ -1,22 +1,32 @@
 const data = [
   {
     id: 1,
-    company: 'civilisten gmbH',
-    position: 'frontend developer',
-    startDate: 'April 2021',
+    company: 'supertemplates UG',
+    position: 'co-founder & developer',
+    startDate: 'November 2021',
     endDate: 'present',
     tasks: [
-      // 'Co-led and developed mosaico supertemplates project.',
-      // 'Trained developers to build responsive mosaico HTML templates.',
+      'Set up processes and workflows',
+      'Developed & maintained the website',
+      'Trained developers to build responsive mosaico HTML templates.',
+      'Made sure quality standards were met.',
       'Developed responsive HTML email templates tested for 90+ email clients and devices.',
     ],
   },
   {
     id: 2,
+    company: 'civilisten gmbH',
+    position: 'frontend developer',
+    startDate: 'April 2021',
+    endDate: 'present',
+    tasks: ['Developed responsive HTML email templates tested for 90+ email clients and devices.'],
+  },
+  {
+    id: 3,
     company: 'energenious gmbH',
     position: 'frontend developer',
     startDate: 'November 2020',
-    endDate: 'present',
+    endDate: 'December 2021',
     tasks: [
       'Designed and built login & account management application. Stack: React Hooks, Redux & Material UI.',
       'Designed and built Spreadsheet Widget. Stack: React Hooks, Redux & Material UI.',
@@ -25,7 +35,7 @@ const data = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: 'EO technologies',
     position: 'frontend developer',
     startDate: 'February 2021',

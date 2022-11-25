@@ -78,7 +78,7 @@ const Work = () => {
             <div className="btn-container">
               <CustomLink
                 type="link"
-                url="../../assets/cv-nicolasdirago.pdf"
+                url="../../assets/cv-nicolasdirago.zip"
                 text="download cv"
                 download
               />
