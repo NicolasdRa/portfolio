@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import socialLinks from '../../constants/social_links';
 import { Container } from './SocialLinks.styled';
 import { CustomCursorContext } from '../../context/CustomCursorContext';
+import cv from '../../../static/cv-nicolasdirago.pdf';
 
 const SocialLinks: React.FC = () => {
   const linksRef = useRef<HTMLDivElement>(null);
@@ -21,7 +22,7 @@ const SocialLinks: React.FC = () => {
       <div ref={linksRef} className="vertical-links">
         <div className="social-links">
           <a
-            href="../../assets/cv-nicolasdirago.pdf"
+            href={cv}
             download
             className="cv"
             onMouseEnter={() => setType('hover-social')}

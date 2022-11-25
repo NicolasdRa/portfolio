@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CustomLink from '../../CustomLink/CustomLink';
 import { Container } from './WorkSection.styled';
 import jobs from '../../../constants/jobs';
+import cv from '../../../../static/cv-nicolasdirago.pdf';
 
 const Work = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -76,12 +77,7 @@ const Work = () => {
             })}
 
             <div className="btn-container">
-              <CustomLink
-                type="link"
-                url="../../assets/cv-nicolasdirago.zip"
-                text="download cv"
-                download
-              />
+              <CustomLink type="link" url={cv} text="download cv" download />
             </div>
           </div>
         </div>
