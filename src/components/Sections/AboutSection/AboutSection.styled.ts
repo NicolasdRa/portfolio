@@ -49,8 +49,56 @@ export const Container = styled.section`
     margin-bottom: 2rem;
   }
 
+  .stack-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+    max-height: 120px;
+    overflow: hidden;
+  }
+
+  .stack-wrapper.expanded {
+    max-height: 2000px;
+  }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem 2rem;
+  }
+
   .stack-item {
-    margin-bottom: 1rem;
+    margin: 0;
+  }
+
+  .stack-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, ${theme.colors.background});
+    pointer-events: none;
+  }
+
+  .view-all-btn {
+    background: none;
+    border: none;
+    color: ${theme.colors.primary4};
+    font-family: inherit;
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    margin-bottom: 2.5rem;
+    margin-left: 0;
+    margin-right: auto;
+    display: block;
+    text-align: left;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   .title-container {
@@ -83,9 +131,37 @@ export const Container = styled.section`
     margin-top: 4rem;
   }
 
+  @media screen and (max-width: 960px) {
+    .stack-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem 1.5rem;
+    }
+
+    .stack-wrapper {
+      max-height: 180px;
+    }
+
+    .stack-wrapper.expanded {
+      max-height: 2000px;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .content {
       width: 70vw;
+    }
+
+    .stack-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.7rem 1rem;
+    }
+
+    .stack-wrapper {
+      max-height: 200px;
+    }
+
+    .stack-wrapper.expanded {
+      max-height: 2000px;
     }
   }
 
@@ -94,6 +170,10 @@ export const Container = styled.section`
       justify-content: flex-start;
       align-items: flex-start;
       width: 80vw;
+    }
+
+    .about h3 {
+      font-size: 2.5rem;
     }
 
     .content {
@@ -113,9 +193,21 @@ export const Container = styled.section`
       width: 100%;
     }
 
+    .stack-grid {
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+
+    .stack-wrapper {
+      max-height: 300px;
+    }
+
+    .stack-wrapper.expanded {
+      max-height: 2000px;
+    }
+
     .stack-item {
       font-size: 1.2rem;
-      margin-bottom: 0.8rem;
     }
 
     .btn-container {

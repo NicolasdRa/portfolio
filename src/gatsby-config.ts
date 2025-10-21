@@ -41,16 +41,17 @@ const gatsbyConfig: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: `https://portfolio-server-strapi-mongo.herokuapp.com`,
-        // apiURL: `http://localhost:1338`,
-        queryLimit: 1000, // Defaults to 100
-        collectionTypes: [`project`],
-        // singleTypes: [`home-page`, `contact`],
-      },
-    },
+    // Strapi integration disabled - using static data from src/constants/projects.tsx
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: `https://portfolio-server-strapi-mongo.herokuapp.com`,
+    //     // apiURL: `http://localhost:1338`,
+    //     queryLimit: 1000, // Defaults to 100
+    //     collectionTypes: [`project`],
+    //     // singleTypes: [`home-page`, `contact`],
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-styled-components',
       options: {

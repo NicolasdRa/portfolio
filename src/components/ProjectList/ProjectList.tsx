@@ -1,48 +1,19 @@
 import React, { useRef, useEffect } from 'react';
 import { v4 } from 'uuid';
-import { useStaticQuery, graphql } from 'gatsby';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ImageDataLike } from 'gatsby-plugin-image';
 import ProjectItem from '../ProjectItem/ProjectItem';
 import { Container } from './ProjectList.styled';
+import projectsData from '../../constants/projects';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const query = graphql`
-  {
-    allStrapiProject {
-      nodes {
-        title
-        summary
-        web
-        slug
-        stack {
-          name
-        }
-        github
-        featured
-        description
-        image {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, transformOptions: { fit: FILL }, formats: AUTO)
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 interface ProjectListProps {
   featured: boolean;
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
-  const {
-    allStrapiProject: { nodes: projects },
-  } = useStaticQuery(query);
+  const projects = projectsData;
 
   const contentRef = useRef(null);
   const elementsRef = useRef<any[]>([]);
@@ -115,23 +86,11 @@ const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
   return (
     <Container>
       <div ref={contentRef} className="list">
-        {data.map(
-          (project: {
-            id: number;
-            title: string;
-            summary: string;
-            featured: boolean;
-            description: string;
-            stack: any[];
-            web: string;
-            github: string;
-            image: { localFile: { childImageSharp: { gatsbyImageData: ImageDataLike } } };
-          }) => (
-            <div ref={addToRef} key={v4()}>
-              <ProjectItem project={project} />
-            </div>
-          )
-        )}
+        {data.map((project: any) => (
+          <div ref={addToRef} key={v4()}>
+            <ProjectItem project={project} />
+          </div>
+        ))}
       </div>
     </Container>
   );

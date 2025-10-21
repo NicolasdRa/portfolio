@@ -71,7 +71,7 @@ export const Container = styled.div`
     justify-content: flex-start;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     .image {
       height: 200px;
     }
@@ -100,6 +100,14 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    h4 {
+      font-size: 2rem;
+    }
+
+    h5 {
+      font-size: 1.3rem;
+    }
+
     .project-block {
       margin: 4rem 0;
       flex-direction: column;
@@ -108,14 +116,12 @@ export const Container = styled.div`
     }
 
     .image {
-      width: 80vw;
-      height: 20rem;
-      margin-bottom: 2rem;
+      display: none;
     }
 
     .info {
-      margin-left: 1rem;
-      width: 95%;
+      margin-left: 0;
+      width: 100%;
     }
 
     .stack {

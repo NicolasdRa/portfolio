@@ -9,7 +9,7 @@ export const Container = styled.section`
     align-items: center;
     width: 60vw;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .contact h3 {
@@ -52,7 +52,8 @@ export const Container = styled.section`
 
   .form-control {
     display: block;
-    width: 30rem;
+    width: 100%;
+    max-width: 40rem;
     padding: 1rem 0;
     border: none;
     border-bottom: 1px solid ${theme.colors.grey4};
@@ -77,6 +78,37 @@ export const Container = styled.section`
     position: relative;
     margin-bottom: 1rem;
     text-align: right;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .contact {
+      width: 75vw;
+    }
+
+    .form-control {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .contact {
+      width: 80vw;
+    }
+
+    .titles {
+      width: 40%;
+      margin: 0 2rem;
+    }
+
+    .form {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .contact h3 {
+      font-size: 2.5rem;
+    }
   }
 
   @media only screen and (max-width: 600px) {

@@ -103,7 +103,7 @@ export const Container = styled.section`
     margin-top: 2rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     .work {
       width: 80vw;
     }
@@ -123,6 +123,18 @@ export const Container = styled.section`
   }
 
   @media screen and (max-width: 600px) {
+    .work h3 {
+      font-size: 2.5rem;
+    }
+
+    .work h4 {
+      font-size: 2rem;
+    }
+
+    .work h5 {
+      font-size: 1.3rem;
+    }
+
     .content {
       flex-direction: column;
       width: 100%;

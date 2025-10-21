@@ -68,3 +68,7 @@ yarn-error.log
 
 # development resources
 resources
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md

@@ -57,7 +57,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  .hover-name {
+  .38 {
     .cursor-background {
       opacity: 0.2;
       background-color: ${theme.colors.primary1};

@@ -3,8 +3,8 @@ import { CustomCursorContext } from '../../context/CustomCursorContext';
 import { Wrapper } from './CustomCursor.styled';
 
 const CustomCursor = () => {
-  const mainCursorRef = useRef(null);
-  const secondaryCursorRef = useRef(null);
+  const mainCursorRef = useRef<HTMLDivElement>(null);
+  const secondaryCursorRef = useRef<HTMLDivElement>(null);
   const positionRef = useRef({
     mouseX: 0,
     mouseY: 0,
@@ -18,31 +18,25 @@ const CustomCursor = () => {
   const { type } = useContext(CustomCursorContext);
 
   useEffect(() => {
-    document.addEventListener('mousemove', (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
 
       const mouseX = clientX;
       const mouseY = clientY;
 
-      positionRef.current.mouseX = mouseX - secondaryCursorRef.current.clientWidth / 2;
-      positionRef.current.mouseY = mouseY - secondaryCursorRef.current.clientHeight / 2;
-      mainCursorRef.current.style.transform = `translate3d(${
-        mouseX - mainCursorRef.current.clientWidth / 2
-      }px, ${mouseY - mainCursorRef.current.clientHeight / 2}px, 0)`;
-    });
-    return () => {
-      document.removeEventListener('mousemove', (e) => {
-        const { clientX, clientY } = e;
-
-        const mouseX = clientX;
-        const mouseY = clientY;
-
+      if (secondaryCursorRef.current && mainCursorRef.current) {
         positionRef.current.mouseX = mouseX - secondaryCursorRef.current.clientWidth / 2;
         positionRef.current.mouseY = mouseY - secondaryCursorRef.current.clientHeight / 2;
         mainCursorRef.current.style.transform = `translate3d(${
           mouseX - mainCursorRef.current.clientWidth / 2
         }px, ${mouseY - mainCursorRef.current.clientHeight / 2}px, 0)`;
-      });
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -70,7 +64,9 @@ const CustomCursor = () => {
           positionRef.current.destinationY += distanceY;
         }
       }
-      secondaryCursorRef.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+      if (secondaryCursorRef.current) {
+        secondaryCursorRef.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+      }
     };
     followMouse();
   }, []);

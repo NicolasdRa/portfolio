@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
                 <AnimatedText
                   key={v4()}
                   text={item}
-                  // setActiveIndex={setActiveIndex}
+                  setActiveIndex={setActiveIndex}
                   index={index}
                 />
               </div>

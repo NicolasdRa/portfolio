@@ -12,11 +12,11 @@ interface CustomImageProps {
 }
 
 const CustomImage: React.FC<CustomImageProps> = ({
-  data,
+  data = '',
   node = null,
   name = 'photo',
   translate = '0px, 0px',
-  isActive,
+  isActive = false,
 }) => {
   const imageRef = useRef<HTMLDivElement>(null);
 
@@ -37,16 +37,25 @@ const CustomImage: React.FC<CustomImageProps> = ({
     );
   }, [isActive]);
 
+  const imageData = node ? getImage(node) : null;
+
   return (
     <Wrapper>
       <div
         style={{ transform: translate, pointerEvents: 'none', willChange: 'transform' }}
         ref={imageRef}
       >
-        {node ? <GatsbyImage image={getImage(node)} alt={name} /> : <img src={data} alt="im" />}
+        {imageData ? <GatsbyImage image={imageData} alt={name} /> : <img src={data} alt="im" />}
       </div>
     </Wrapper>
   );
+};
+
+CustomImage.defaultProps = {
+  data: undefined,
+  node: undefined,
+  translate: '0px, 0px',
+  isActive: false,
 };
 
 export default CustomImage;

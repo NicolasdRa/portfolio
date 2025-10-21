@@ -45,4 +45,22 @@ export const Wrapper = styled.div`
       color: ${theme.colors.primary3};
     }
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.3rem;
+
+    a,
+    button {
+      padding: 1.6rem 2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.2rem;
+
+    a,
+    button {
+      padding: 1.5rem 2.2rem;
+    }
+  }
 `;

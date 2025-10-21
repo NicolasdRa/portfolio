@@ -57,7 +57,7 @@ const Work = () => {
           </div>
           <div className="text">
             {jobs.map((job) => {
-              const { id, company, startDate, endDate, tasks } = job;
+              const { id, company, position, startDate, endDate, tasks } = job;
 
               return (
                 <div key={id} className="experience-block">
@@ -65,7 +65,7 @@ const Work = () => {
                   <h5>
                     <span className="date">
                       {startDate} - {endDate}
-                      {/* <span className="position">- {position}</span> */}
+                      <span className="position"> - {position}</span>
                     </span>
                   </h5>
 

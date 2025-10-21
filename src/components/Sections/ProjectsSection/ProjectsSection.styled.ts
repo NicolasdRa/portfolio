@@ -53,7 +53,7 @@ export const Container = styled.section`
     width: min-content;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     .content {
       width: 80vw;
       align-items: flex-start;
@@ -72,6 +72,10 @@ export const Container = styled.section`
     max-width: 100vw;
     height: 100%;
 
+    .subtitle {
+      font-size: 2.5rem;
+    }
+
     .content {
       width: 80vw;
       align-items: flex-start;
@@ -85,6 +89,16 @@ export const Container = styled.section`
     .btn-container {
       margin: 4rem 0 0 0;
       align-self: center;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .subtitle {
+      font-size: 2rem;
+    }
+
+    .title {
+      font-size: 1.4rem;
     }
   }
 `;
