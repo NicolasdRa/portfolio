@@ -17,7 +17,18 @@ const CustomCursor = () => {
 
   const { type } = useContext(CustomCursorContext);
 
+  // Check if user prefers reduced motion
+  const [isVisible, setIsVisible] = React.useState(false);
+
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    setIsVisible(supportsHover && !prefersReducedMotion);
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return undefined;
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
 
@@ -38,11 +49,17 @@ const CustomCursor = () => {
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [isVisible]);
 
   useEffect(() => {
+    if (!isVisible) return undefined;
+    let rafId: number;
+    let isActive = true;
+
     const followMouse = () => {
-      positionRef.current.key = requestAnimationFrame(followMouse);
+      if (!isActive || document.hidden) return;
+
+      rafId = requestAnimationFrame(followMouse);
       const { mouseX, mouseY, destinationX, destinationY, distanceX, distanceY } =
         positionRef.current;
 
@@ -68,8 +85,30 @@ const CustomCursor = () => {
         secondaryCursorRef.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
       }
     };
+
+    // Handle visibility changes to pause animation when tab is not active
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        followMouse();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
     followMouse();
-  }, []);
+
+    // Clean up the animation frame on unmount
+    return () => {
+      isActive = false;
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [isVisible]);
+
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <Wrapper>

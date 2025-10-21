@@ -9,5 +9,7 @@ export type CustomCursorType = {
 
 export const CustomCursorContext = createContext<CustomCursorType>({
   type: 'default',
-  setType: () => {},
+  setType: () => {
+    // Default implementation - will be overridden by provider
+  },
 });

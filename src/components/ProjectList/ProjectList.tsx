@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { v4 } from 'uuid';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ProjectItem from '../ProjectItem/ProjectItem';
@@ -15,8 +14,8 @@ interface ProjectListProps {
 const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
   const projects = projectsData;
 
-  const contentRef = useRef(null);
-  const elementsRef = useRef<any[]>([]);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const elementsRef = useRef<HTMLDivElement[]>([]);
   elementsRef.current = [];
 
   const data = featured ? projects.filter((project) => project.featured === true) : projects;
@@ -77,7 +76,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
     });
   }, []);
 
-  const addToRef = (el: React.ReactNode) => {
+  const addToRef = (el: HTMLDivElement | null) => {
     if (el && !elementsRef.current.includes(el)) {
       elementsRef.current.push(el);
     }
@@ -86,8 +85,8 @@ const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
   return (
     <Container>
       <div ref={contentRef} className="list">
-        {data.map((project: any) => (
-          <div ref={addToRef} key={v4()}>
+        {data.map((project) => (
+          <div ref={addToRef} key={`project-${project.id}`}>
             <ProjectItem project={project} />
           </div>
         ))}

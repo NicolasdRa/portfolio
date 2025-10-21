@@ -17,46 +17,35 @@ const Navbar: React.FC<Props> = ({ toggleSideBar }) => {
 
   const { setType } = useContext(CustomCursorContext);
 
-  // TODO: fix this function and event listener
-  // const handleScroll = () => {
-  //   let prevScroll = window.pageYOffset;
-
-  //   window.onscroll = () => {
-  //     const currentScroll = window.pageYOffset;
-
-  //     if (prevScroll < currentScroll) {
-  //       setScrolled('scrolledDown');
-  //     } else if (prevScroll > currentScroll) {
-  //       setScrolled('');
-  //     } else {
-  //       setScrolled('');
-  //     }
-
-  //     prevScroll = currentScroll;
-  //   };
-  // };
-
   useEffect(() => {
     let prevScroll = window.pageYOffset;
+    let ticking = false;
 
-    window.onscroll = () => {
-      const currentScroll = window.pageYOffset;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScroll = window.pageYOffset;
 
-      if (prevScroll < currentScroll) {
-        setScrolled('scrolledDown');
-      } else if (prevScroll > currentScroll) {
-        setScrolled('');
-      } else {
-        setScrolled('');
+          if (prevScroll < currentScroll && currentScroll > 80) {
+            setScrolled('scrolledDown');
+          } else {
+            setScrolled('');
+          }
+
+          prevScroll = currentScroll;
+          ticking = false;
+        });
+
+        ticking = true;
       }
-
-      prevScroll = currentScroll;
     };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      // window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-  });
+  }, []);
 
   useEffect(() => {
     if (!navRef.current) throw Error('divRef is not assigned');

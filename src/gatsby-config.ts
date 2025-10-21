@@ -25,7 +25,7 @@ const gatsbyConfig: GatsbyConfig = {
       'wordpress developer',
       'frontend developer berlin',
       'react SPA developer',
-      'wen applications developer',
+      'web applications developer',
       'frontend developer germany',
       'frontend developer berlin',
       'full-stack developer berlin',

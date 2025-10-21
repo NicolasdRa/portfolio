@@ -10,8 +10,29 @@ export const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
-    cursor: none;
     box-sizing: border-box;
+  }
+
+  /* Only hide cursor when custom cursor is supported and not in reduced motion mode */
+  @media (hover: hover) and (pointer: fine) {
+    *,
+    *::before,
+    *::after {
+      cursor: none;
+    }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      cursor: auto !important;
+    }
   }
 
   html {
@@ -19,7 +40,12 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
-    /* cursor: none */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   body {
@@ -45,12 +71,34 @@ body::-webkit-scrollbar-thumb {
   /* outline: 1px solid slategrey; */
 }
 
+  /* Focus styles for keyboard navigation */
+  /* Visible focus indicator for keyboard navigation */
+  *:focus-visible {
+    outline: 2px solid ${theme.colors.primary1};
+    outline-offset: 2px;
+    border-radius: ${theme.borderRadius};
+  }
+
+  /* Default focus styles for all elements */
+  *:focus {
+    outline: 2px solid ${theme.colors.primary1};
+    outline-offset: 2px;
+  }
+
+  /* Only remove focus outline for mouse users */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
   a {
     color: currentColor;
     display: block;
     text-decoration: none;
+    position: relative;
 
-    &:hover {cursor: none}
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {cursor: none}
+    }
   }
 
   button {
@@ -58,8 +106,10 @@ body::-webkit-scrollbar-thumb {
     border: none;
     cursor: pointer;
     padding: 0;
-    outline: none;
-    &:hover {cursor: none}
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {cursor: none}
+    }
   }
 
   h1,
