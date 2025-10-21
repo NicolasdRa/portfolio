@@ -1,11 +1,9 @@
 [build]
-  command = "yarn build"
+  command = "npm run build"
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "18.12.0"
-  NPM_FLAGS = "--legacy-peer-deps"
-  NODE_OPTIONS = "--openssl-legacy-provider"
+  NODE_VERSION = "20.18.0"
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { v4 } from 'uuid';
 import ProjectItem from '../ProjectItem/ProjectItem';
 import { Container } from './ProjectList.styled';
 import projectsData from '../../constants/projects';
@@ -86,7 +87,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ featured }) => {
     <Container>
       <div ref={contentRef} className="list">
         {data.map((project) => (
-          <div ref={addToRef} key={`project-${project.id}`}>
+          <div ref={addToRef} key={v4()}>
             <ProjectItem project={project} />
           </div>
         ))}

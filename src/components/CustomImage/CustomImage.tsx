@@ -6,15 +6,15 @@ import { Wrapper } from './CustomImage.styled';
 interface CustomImageProps {
   data?: string;
   node?: ImageDataLike;
-  name: string;
+  name?: string;
   translate?: string;
   isActive?: boolean;
 }
 
 const CustomImage: React.FC<CustomImageProps> = ({
-  data = '',
-  node = null,
-  name = 'photo',
+  data,
+  node,
+  name = '',
   translate = '0px, 0px',
   isActive = false,
 }) => {
@@ -45,17 +45,10 @@ const CustomImage: React.FC<CustomImageProps> = ({
         style={{ transform: translate, pointerEvents: 'none', willChange: 'transform' }}
         ref={imageRef}
       >
-        {imageData ? <GatsbyImage image={imageData} alt={name} /> : <img src={data} alt="im" />}
+        {imageData ? <GatsbyImage image={imageData} alt={name || ''} /> : <img src={data} alt={name || ''} />}
       </div>
     </Wrapper>
   );
-};
-
-CustomImage.defaultProps = {
-  data: undefined,
-  node: undefined,
-  translate: '0px, 0px',
-  isActive: false,
 };
 
 export default CustomImage;

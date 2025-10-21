@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageProps } from 'gatsby';
+import { PageProps, HeadFC } from 'gatsby';
 import loadable from '@loadable/component';
 
 import HeroSection from '../components/Sections/HeroSection/HeroSection';
@@ -8,11 +8,11 @@ import AboutSection from '../components/Sections/AboutSection/AboutSection';
 import WorkSection from '../components/Sections/WorkSection/WorkSection';
 import ProjectsSection from '../components/Sections/ProjectsSection/ProjectsSection';
 import ContactSection from '../components/Sections/ContactSection/ContactSection';
-import { SEO } from '../components/SEO/SEO';
+import { Head as HeadComponent } from '../components/Head/Head';
 
-const ParticlesBg = loadable(() => import('../../node_modules/particles-bg'));
+const ParticlesBg = loadable(() => import("particles-bg/dist"));
 
-const Index: React.FC<PageProps> = ({ location }) => {
+const Index: React.FC<PageProps> = ({ location: _location }) => {
   const particleConfig = {
     num: [1, 50],
     rps: 0.7,
@@ -34,7 +34,6 @@ const Index: React.FC<PageProps> = ({ location }) => {
 
   return (
     <>
-      <SEO pageMetadata={{ title: 'Home' }} location={location} />
       <HeroSection />
       <ParticlesBg num={50} type="custom" bg config={particleConfig} />
       {/* <Services /> */}
@@ -47,3 +46,7 @@ const Index: React.FC<PageProps> = ({ location }) => {
 };
 
 export default Index;
+
+export const Head: HeadFC = ({ location }) => (
+  <HeadComponent title="Home" pathname={location.pathname} />
+);

@@ -10,7 +10,7 @@ interface Props {
   download?: boolean;
 }
 
-const CustomButton: React.FC<Props> = ({ url, type, text, download }) => {
+const CustomButton: React.FC<Props> = ({ url, type, text, download = false }) => {
   const { setType } = useContext(CustomCursorContext);
 
   const componentMap = {
@@ -31,7 +31,3 @@ const CustomButton: React.FC<Props> = ({ url, type, text, download }) => {
 };
 
 export default CustomButton;
-
-CustomButton.defaultProps = {
-  download: false,
-};

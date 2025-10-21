@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CustomLink from '../../CustomLink/CustomLink';
 import { Container } from './ContactSection.styled';
 
-const Contact = () => {
+function Contact() {
   gsap.registerPlugin(ScrollTrigger);
   const contentRef = useRef(null);
 
@@ -95,6 +95,6 @@ const Contact = () => {
       </div>
     </Container>
   );
-};
+}
 
 export default Contact;

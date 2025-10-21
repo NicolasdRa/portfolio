@@ -18,6 +18,12 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/require-default-props': 'off',
+    'react/function-component-definition': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
+    'react/no-unknown-property': ['error', { ignore: ['netlify-honeypot'] }],
+    'func-names': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
   },
   overrides: [
     {

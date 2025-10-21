@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
+import React, { useRef, useState } from 'react';
 import { v4 } from 'uuid';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ImageDataLike } from 'gatsby-plugin-image';
@@ -9,8 +8,6 @@ import AnimatedText from '../../AnimatedText/AnimatedText';
 import CustomImage from '../../CustomImage/CustomImage';
 import { Container } from './HeroSection.styled';
 // import { useMousePosition } from '../../../hooks/useMousePosition';
-
-import { data } from '../../../constants/heroData';
 
 const query = graphql`
   {
@@ -54,7 +51,7 @@ const Hero: React.FC = () => {
       <div id="hero" className="hero">
         <div className="content">
           <div className="media">
-            {nodes.map((node: ImageDataLike, index: any) => {
+            {nodes.map((node: ImageDataLike, index: number) => {
               const isActive = index === activeIndex;
               let { y, x } = mousePosition;
 

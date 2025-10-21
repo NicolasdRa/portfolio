@@ -7,7 +7,7 @@ import { Container } from './WorkSection.styled';
 import jobs from '../../../constants/jobs';
 import cv from '../../../../static/cv-nicolasdirago.pdf';
 
-const Work = () => {
+function Work() {
   gsap.registerPlugin(ScrollTrigger);
   const contentRef = useRef(null);
 
@@ -84,6 +84,6 @@ const Work = () => {
       </div>
     </Container>
   );
-};
+}
 
 export default Work;

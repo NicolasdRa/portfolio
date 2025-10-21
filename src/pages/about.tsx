@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
-import { PageProps } from 'gatsby';
-import { SEO } from '../components/SEO/SEO';
+import { PageProps, HeadFC } from 'gatsby';
 import CustomLink from '../components/CustomLink/CustomLink';
 import { theme } from '../style/theme';
+import { Head as HeadComponent } from '../components/Head/Head';
 
 const Wrapper = styled.main`
   display: grid;
@@ -27,7 +27,7 @@ const Wrapper = styled.main`
   }
 `;
 
-const About: React.FC<PageProps> = ({ location }) => {
+const About: React.FC<PageProps> = ({ location: _location }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,7 +38,6 @@ const About: React.FC<PageProps> = ({ location }) => {
 
   return (
     <Wrapper>
-      <SEO pageMetadata={{ title: 'About' }} location={location} />
       <div ref={contentRef} className="container">
         <h1>a detailed about page is coming soon...</h1>
         <CustomLink url="/" text="back home" type="gatsby" />
@@ -48,3 +47,7 @@ const About: React.FC<PageProps> = ({ location }) => {
 };
 
 export default About;
+
+export const Head: HeadFC = ({ location }) => (
+  <HeadComponent title="About" pathname={location.pathname} />
+);

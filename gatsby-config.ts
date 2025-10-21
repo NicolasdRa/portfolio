@@ -13,6 +13,7 @@ dotenv.config({
 });
 
 const gatsbyConfig: GatsbyConfig = {
+  trailingSlash: 'always', // Explicitly set for Gatsby v5 (default changed from 'legacy' to 'always')
   siteMetadata: {
     title: `Nicolás di Rago - Full-stack Web developer`,
     titleTemplate: `%s | Nicolás di Rago - Full-stack Web developer`,
@@ -37,52 +38,49 @@ const gatsbyConfig: GatsbyConfig = {
   },
   plugins: [
     'gatsby-plugin-image',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    // Strapi integration disabled - using static data from src/constants/projects.tsx
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: `https://portfolio-server-strapi-mongo.herokuapp.com`,
-    //     // apiURL: `http://localhost:1338`,
-    //     queryLimit: 1000, // Defaults to 100
-    //     collectionTypes: [`project`],
-    //     // singleTypes: [`home-page`, `contact`],
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Nicolás di Rago Portfolio',
+        short_name: 'NdR Portfolio',
+        start_url: '/',
+        background_color: '#FAFAFA',
+        theme_color: '#EC4D37',
+        display: 'standalone',
+        icon: 'src/assets/icon-512.png', // This icon path is relative to the root of the site
+        icons: [
+          {
+            src: '/favicon-1.png',
+            sizes: '16x16',
+            type: 'image/png',
+          },
+          {
+            src: '/favicon-2.png',
+            sizes: '32x32',
+            type: 'image/png',
+          },
+          {
+            src: '/favicon-3.png',
+            sizes: '48x48',
+            type: 'image/png',
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-styled-components',
       options: {
         displayName: process.env.NODE_ENV !== 'production',
       },
     },
-    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: resolve(__dirname, './assets/images'),
+        path: resolve(__dirname, './src/assets/images'),
         name: 'images',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-fonts-v2',
-      options: {
-        fonts: [
-          {
-            family: 'Source Code Pro',
-            weights: ['300', '400', '500', '600', '700', '800'],
-          },
-          {
-            family: 'Space Grotesk',
-            weights: ['300', '400', '500', '600', '700'],
-          },
-          {
-            family: 'Oswald',
-            weights: ['300', '400', '500', '600', '700'],
-          },
-        ],
       },
     },
   ],
