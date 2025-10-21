@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { MdWeb } from 'react-icons/md';
 import { v4 as uuidv4 } from 'uuid';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import { Container, ProjectLink } from './ProjectItem.styled';
 import { CustomCursorContext } from '../../context/CustomCursorContext';
 
@@ -13,10 +13,16 @@ interface ProjectItemProps {
     summary: string;
     featured: boolean;
     description: string;
-    stack: any[];
+    stack: Array<{ name: string }>;
     web: string;
     github: string;
-    image: any; // Can be either a string (import) or Gatsby image data
+    image: {
+      localFile?: {
+        childImageSharp?: {
+          gatsbyImageData: ImageDataLike;
+        };
+      };
+    } | string;
   };
 }
 
@@ -26,9 +32,11 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   const stackArray = stack.map((item) => item.name);
   const { setType } = useContext(CustomCursorContext);
 
-  // Check if image is a Gatsby image object or a direct import
-  const isGatsbyImage = image?.localFile?.childImageSharp?.gatsbyImageData;
-  const imageData = isGatsbyImage ? getImage(image.localFile.childImageSharp.gatsbyImageData) : null;
+  // Check if image is a Gatsby image object or a direct import (string)
+  const isGatsbyImage = typeof image !== 'string' && image?.localFile?.childImageSharp?.gatsbyImageData;
+  const imageData = isGatsbyImage && typeof image !== 'string' && image.localFile?.childImageSharp?.gatsbyImageData
+    ? getImage(image.localFile.childImageSharp.gatsbyImageData)
+    : null;
 
   return (
     <Container>
@@ -36,7 +44,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
         {isGatsbyImage && imageData ? (
           <GatsbyImage image={imageData} alt={title} className="image" />
         ) : (
-          <img src={image} alt={title} className="image" />
+          <img src={typeof image === 'string' ? image : ''} alt={title} className="image" />
         )}
         <div className="info">
           {featured && <span className="featured">featured</span>}

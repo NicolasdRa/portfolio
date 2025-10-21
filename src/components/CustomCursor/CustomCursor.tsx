@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useContext } from 'react';
 import { CustomCursorContext } from '../../context/CustomCursorContext';
 import { Wrapper } from './CustomCursor.styled';
 
-const CustomCursor = () => {
+function CustomCursor() {
   const mainCursorRef = useRef<HTMLDivElement>(null);
   const secondaryCursorRef = useRef<HTMLDivElement>(null);
   const positionRef = useRef({
@@ -83,6 +83,6 @@ const CustomCursor = () => {
       </div>
     </Wrapper>
   );
-};
+}
 
 export default CustomCursor;

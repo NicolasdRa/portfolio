@@ -7,8 +7,8 @@ import { Container } from './ProjectsSection.styled';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Projects = () => (
-  <Container>
+function Projects() {
+  return <Container>
     <div id="projects" className="content">
       <div className="content">
         <div className="title-container">
@@ -25,6 +25,6 @@ const Projects = () => (
       </div>
     </div>
   </Container>
-);
+}
 
 export default Projects;

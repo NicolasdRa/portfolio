@@ -4,14 +4,14 @@ import { CustomCursorContext } from '../../context/CustomCursorContext';
 
 import { Text } from './AnimatedText.styled';
 
-interface Text {
+interface AnimatedTextProps {
   text: string;
   // color: string;
   setActiveIndex: Dispatch<SetStateAction<number>>;
   index: number;
 }
 
-const AnimatedText: React.FC<Text> = ({ text, setActiveIndex, index }) => {
+const AnimatedText: React.FC<AnimatedTextProps> = ({ text, setActiveIndex, index: _index }) => {
   const { setType } = useContext(CustomCursorContext);
 
   return (

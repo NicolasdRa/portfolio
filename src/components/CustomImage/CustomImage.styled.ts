@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../style/theme';
 
 export const Wrapper = styled.div`
   .active {

@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
     <Container id="hero">
       <div className="content">
         <div className="media">
-          {nodes.map((node: ImageDataLike, index: any) => {
+          {nodes.map((node: ImageDataLike, index: number) => {
             const isActive = index === activeIndex;
 
             return (

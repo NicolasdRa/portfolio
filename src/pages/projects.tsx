@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
-import { PageProps } from 'gatsby';
+import { PageProps, HeadFC } from 'gatsby';
 import { theme } from '../style/theme';
 import ProjectList from '../components/ProjectList/ProjectList';
 import CustomLink from '../components/CustomLink/CustomLink';
-import { SEO } from '../components/SEO/SEO';
+import { Head as HeadComponent } from '../components/Head/Head';
 
 const Wrapper = styled.main`
   display: flex;
@@ -32,7 +32,7 @@ const Wrapper = styled.main`
   }
 `;
 
-const Projects: React.FC<PageProps> = ({ location }) => {
+const Projects: React.FC<PageProps> = ({ location: _location }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,7 +43,6 @@ const Projects: React.FC<PageProps> = ({ location }) => {
 
   return (
     <Wrapper>
-      <SEO pageMetadata={{ title: 'Projects' }} location={location} />
       <div ref={contentRef} className="content">
         <h1>more projects</h1>
         <ProjectList featured={false} />
@@ -54,3 +53,7 @@ const Projects: React.FC<PageProps> = ({ location }) => {
 };
 
 export default Projects;
+
+export const Head: HeadFC = ({ location }) => (
+  <HeadComponent title="Projects" pathname={location.pathname} />
+);
