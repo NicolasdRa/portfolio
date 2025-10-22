@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../../style/theme';
 
 export const Container = styled.section`
   .about {
@@ -42,7 +41,7 @@ export const Container = styled.section`
   .text span {
     font-weight: bold;
     text-transform: none;
-    color: ${theme.colors.primary4};
+    color: ${({ theme }) => theme.colors.primary4};
   }
 
   .profile {
@@ -76,14 +75,19 @@ export const Container = styled.section`
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom, transparent, ${theme.colors.background});
+    background: ${({ theme }) =>
+      theme.mode === 'dark'
+        ? 'linear-gradient(to bottom, rgba(10, 10, 10, 0), rgba(10, 10, 10, 1))'
+        : 'linear-gradient(to bottom, rgba(250, 250, 250, 0), rgba(250, 250, 250, 1))'
+    };
     pointer-events: none;
+    transition: background 0.3s ease;
   }
 
   .view-all-btn {
     background: none;
     border: none;
-    color: ${theme.colors.primary4};
+    color: ${({ theme }) => theme.colors.primary3};
     font-family: inherit;
     font-size: 1.4rem;
     text-transform: lowercase;
@@ -94,10 +98,31 @@ export const Container = styled.section`
     margin-right: auto;
     display: block;
     text-align: left;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: ${({ theme }) => theme.colors.primary3};
+      transition: width 0.3s ease;
+    }
 
     &:hover {
-      opacity: 0.7;
+      color: ${({ theme }) => theme.colors.primary2};
+      cursor: none;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:active {
+      transform: translateY(1px);
     }
   }
 
@@ -114,7 +139,7 @@ export const Container = styled.section`
   .title {
     display: flex;
     justify-content: flex-end;
-    color: ${theme.colors.primary4};
+    color: ${({ theme }) => theme.colors.primary3};
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 600;

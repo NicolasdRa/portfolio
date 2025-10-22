@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from './theme';
 import 'normalize.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -49,11 +48,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: ${theme.fonts.primary};
+    font-family: ${({ theme }) => theme.fonts.primary};
     font-size: 1.6rem;
-    background-color: ${theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.black};
     /* cursor: none; */
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
 body::-webkit-scrollbar {
@@ -67,21 +68,21 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   height: 15rem;
-  background-color: ${theme.colors.grey5};
+  background-color: ${({ theme }) => theme.colors.grey5};
   /* outline: 1px solid slategrey; */
 }
 
   /* Focus styles for keyboard navigation */
   /* Visible focus indicator for keyboard navigation */
   *:focus-visible {
-    outline: 2px solid ${theme.colors.primary1};
+    outline: 2px solid ${({ theme }) => theme.colors.primary1};
     outline-offset: 2px;
-    border-radius: ${theme.borderRadius};
+    border-radius: ${({ theme }) => theme.borderRadius};
   }
 
   /* Default focus styles for all elements */
   *:focus {
-    outline: 2px solid ${theme.colors.primary1};
+    outline: 2px solid ${({ theme }) => theme.colors.primary1};
     outline-offset: 2px;
   }
 
@@ -119,7 +120,7 @@ body::-webkit-scrollbar-thumb {
   h5,
   h6 {
     margin: 0;
-    font-family: ${theme.fonts.secondary};
+    font-family: ${({ theme }) => theme.fonts.secondary};
     font-size: 100%;
     font-weight: normal;
   }
@@ -160,7 +161,7 @@ body::-webkit-scrollbar-thumb {
     margin-right: 1rem;
     width: 90px;
     height: 9px;
-    border-bottom: 1px solid ${theme.colors.grey3};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey3};
   }
 
 

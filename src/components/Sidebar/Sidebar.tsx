@@ -2,6 +2,7 @@ import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import links from '../../constants/links';
 import socialLinks from '../../constants/social_links';
+import { useThemeMode } from '../../context/ThemeContext';
 
 import {
   Wrapper,
@@ -12,6 +13,7 @@ import {
   SideBarLinks,
   SocialLinks,
   SideBarLink,
+  ThemeToggleButton,
 } from './SideBar.styled';
 
 interface SideBarProps {
@@ -19,7 +21,10 @@ interface SideBarProps {
   toggleSideBar: () => void;
 }
 
-const Sidebar: React.FC<SideBarProps> = ({ isOpen, toggleSideBar }) => (
+const Sidebar: React.FC<SideBarProps> = ({ isOpen, toggleSideBar }) => {
+  const { themeMode, toggleTheme } = useThemeMode();
+
+  return (
   <Wrapper>
     <SideBar className={isOpen ? 'show-sidebar' : undefined}>
       <CloseBtn onClick={toggleSideBar} aria-label="Close menu">
@@ -36,6 +41,9 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, toggleSideBar }) => (
             </li>
           ))}
         </SideBarLinks>
+        <ThemeToggleButton onClick={toggleTheme}>
+          {themeMode === 'light' ? 'dark' : 'light'} mode
+        </ThemeToggleButton>
         <SocialLinks>
           {socialLinks.map((link) => (
             <li key={link.id}>
@@ -48,6 +56,7 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, toggleSideBar }) => (
       </Inner>
     </SideBar>
   </Wrapper>
-);
+  );
+};
 
 export default Sidebar;

@@ -6,6 +6,7 @@ import SocialLinks from '../SocialLinks/SocialLinks';
 import CustomCursor from '../CustomCursor/CustomCursor';
 import Sidebar from '../Sidebar/Sidebar';
 import CustomCursorManager from '../../context/manager';
+import { ThemeToggle } from '../ThemeToggle';
 
 interface LayoutProps {
   children: ReactNode;
@@ -23,6 +24,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, location }) => {
     <CustomCursorManager>
       {location.pathname === '/' && <Navbar toggleSideBar={toggleSideBar} />}
       <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
+      <ThemeToggle />
       <CustomCursor />
       <SocialLinks />
       {children}

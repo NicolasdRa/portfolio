@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../style/theme';
 
 export const Container = styled.div`
   .vertical-links {
@@ -21,55 +20,58 @@ export const Container = styled.div`
   }
 
   .cv {
-    color: ${theme.colors.background};
-    background-color: ${theme.colors.grey1};
-    /* background-color: transparent;
-    color: ${theme.colors.grey2};
-    border: 1px solid ${theme.colors.grey1}; */
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.grey2};
     border-radius: 50%;
     padding: 0.6rem;
     line-height: 1;
     text-decoration: none;
-    transition: ${theme.transition};
+    transition: ${({ theme }) => theme.transition};
     font-size: 1rem;
     width: max-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .cv:hover {
-    background-color: ${theme.colors.primary4};
+    background-color: ${({ theme }) => theme.colors.primary3};
+    color: ${({ theme }) => theme.colors.white};
     transform: translateY(-2px);
-    transition: ${theme.transition};
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: ${({ theme }) => theme.transition};
   }
 
   .cv:active {
-    background-color: ${theme.colors.primary3};
+    background-color: ${({ theme }) => theme.colors.primary2};
     transform: translateY(1px);
     transition: transform 125ms;
   }
 
   .vertical-line {
-    border-left: 1px solid ${theme.colors.grey4};
+    border-left: 1px solid ${({ theme }) => theme.colors.grey4};
     height: 100px;
     margin: 1.5rem 0;
+    opacity: 0.5;
+    transition: border-color 0.3s ease;
   }
 
   .social-link {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: ${theme.colors.grey1};
+    color: ${({ theme }) => theme.colors.grey2};
     will-change: transform;
     backface-visibility: hidden;
-    transition: transform 450ms ease-out;
+    transition: transform 450ms ease-out, color 0.3s ease;
+    position: relative;
   }
 
   .social-link:hover {
-    color: ${theme.colors.primary4};
+    color: ${({ theme }) => theme.colors.primary3};
     transform: translateY(-2px);
-    transition: transform 125ms;
+    transition: transform 125ms, color 0.15s ease;
   }
 
   .social-link:active {
-    color: ${theme.colors.primary3};
+    color: ${({ theme }) => theme.colors.primary2};
     transform: translateY(1px);
     transition: transform 125ms;
   }

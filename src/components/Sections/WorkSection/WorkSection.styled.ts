@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../../style/theme';
 
 export const Container = styled.section`
   .work {
@@ -26,7 +25,7 @@ export const Container = styled.section`
   }
 
   .work h5 {
-    font-family: ${theme.fonts.primary};
+    font-family: ${({ theme }) => theme.fonts.primary};
     margin-bottom: 1rem;
   }
 
@@ -89,7 +88,7 @@ export const Container = styled.section`
   .title {
     display: flex;
     justify-content: flex-end;
-    color: ${theme.colors.primary4};
+    color: ${({ theme }) => theme.colors.primary3};
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 600;

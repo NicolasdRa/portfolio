@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../../style/theme';
 
 export const Container = styled.section`
   display: flex;
@@ -25,10 +24,10 @@ export const Container = styled.section`
     place-content: center;
     height: 50vh;
     width: 50vw;
-    font-family: ${theme.fonts.tertiary};
+    font-family: ${({ theme }) => theme.fonts.tertiary};
     font-size: 10rem;
     font-weight: 300;
-    color: ${theme.colors.grey1};
+    color: ${({ theme }) => theme.colors.grey1};
     position: relative;
     cursor: none;
     opacity: 0;
@@ -36,7 +35,7 @@ export const Container = styled.section`
 
   .title-1 {
     grid-area: title-1;
-    color: ${theme.colors.grey4};
+    color: ${({ theme }) => theme.colors.grey3};
     justify-self: flex-start;
     align-self: flex-end;
     margin: 1rem 1rem 1.45rem -9rem;
@@ -63,7 +62,7 @@ export const Container = styled.section`
 
   .details {
     grid-area: details;
-    font-family: ${theme.fonts.primary};
+    font-family: ${({ theme }) => theme.fonts.primary};
     font-size: 1.5rem;
     font-weight: normal;
     justify-self: flex-start;
@@ -74,7 +73,7 @@ export const Container = styled.section`
   }
 
   .description {
-    background-color: ${theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.background};
     padding: 2rem 1rem 3rem 0;
     /* check whether to use this or not */
     /* mix-blend-mode: difference; */
@@ -83,7 +82,7 @@ export const Container = styled.section`
   .details span {
     font-weight: bold;
     text-transform: none;
-    color: ${theme.colors.primary4};
+    color: ${({ theme }) => theme.colors.primary3};
   }
 
   .description a {
@@ -165,7 +164,7 @@ export const Container = styled.section`
       /* place-content: center; */
       height: 50vh;
       width: 100%;
-      font-family: ${theme.fonts.tertiary};
+      font-family: ${({ theme }) => theme.fonts.tertiary};
       font-size: 5rem;
     }
 
@@ -183,7 +182,7 @@ export const Container = styled.section`
       margin: 1rem 4rem 1rem 0rem;
     }
     .title-3 {
-      margin: -3rem 0rem 1rem 2rem;
+      margin: -3rem 0rem 1rem 4rem;
     }
 
     .details {
@@ -202,6 +201,10 @@ export const Container = styled.section`
   }
 
   @media only screen and (max-width: 400px) {
+    .title {
+      padding-left: 15%; /* Move titles to the right on smaller screens too */
+    }
+
     .title-2,
     .title-3 {
       font-size: 5rem;

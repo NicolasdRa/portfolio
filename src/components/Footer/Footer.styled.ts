@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../style/theme';
 
 export const Container = styled.footer`
   .footer {
@@ -13,6 +12,12 @@ export const Container = styled.footer`
   .logo img {
     height: 2.3rem;
     margin-bottom: 2.5rem;
+    filter: ${({ theme }) => theme.mode === 'dark' ? 'invert(1) brightness(0.9)' : 'none'};
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  .logo a:hover img {
+    transform: scale(1.05);
   }
 
   .footer h4 {
@@ -23,7 +28,7 @@ export const Container = styled.footer`
   }
 
   .footer h4 span {
-    color: ${theme.colors.primary4};
+    color: ${({ theme }) => theme.colors.primary3};
   }
 
   .social-links {
@@ -36,18 +41,22 @@ export const Container = styled.footer`
     margin-right: 3rem;
     will-change: transform;
     backface-visibility: hidden;
-    transition: transform 450ms ease-out;
+    transition: transform 450ms ease-out, color 0.3s ease;
 
     a {
       height: 2rem;
-      color: ${theme.colors.grey2};
+      color: ${({ theme }) => theme.colors.grey2};
+      transition: color 0.3s ease;
     }
   }
 
   .social-link:hover {
-    color: ${theme.colors.primary3};
     transform: translateY(-2px);
     transition: transform 125ms;
+
+    a {
+      color: ${({ theme }) => theme.colors.primary3};
+    }
   }
 
   .social-link:last-child {
@@ -59,14 +68,14 @@ export const Container = styled.footer`
   }
 
   .footer .social-link {
-    color: ${theme.colors.grey3};
+    color: ${({ theme }) => theme.colors.grey3};
   }
 
-  .footer .social-link:hover {
-    color: ${theme.colors.primary3};
+  .footer .social-link:hover a {
+    color: ${({ theme }) => theme.colors.primary3};
   }
 
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 768px) {
     .social-links {
       display: none;
     }

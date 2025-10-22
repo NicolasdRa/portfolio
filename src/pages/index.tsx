@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageProps, HeadFC } from 'gatsby';
 import loadable from '@loadable/component';
+import { useTheme } from 'styled-components';
 
 import HeroSection from '../components/Sections/HeroSection/HeroSection';
 // import ServicesSection from '../components/Sections/ServicesSection/ServicesSection';
@@ -13,6 +14,8 @@ import { Head as HeadComponent } from '../components/Head/Head';
 const ParticlesBg = loadable(() => import("particles-bg/dist"));
 
 const Index: React.FC<PageProps> = ({ location: _location }) => {
+  const theme = useTheme();
+
   const particleConfig = {
     num: [1, 50],
     rps: 0.7,
@@ -25,7 +28,7 @@ const Index: React.FC<PageProps> = ({ location: _location }) => {
     alpha: [0.1, 0.6],
     scale: [0.1, 0.4],
     position: { x: 800, y: 800, width: 100, height: 100 }, // all or center or {x:1,y:1,width:100,height:100}
-    color: ['#262626'],
+    color: theme.mode === 'dark' ? ['#808080'] : ['#262626'], // Light grey in dark mode
     cross: 'dead', // cross or bround
     random: 15, // or null,
     g: 1, // gravity
