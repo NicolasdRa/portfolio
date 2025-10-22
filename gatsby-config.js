@@ -9,11 +9,15 @@ require('dotenv').config({
 });
 
 const { resolve } = require('path');
+const adapter = require('gatsby-adapter-netlify');
 
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  adapter: adapter({
+    excludeDatastoreFromEngineFunction: false,
+  }),
   trailingSlash: 'always', // Explicitly set for Gatsby v5 (default changed from 'legacy' to 'always')
   siteMetadata: {
     title: 'Nicolás di Rago - Full-stack Web developer',
