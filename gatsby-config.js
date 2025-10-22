@@ -16,8 +16,8 @@ const { resolve } = require('path');
 module.exports = {
   trailingSlash: 'always', // Explicitly set for Gatsby v5 (default changed from 'legacy' to 'always')
   siteMetadata: {
-    title: `Nicolás di Rago - Full-stack Web developer`,
-    titleTemplate: `%s | Nicolás di Rago - Full-stack Web developer`,
+    title: 'Nicolás di Rago - Full-stack Web developer',
+    titleTemplate: '%s | Nicolás di Rago - Full-stack Web developer',
     description: 'Nicolás di Rago Full-stack Web Developer',
     keywords: [
       'react developer',
@@ -33,7 +33,7 @@ module.exports = {
       'full-stack developer berlin',
     ],
     siteUrl: 'https://www.nicolasdirago.com',
-    twitterUsername: `@nicolasdiRago`,
+    twitterUsername: '@nicolasdiRago',
     imageUrl: '/main.jpg',
     language: 'en',
   },
@@ -42,6 +42,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -5,5 +5,5 @@
 [build.environment]
   NODE_VERSION = "20.18.0"
 
-[[plugins]]
-  package = "netlify-plugin-gatsby-cache"
+# [[plugins]]
+#   package = "netlify-plugin-gatsby-cache"
