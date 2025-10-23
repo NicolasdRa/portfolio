@@ -72,12 +72,12 @@ const Hero: React.FC = () => {
 
           <div className="details">
             <div className="description">
-              full-stack <span>web developer</span> mainly focused on the frontend side. currently
-              working for{' '}
+              senior <span>frontend engineer</span> with backend capabilities. building apps at{' '}
               <a href="https://nuuk.de" target="_blank" rel="noopener noreferrer">
                 <span>nuuk gmbh</span>
               </a>
-              . based in berlin.
+              . <br />
+              based in berlin.
             </div>
             <CustomLink url="#contact" type="link" text="get in touch" />
           </div>

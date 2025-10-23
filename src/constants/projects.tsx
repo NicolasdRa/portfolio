@@ -1,7 +1,5 @@
-import energeniousWebsite from '../assets/images/projects/energeniousWebsite.jpg';
 import energeniousGUI from '../assets/images/projects/energeniousGui.jpg';
 import energeniousAdmin from '../assets/images/projects/energeniousAdmin2.jpg';
-import energeniousSpreadsheet from '../assets/images/projects/energeniousSpreadsheet.jpg';
 import placeholderImage from '../assets/images/projects/Untitled-1.jpg';
 
 const data = [
@@ -210,20 +208,6 @@ const data = [
 
   // Energenious Projects
   {
-    id: 3,
-    title: 'energenious website',
-    summary: 'website revamp',
-    featured: true,
-    description: 'Company website responsive re-design and implementation in wordpress.',
-    stack: [{ name: 'Wordpress' }, { name: 'HTML5' }, { name: 'CSS3' }],
-    web: 'https://energenious.eu/',
-    github: '',
-    slug: 'energenious-website',
-    image: energeniousWebsite,
-    tag: 'Energenious',
-  },
-
-  {
     id: 5,
     title: 'Micogrid Creator - Energenious',
     summary: 'UX-UI re-design, energenious flagship product',
@@ -249,27 +233,6 @@ const data = [
     github: '',
     slug: 'account-management-energenious',
     image: energeniousAdmin,
-    tag: 'Energenious',
-  },
-
-  {
-    id: 7,
-    title: 'spreadsheet widget - energenious',
-    summary: 'spreadsheet widget, design and development',
-    featured: true,
-    description:
-      'Design and partial implementation of Spreadsheet widget developed in Typescript and React with Material UI. ',
-    stack: [
-      { name: 'React.js' },
-      { name: 'Typescript' },
-      { name: 'Redux.js' },
-      { name: 'Material-UI' },
-      { name: 'Figma' },
-    ],
-    web: '',
-    github: '',
-    slug: 'spreadsheet-widget-energenious',
-    image: energeniousSpreadsheet,
     tag: 'Energenious',
   },
 ];

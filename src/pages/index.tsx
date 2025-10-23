@@ -11,7 +11,7 @@ import ProjectsSection from '../components/Sections/ProjectsSection/ProjectsSect
 import ContactSection from '../components/Sections/ContactSection/ContactSection';
 import { Head as HeadComponent } from '../components/Head/Head';
 
-const ParticlesBg = loadable(() => import("particles-bg/dist"));
+const ParticlesBg = loadable(() => import('particles-bg/dist'));
 
 const Index: React.FC<PageProps> = ({ location: _location }) => {
   const theme = useTheme();
