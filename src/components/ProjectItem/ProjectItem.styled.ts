@@ -50,7 +50,9 @@ export const Container = styled.div`
   .stack {
     margin: 2rem 2rem 2rem 0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    max-width: 600px;
     /* justify-content: space-between; */
   }
 
@@ -58,6 +60,7 @@ export const Container = styled.div`
     font-size: 1.3rem;
     font-style: italic;
     margin-right: 2rem;
+    margin-bottom: 0.5rem;
     white-space: nowrap;
 
     &:last-child {
