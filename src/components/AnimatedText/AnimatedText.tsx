@@ -6,7 +6,6 @@ import { Text } from './AnimatedText.styled';
 
 interface AnimatedTextProps {
   text: string;
-  // color: string;
   setActiveIndex: Dispatch<SetStateAction<number>>;
   index: number;
 }
@@ -16,7 +15,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, setActiveIndex, index
 
   return (
     <Text>
-      {/* {[...text].map((item) => ( */}
       <div
         className="animated-item"
         key={v4()}
@@ -31,7 +29,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, setActiveIndex, index
       >
         {text}
       </div>
-      {/* ))} */}
     </Text>
   );
 };

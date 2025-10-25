@@ -4,7 +4,6 @@ import loadable from '@loadable/component';
 import { useTheme } from 'styled-components';
 
 import HeroSection from '../components/Sections/HeroSection/HeroSection';
-// import ServicesSection from '../components/Sections/ServicesSection/ServicesSection';
 import AboutSection from '../components/Sections/AboutSection/AboutSection';
 import WorkSection from '../components/Sections/WorkSection/WorkSection';
 import ProjectsSection from '../components/Sections/ProjectsSection/ProjectsSection';
@@ -39,7 +38,6 @@ const Index: React.FC<PageProps> = ({ location: _location }) => {
     <>
       <HeroSection />
       <ParticlesBg num={50} type="custom" bg config={particleConfig} />
-      {/* <Services /> */}
       <AboutSection />
       <WorkSection />
       <ProjectsSection />

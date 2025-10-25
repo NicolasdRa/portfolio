@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
   .footer {
-    /* min-height: 12rem; */
     text-align: center;
     display: flex;
     flex-direction: column;

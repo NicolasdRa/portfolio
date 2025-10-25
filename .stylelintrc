@@ -3,6 +3,7 @@
   "extends": ["stylelint-config-recommended"],
   "rules": {
     "no-empty-source": null,
-    "block-no-empty": null
+    "block-no-empty": null,
+    "nesting-selector-no-missing-scoping-root": null
   }
 }

@@ -36,7 +36,6 @@ const About: React.FC = () => {
               start: 'top 75%',
               end: 'bottom 90%',
               toggleActions: 'play none none reverse',
-              // markers: true,
             },
           }
         );
@@ -135,9 +134,6 @@ const About: React.FC = () => {
                 {showAll ? 'show less' : 'view more'}
               </button>
             )}
-            {/* <div className="btn-container">
-              <CustomLink url="/about" type="gatsby" text="the other side" />
-            </div> */}
           </div>
         </div>
       </div>

@@ -54,10 +54,8 @@ const Hero: React.FC = () => {
               <div key={v4()} className={`image ${isActive ? 'active' : 'inactive'}`}>
                 <CustomImage
                   isActive={isActive}
-                  // data={data[index].url}
                   node={node}
                   name={name[index]}
-                  // translate={`translate(${xPos / 1.5}px, ${yPos / 3}px)`}
                 />
               </div>
             );

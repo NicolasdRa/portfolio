@@ -52,7 +52,6 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.black};
-    /* cursor: none; */
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -62,14 +61,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 6px red; */
 }
 
 body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   height: 15rem;
   background-color: ${({ theme }) => theme.colors.grey5};
-  /* outline: 1px solid slategrey; */
 }
 
   /* Focus styles for keyboard navigation */

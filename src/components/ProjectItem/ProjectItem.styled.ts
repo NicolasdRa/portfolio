@@ -53,7 +53,6 @@ export const Container = styled.div`
     flex-wrap: wrap;
     width: 100%;
     max-width: 600px;
-    /* justify-content: space-between; */
   }
 
   .stack-item {

@@ -253,15 +253,3 @@ export const ThemeToggleButton = styled.button`
     padding-left: 2.5rem;
   }
 `;
-
-//   /*
-// ===============
-// Sidebar Animation
-// ===============
-// */
-//   .sidebar-icons li {
-//     opacity: 0;
-//     animation: slideUp 0.5s ease-in-out 0.3s forwards;
-//   }
-
-//
