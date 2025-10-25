@@ -10,7 +10,7 @@ const data = [
     summary: 'Complete bakery management SaaS platform (In Development)',
     featured: true,
     description:
-      'Full-stack bakery management SaaS platform with three distinct applications: NestJS backend API, SolidStart SSR marketing website, and Solid.js admin dashboard SPA. Backend built with NestJS 11, Fastify adapter, PostgreSQL with Drizzle ORM, JWT authentication with Passport, Swagger API documentation, WebSocket support with Socket.io, Stripe payment integration, and comprehensive Jest testing with contract tests. Marketing website developed with SolidStart SSR for SEO optimization and Tailwind CSS v4. Admin dashboard built as client-side SPA with Solid.js, @solidjs/router, real-time updates via WebSockets, cookie-based authentication, and Vite build system. Features include orders management, inventory tracking, production planning, recipe management, customer management, and business analytics. Demonstrates expertise in modern SaaS architecture, microservices pattern, SSR optimization, and real-time features.',
+      'Full-stack bakery management SaaS platform with three distinct applications: NestJS backend API, SolidStart SSR marketing website, and Solid.js admin dashboard SPA. Backend built with NestJS 11, Fastify adapter, PostgreSQL with Drizzle ORM, JWT authentication with Passport, Swagger API documentation, WebSocket support with Socket.io, Stripe payment integration, and comprehensive Jest testing with contract tests. Marketing website developed with SolidStart SSR for SEO optimization and Tailwind CSS v4. Admin dashboard built as client-side SPA with Solid.js, @solidjs/router, real-time updates via WebSockets, cookie-based authentication, and Vite build system. Features include orders management, inventory tracking, production planning, recipe management, customer management, and business analytics.',
     stack: [
       { name: 'NestJS 11' },
       { name: 'Solid.js' },
@@ -67,7 +67,7 @@ const data = [
     summary: 'Production NestJS API for educational institutions (In Development)',
     featured: true,
     description:
-      'Production-ready backend API for school management system deployed on Hetzner Cloud with automated CI/CD via GitHub Actions. Built with NestJS and PostgreSQL using Drizzle ORM for type-safe database operations. Features comprehensive JWT authentication with refresh token rotation, extensive audit logging system across multiple database tables, rate limiting with throttler guards, bcrypt password hashing, and enterprise-grade security measures. Includes Swagger API documentation, Zod validation, systemd service management, Nginx reverse proxy configuration, and database security with SSH tunnels. Demonstrates expertise in scalable backend architecture, security best practices, and production deployment strategies.',
+      'Production-ready backend API for school management system deployed on Hetzner Cloud with automated CI/CD via GitHub Actions. Built with NestJS and PostgreSQL using Drizzle ORM for type-safe database operations. Features comprehensive JWT authentication with refresh token rotation, extensive audit logging system across multiple database tables, rate limiting with throttler guards, bcrypt password hashing, and enterprise-grade security measures. Includes Swagger API documentation, Zod validation, systemd service management, Nginx reverse proxy configuration, and database security with SSH tunnels.',
     stack: [
       { name: 'NestJS' },
       { name: 'TypeScript' },
@@ -122,7 +122,7 @@ const data = [
     summary: 'Custom Contentful apps with AI-powered automation',
     featured: false,
     description:
-      'Suite of custom Contentful app integrations providing AI-powered content generation and automation workflows for enterprise media operations. Built as native Contentful apps using Contentful App SDK and F36 design system. Features include OpenAI integration for automated content generation, intelligent teaser creation, multi-platform social media content generation (Facebook, WhatsApp), and automated notification systems. Developed with React 18, TypeScript, Vite build system, Emotion styling, and Contentful Management API. Demonstrates expertise in building custom Contentful app extensions, AI/LLM integration, and scalable content automation workflows.',
+      'Suite of custom Contentful app integrations providing AI-powered content generation and automation workflows for enterprise media operations. Built as native Contentful apps using Contentful App SDK and F36 design system. Features include OpenAI integration for automated content generation, intelligent teaser creation, multi-platform social media content generation (Facebook, WhatsApp), and automated notification systems. Developed with React 18, TypeScript, Vite build system, Emotion styling, and Contentful Management API. ',
     stack: [
       { name: 'React 18' },
       { name: 'TypeScript' },
